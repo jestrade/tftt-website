@@ -47,5 +47,10 @@
     "sass-loader": "^12.2.0",
     "standard": "^16.0.4",
     "style-loader": "^3.3.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
