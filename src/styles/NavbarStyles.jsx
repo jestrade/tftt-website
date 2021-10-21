@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import '../fonts/font.scss'
 
 export const NavbarSection = styled.nav`
   display: grid;
@@ -25,11 +26,14 @@ export const Menu = styled.ul`
   flex-direction: row nowrap;
   list-style: none;
   margin: auto ;
+  font-family: "Steinbeck";
   li{
     margin-left: 40px;
+    
     a{
       text-decoration: none;
       color: ${({ fontColor }) => fontColor};
+      
     }
   }
 `
