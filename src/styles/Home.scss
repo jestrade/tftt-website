@@ -24,14 +24,18 @@
   height: auto;
 }
 
+@import 'animations';
+
 .tfttContainer h1 {
   font-family: var(--titles);
   font-size: 144px;
   line-height: 162.72px;
   color: var(--white);
+  animation: 3s animationFade ease; 
   span {
     color: var(--red);
   }
+  
 }
 
 .tfttSubcontainer h3 {
@@ -180,4 +184,8 @@
   font-size: 48px;
   line-height: 24px;
   color: var(--white);
+}
+
+.custom-section{
+  height: 800px;
 }
