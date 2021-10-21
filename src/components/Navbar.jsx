@@ -20,7 +20,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
           <li> <Link to='/store'> STORE </Link> </li>
           <li> <Link to='/news'> NEWS </Link> </li>
-          <li> <Link to='#'> CONTACT </Link> </li>
+          <li> <Link to='/contact'> CONTACT </Link> </li>
           <li> <Link to='/gallery'> GALLERY </Link> </li>
         </Menu>
       </NavbarSection>
