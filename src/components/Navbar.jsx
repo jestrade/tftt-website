@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Styles
-import { NavbarSection, Logo, Menu } from '@styles/NavbarStyles'
+import { NavbarSection, Logo, Menu, Grid } from '@styles/NavbarStyles'
 
 // Logos
 import tfttLogo from '@logos/tftt.png'
 
 export const Navbar = ({ fontColor = 'white' }) => {
   return (
-    <>
+    <Grid>
       <NavbarSection>
         <Logo>
           <img src={tfttLogo} alt='Logo' />
@@ -24,6 +24,6 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <li> <Link to='/gallery'> GALLERY </Link> </li>
         </Menu>
       </NavbarSection>
-    </>
+    </Grid>
   )
 }

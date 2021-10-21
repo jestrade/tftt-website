@@ -4,7 +4,7 @@ export const Section = styled.section`
     display:flex;
     flex-flow: row nowrap;
     width: 1249px;
-    margin: auto;
+    margin: 180px auto;
 `
 export const Image = styled.div`
   width: 694px;
@@ -20,6 +20,7 @@ export const Container = styled.div`
 export const Form = styled.form`
   width: 426px;
   margin: auto;
+  font-family: "steinbeckregular";
 `
 
 export const Input = styled.div`
@@ -73,6 +74,7 @@ export const Text = styled.div`
   width: 411px;
   height: 100px;
   margin: auto;
+  font-family: "steinbeckregular";
   p:nth-child(1){
     font-size: 30px;
     margin-bottom: 10px;

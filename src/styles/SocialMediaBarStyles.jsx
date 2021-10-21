@@ -16,7 +16,7 @@ export const Container = styled.div`
   grid-row: 1;
   
 `
-export const Item = styled.div`
+export const Item = styled.a`
   width: 30px;
   height: 30px;
 
@@ -27,4 +27,5 @@ export const TextContainer = styled.div`
   color: white;
   text-align: center;
   margin: auto;
+  font-family: "steinbeckregular";
 `

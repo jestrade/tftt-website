@@ -1,15 +1,18 @@
 import styled from 'styled-components'
-import '../fonts/font.scss'
 
-export const NavbarSection = styled.nav`
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+export const Grid = styled.nav`
   width:100%;
-  height: 180px;
-  padding: 0 100px;
   position: absolute;
   top:0px;
   background-color: #0d061a;
+`
+
+export const NavbarSection = styled.nav`
+  display: grid;
+  grid-template-columns: 1fr 10fr 2fr;
+  height: 57px;
+  margin: 42px 181px;
+  
 `
 export const Logo = styled.div`
   display: flex;
@@ -23,12 +26,14 @@ export const Logo = styled.div`
 export const Menu = styled.ul`
   grid-column: 2;
   display:flex;
+  width: 100%;
+  justify-content: end;
   flex-direction: row nowrap;
   list-style: none;
   margin: auto ;
-  font-family: "Steinbeck";
+  font-family: "steinbeckregular";
   li{
-    margin-left: 40px;
+    margin-left: 70px;
     
     a{
       text-decoration: none;
