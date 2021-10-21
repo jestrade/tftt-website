@@ -125,3 +125,29 @@
 .moviesContainer {
   display: flex;
 }
+
+.discoverContainer {
+  background-image: url("../assets/images/discoverourpeople.png");
+  width: 100%;
+  height: 572px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ijbTitle {
+  color: var(--white);
+  font-family: var(--titles);
+  font-size: 96px;
+  line-height: 81.6px;
+  margin-bottom: 27px;
+}
+
+.ijbSubtitle {
+  color: var(--white);
+  font-family: var(--subtitles);
+  font-size: 24px;
+  line-height: 27.96px;
+  margin-bottom: 27px;
+}

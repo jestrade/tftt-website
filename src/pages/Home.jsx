@@ -12,6 +12,7 @@ import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
 import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
+import ijbimg from '@images/IJBIMAG.png'
 
 const Home = () => {
   return (
@@ -42,6 +43,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className='discoverContainer'>
+        <h1 className='ijbTitle'>DISCOVER OUR PEOPLE</h1>
+        <p className='ijbSubtitle'>FIND YOUR PLACE</p>
+        <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
+      </div>
+
     </>
   )
 }
