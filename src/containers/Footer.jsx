@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='lettersContainer'>
-        <h1 className='Title1'>CONNECT WITH THE</h1>
-        <h1 className='Title2'>TRAP</h1>
+        <h1 className='Title1'>CONNECT WITH THE <span>TRAP</span></h1>
       </div>
       <div className='cardsContainer'>
         <FooterCard />
