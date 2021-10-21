@@ -21,7 +21,6 @@ import {
 import imgForm from '@images/contactFormImage.png'
 
 // Icons
-
 import iconMessageCheck from '@icons/messageCheck.png'
 import iconFolder from '@icons/folder.png'
 

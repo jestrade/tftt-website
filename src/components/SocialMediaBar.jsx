@@ -1,12 +1,13 @@
 import React from 'react'
-// Styles
 
+// Styles
 import {
   Section,
   Container,
   Item,
   TextContainer
 } from '@styles/SocialMediaBarStyles'
+
 // Icons
 import FBlogo from '@logos/facebook.svg'
 import TWlogo from '@logos/twitter.png'
