@@ -1,13 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-//Styles
+// Styles
 import '@styles/global.scss'
 
-//Components
+// Components
 import Layout from '@containers/Layout'
 import Home from '@pages/Home'
-
 
 const App = () => {
   return (
