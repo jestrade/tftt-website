@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div>
 
-      <div className='tfttContainer animation'>
+      <div className='tfttContainer animationHeader'>
         <div className='tfttSubcontainer'>
           <h1>TALES FROM THE<span> TRAP</span></h1>
           <h3>FILM SYNOPSIS</h3>
@@ -37,10 +37,11 @@ const Home = () => {
           <img className='fade' src={fade} alt='Fade' />
         </div>
       </div>
+
       <section className='terryStoneContainer' ref={element1}>
         {show1 &&
           <div className={show1 ? 'terryStoneContainer animation' : 'terryStoneContainer'}>
-            <img className='terryStone animation' src={terrystone} alt='Terry Stone' />
+            <img className='terryStone' src={terrystone} alt='Terry Stone' />
             <div className='terryStoneTextContainer'>
               <h1 className='terryTitle'>TERRY STONE</h1>
               <p className='terryText'>“Tales From The Trap’s (“TFTT”) Film & Television Franchise will leverage from the anticipated exponential growing demand of digital assets in the film, TV, social media, music and the graphic/art content industries.</p>
@@ -48,9 +49,27 @@ const Home = () => {
               <p className='terryText2'>Anyone and everyone will have the opportunity to become a Part Shareholder in the TFTT film & television franchise</p>
               <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
               <div className='moviesContainer'>
-                <img className='movieCover' src={ouatil} alt='Movie cover' />
-                <img className='movieCover' src={rolling} alt='Movie cover' />
-                <img className='movieCover' src={anuvahood} alt='Movie cover' />
+                <div className='imageWrapper'>
+                  <img className='movieCover1' src={ouatil} alt='Movie cover' />
+                  <img className='movieCover' src={ouatil} alt='Movie cover' />
+                  <img className='movieCover3' src={ouatil} alt='Movie cover' />
+                  <img className='movieCover4' src={ouatil} alt='Movie cover' />
+                  <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
+                </div>
+                <div className='imageWrapper'>
+                  <img className='movieCover1' src={rolling} alt='Movie cover' />
+                  <img className='movieCover' src={rolling} alt='Movie cover' />
+                  <img className='movieCover3' src={rolling} alt='Movie cover' />
+                  <img className='movieCover4' src={rolling} alt='Movie cover' />
+                  <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
+                </div>
+                <div className='imageWrapper'>
+                  <img className='movieCover1' src={anuvahood} alt='Movie cover' />
+                  <img className='movieCover' src={anuvahood} alt='Movie cover' />
+                  <img className='movieCover3' src={anuvahood} alt='Movie cover' />
+                  <img className='movieCover4' src={anuvahood} alt='Movie cover' />
+                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
+                </div>
               </div>
             </div>
           </div>}
@@ -58,22 +77,19 @@ const Home = () => {
 
       <section className='discoverContainer' ref={element2}>
         {show2 &&
-          <div className={show1 ? 'discoverContainer animation' : 'discoverContainer'}>
-
+          <div className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
             <h1 className='ijbTitle'>DISCOVER OUR PEOPLE</h1>
             <p className='ijbSubtitle'>FIND YOUR PLACE</p>
             <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
-
           </div>}
       </section>
 
-      <div className='sliderContainer' ref={element3}>
+      <section className='sliderContainer' ref={element3}>
         {show3 &&
           <div className={show3 ? 'sliderContainer animation' : 'sliderContainer'}>
             <Slider />
           </div>}
-
-      </div>
+      </section>
 
       <div className='graffitiContainer' ref={element4}>
         {show4 &&
