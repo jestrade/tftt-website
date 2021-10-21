@@ -8,7 +8,7 @@ import Footer from '@containers/Footer'
 
 const Layout = ({ children }) => {
   return (
-    <div className='Layout' style={{ backgroundColor: '#1c1c33' }}>
+    <div className='Layout' style={{ backgroundColor: '#020202' }}>
       <Navbar />
       {children}
       <Footer />
