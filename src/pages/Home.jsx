@@ -63,6 +63,19 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className='ifyoulovecontainer'>
+        <h2>IF YOU LOVED</h2>
+        <div className='pictureContainer1'>
+          <h1>"BLUE STORY"</h1>
+        </div>
+        <div className='pictureContainer2'>
+          <h1>"TOP BOY"&</h1>
+        </div>
+        <div className='pictureContainer3'>
+          <h1>"ADULTHOOD"</h1>
+        </div>
+        <h3>YOUR IN THE RIGHT PLACE</h3>
+      </div>
       <div className='discoverContainer'>
         <h1 className='ijbTitle'>DISCOVER OUR PEOPLE</h1>
         <p className='ijbSubtitle'>FIND YOUR PLACE</p>
