@@ -39,9 +39,27 @@ const Home = () => {
           <p className='terryText2'>Anyone and everyone will have the opportunity to become a Part Shareholder in the TFTT film & television franchise</p>
           <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
           <div className='moviesContainer'>
-            <img className='movieCover' src={ouatil} alt='Movie cover' />
-            <img className='movieCover' src={rolling} alt='Movie cover' />
-            <img className='movieCover' src={anuvahood} alt='Movie cover' />
+            <div className='imageWrapper'>
+              <img className='movieCover1' src={ouatil} alt='Movie cover' />
+              <img className='movieCover' src={ouatil} alt='Movie cover' />
+              <img className='movieCover3' src={ouatil} alt='Movie cover' />
+              <img className='movieCover4' src={ouatil} alt='Movie cover' />
+              <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
+            </div>
+            <div className='imageWrapper'>
+              <img className='movieCover1' src={rolling} alt='Movie cover' />
+              <img className='movieCover' src={rolling} alt='Movie cover' />
+              <img className='movieCover3' src={rolling} alt='Movie cover' />
+              <img className='movieCover4' src={rolling} alt='Movie cover' />
+              <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
+            </div>
+            <div className='imageWrapper'>
+              <img className='movieCover1' src={anuvahood} alt='Movie cover' />
+              <img className='movieCover' src={anuvahood} alt='Movie cover' />
+              <img className='movieCover3' src={anuvahood} alt='Movie cover' />
+              <img className='movieCover4' src={anuvahood} alt='Movie cover' />
+              <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
+            </div>
           </div>
         </div>
       </div>

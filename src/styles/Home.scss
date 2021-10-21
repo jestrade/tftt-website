@@ -107,10 +107,110 @@
   text-decoration: underline;
 }
 
+.imageWrapper {
+  width: 325px;
+  height: 486px;
+  position: relative;
+  margin-right: 40px;
+  &:hover img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transform: translate(0, 0);
+  }
+}
+
+.imageWrapper:hover #a1 {
+  color: var(--red);
+}
+
+.imageWrapper:hover #a2 {
+  color: var(--red);
+}
+
+.imageWrapper:hover #a3 {
+  color: var(--red);
+}
+
+.imageWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
 .movieCover {
   width: 325px;
   height: 486px;
-  margin-right: 35px;
+  cursor: pointer;
+  z-index: 1;
+  clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+  transform: translate(-30px, 5px);
+  transition: transform 300ms ease;
+}
+
+.movieCover1 {
+  width: 325px;
+  height: 486px;
+  cursor: pointer;
+  z-index: 1;
+  clip-path: polygon(0 0, 0 32%, 28% 0);
+  transform: translate(-10px, -10px);
+  transition: transform 300ms ease;
+  transform-origin: top;
+}
+
+.movieCover3 {
+  width: 325px;
+  height: 486px;
+  cursor: pointer;
+  z-index: 1;
+  clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+  transform: translate(-15px, -10px);
+  transition: transform 300ms ease;
+}
+
+.movieCover4 {
+  width: 325px;
+  height: 486px;
+  cursor: pointer;
+  z-index: 1;
+  clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+  transform: translate(-32px, 5px);
+  transition: transform 300ms ease;
+  transform-origin: top;
+}
+
+#a1 {
+  position: absolute;
+  font-family: var(--titles);
+  color: transparent;
+  font-size: 140px;
+  top: 170px;
+  left: 120px;
+  z-index: 5;
+  text-decoration: none;
+}
+
+#a2 {
+  position: absolute;
+  font-family: var(--titles);
+  color: transparent;
+  font-size: 140px;
+  top: 170px;
+  left: 120px;
+  z-index: 5;
+  text-decoration: none;
+}
+
+#a3 {
+  position: absolute;
+  font-family: var(--titles);
+  color: transparent;
+  font-size: 140px;
+  top: 170px;
+  left: 120px;
+  z-index: 5;
+  text-decoration: none;
 }
 
 .moviesContainer {
