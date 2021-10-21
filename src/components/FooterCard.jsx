@@ -1,5 +1,9 @@
 import React from 'react'
+
+// Styles
 import '@styles/FooterCard.scss'
+
+// Images
 import ProfilePicture from '../assets/images/tfttCirculImage.png'
 import Card1Image from '../assets/images/footerCard1.png'
 import Card2Image from '../assets/images/footerCard2.png'
