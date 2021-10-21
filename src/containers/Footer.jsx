@@ -4,6 +4,7 @@ import React from 'react'
 import '@styles/Footer.scss'
 // Components
 import FooterCard from '@components/FooterCard'
+import { SocialMediaBar } from '@components/SocialMediaBar'
 
 const Footer = () => {
   return (
@@ -14,6 +15,7 @@ const Footer = () => {
       <div className='cardsContainer'>
         <FooterCard />
       </div>
+      <SocialMediaBar />
     </div>
   )
 }

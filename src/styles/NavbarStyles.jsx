@@ -4,7 +4,7 @@ export const Grid = styled.nav`
   width:100%;
   position: absolute;
   top:0px;
-  background-color: #0d061a;
+  background-color: transparent;
 `
 
 export const NavbarSection = styled.nav`

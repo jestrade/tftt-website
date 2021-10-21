@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Section = styled.section`
   width: 253px;
   height: 73px;
-  margin: 180px auto;
+  margin: auto;
   display: grid;
   grid-template-rows: 2fr 1fr;
 

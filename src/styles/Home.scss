@@ -1,0 +1,57 @@
+@import "vars";
+
+.tfttContainer {
+  background-image: url("../assets/images/homeImage.png");
+  height: 1369px;
+  width: 100%;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tfttSubcontainer {
+  background-color: transparent;
+  height: 1023px;
+  width: 1523px;
+}
+
+.tfttTitle {
+  font-family: var(--titles);
+  font-size: 144px;
+  line-height: 162.72px;
+  color: var(--white);
+  span {
+    color: var(--red);
+  }
+}
+
+.tfttSubtitle {
+  margin-left: 862px;
+  margin-top: 55px;
+  font-family: var(--titles);
+  font-size: 48px;
+  text-decoration: underline;
+  color: var(--white);
+}
+
+.paragraph1 {
+  color: var(--white);
+  font-size: 24px;
+  line-height: 33.6px;
+  font-family: var(--subtitles);
+  font-weight: 400;
+  margin-left: 862px;
+  margin-top: 23px;
+}
+
+.paragraph2 {
+  color: var(--white);
+  font-size: 24px;
+  line-height: 33.6px;
+  font-family: var(--subtitles);
+  font-weight: bolder;
+  margin-left: 862px;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
