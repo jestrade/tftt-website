@@ -16,6 +16,14 @@
   width: 1523px;
 }
 
+.fade {
+  position: absolute;
+  bottom: -410px;
+  left: -10px;
+  width: auto;
+  height: auto;
+}
+
 .tfttTitle {
   font-family: var(--titles);
   font-size: 144px;
@@ -54,4 +62,66 @@
   margin-left: 862px;
   margin-top: 25px;
   margin-bottom: 60px;
+}
+
+.terryStoneContainer {
+  height: 1350px;
+  width: 100%;
+  background-color: black;
+  color: var(--white);
+}
+
+.terryStoneContainer {
+  display: flex;
+  align-items: center;
+}
+
+.terryStone {
+  width: 710px;
+  height: 1117px;
+}
+
+.terryStoneTextContainer {
+  height: 1117px;
+  margin-right: 82px;
+  margin-left: 92px;
+}
+
+.terryTitle {
+  font-family: var(--titles);
+  font-size: 48px;
+  line-height: 24px;
+  margin-bottom: 43px;
+}
+
+.terryText {
+  font-family: var(--subtitles);
+  font-size: 24px;
+  line-height: 33.6px;
+  margin-bottom: 50px;
+}
+
+.terryText2 {
+  font-family: var(--subtitles);
+  font-size: 24px;
+  line-height: 33.6px;
+  margin-bottom: 50px;
+}
+
+.terrySubtitle {
+  font-family: var(--titles);
+  font-size: 48px;
+  line-height: 24px;
+  margin-bottom: 84px;
+  text-decoration: underline;
+}
+
+.movieCover {
+  width: 325px;
+  height: 486px;
+  margin-right: 35px;
+}
+
+.moviesContainer {
+  display: flex;
 }
