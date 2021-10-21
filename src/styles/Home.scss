@@ -24,7 +24,7 @@
   height: auto;
 }
 
-.tfttTitle {
+.tfttContainer h1 {
   font-family: var(--titles);
   font-size: 144px;
   line-height: 162.72px;
@@ -34,7 +34,7 @@
   }
 }
 
-.tfttSubtitle {
+.tfttSubcontainer h3 {
   margin-left: 862px;
   margin-top: 55px;
   font-family: var(--titles);
@@ -43,7 +43,7 @@
   color: var(--white);
 }
 
-.paragraph1 {
+.tfttSubcontainer p {
   color: var(--white);
   font-size: 24px;
   line-height: 33.6px;
@@ -53,13 +53,7 @@
   margin-top: 23px;
 }
 
-.paragraph2 {
-  color: var(--white);
-  font-size: 24px;
-  line-height: 33.6px;
-  font-family: var(--subtitles);
-  font-weight: bolder;
-  margin-left: 862px;
+.paragraph {
   margin-top: 25px;
   margin-bottom: 60px;
 }
@@ -69,9 +63,6 @@
   width: 100%;
   background-color: black;
   color: var(--white);
-}
-
-.terryStoneContainer {
   display: flex;
   align-items: center;
 }
@@ -150,4 +141,14 @@
   font-size: 24px;
   line-height: 27.96px;
   margin-bottom: 27px;
+}
+
+.sliderContainer {
+  background-image: url("../assets//images/blockshome.png");
+  background-color: var(--main);
+  padding-top: 136px;
+}
+
+.graffitiContainer {
+  height: 872px;
 }

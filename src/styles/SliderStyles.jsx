@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Grid = styled.div`
   display: grid;
-  margin-top: 140px;
   width: 100%;
   height: 1200px;
   
