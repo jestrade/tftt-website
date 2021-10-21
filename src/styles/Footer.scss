@@ -1,0 +1,38 @@
+@import "vars";
+
+.footer {
+  background-image: url("../assets/images/footerBackground.png");
+  background-color: var(--main);
+  height: 1257px;
+  width: 1920px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lettersContainer {
+  display: flex;
+  width: 1198px;
+  height: 85px;
+  font-family: "CooperHewitt-Bold";
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 214px;
+  margin-bottom: 79px;
+}
+
+.Title1 {
+  color: var(--white);
+}
+
+.Title2 {
+  color: var(--red);
+  margin-left: 20px;
+}
+
+.cardsContainer {
+  width: 1700px;
+  height: 530px;
+  margin-bottom: 125px;
+}
