@@ -8,6 +8,9 @@ import { GlobalStyles } from '@styles/GlobalStyles'
 import Layout from '@containers/Layout'
 import Home from '@pages/Home'
 import SignUpForm from '@components/SignUpForm'
+import { Partnerships } from '@pages/Partnerships'
+import { Store } from '@pages/Store'
+import { News } from '@pages/News'
 
 const App = () => {
   return (
@@ -17,8 +20,12 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/signup' component={SignUpForm} />
+          <Route path='/partnerships' component={Partnerships} />
+          <Route path='/store' component={Store} />
+          <Route path='/news' component={News} />
         </Switch>
       </Layout>
+
     </BrowserRouter>
   )
 }
