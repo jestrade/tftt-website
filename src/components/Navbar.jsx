@@ -11,7 +11,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
   return (
     <Grid>
       <NavbarSection>
-        <Logo>
+        <Logo to='/' borderColor={fontColor}>
           <img src={tfttLogo} alt='Logo' />
         </Logo>
         <Menu fontColor={fontColor}>

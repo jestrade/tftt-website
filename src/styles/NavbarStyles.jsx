@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Grid = styled.nav`
@@ -14,10 +15,13 @@ export const NavbarSection = styled.nav`
   margin: 42px 181px;
   
 `
-export const Logo = styled.div`
+export const Logo = styled(Link)`
   display: flex;
   grid-column: 1;
   margin: auto;
+  border: 1px solid ${(props) => props.borderColor};
+  padding:10px 15px;
+  cursor: pointer;
   img{
     width: 93px;
     height: 31px;

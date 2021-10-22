@@ -9,6 +9,7 @@ import { Partnerships } from '@pages/Partnerships'
 import { Store } from '@pages/Store'
 import { News } from '@pages/News'
 import { Contact } from '@pages/Contact'
+import { Gallery } from '../pages/Gallery'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/store' component={Store} />
           <Route path='/news' component={News} />
           <Route path='/contact' component={Contact} />
+          <Route path='/gallery' component={Gallery} />
         </Switch>
       </Layout>
 
