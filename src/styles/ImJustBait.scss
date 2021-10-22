@@ -47,7 +47,7 @@
     }
     &__last{
       width: 100%;
-      height: 35rem;
+      height: 45rem;
       background: linear-gradient(
         0deg, rgba(0, 0, 0, 0.49),
         rgba(0, 0, 0, 0.49)),
@@ -92,12 +92,73 @@
   @media (min-width: 696px) {
     &-image{
       &__first{
-        background-image: url("../assets/images/ImJustBaitLeft.png");
+        background: linear-gradient(
+          0deg, rgba(0, 0, 0, 0.49),
+          rgba(0, 0, 0, 0.49)),
+          url("../assets/images/ImJustBaitLeft.png");
+          background-position: 30% 30%;
       }
       &__last{
-        object-fit: contain;
         background-position: 60% 10%;
       }
     }
   }
+  // Responsive for desktop
+  @media (min-width: 1024px) {
+    $container-height: 40rem;
+    &-container {
+      display: grid;
+      grid-template-rows: $container-height;
+      grid-template-columns: 50% 50%;
+      grid-template-areas:"LeftImg RightImg"
+                          "Titles Titles"
+                          "Desc Logo";
+    }
+    &-headings {
+      grid-area: Titles;
+      text-align: right;
+      margin-left: 0;
+      margin-top: 0;
+      margin-top: 10rem - $container-height;
+      z-index: 0;
+      max-width: initial;
+      h1 {
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.415rem;
+      }
+    }
+    &-image{
+      &__first{
+        grid-area: LeftImg;
+        height: inherit;
+        background-position: 32% 30%;
+      }
+      &__last{
+        height: inherit;
+        grid-area: RightImg;
+        background-position: 60% 30%;
+      }
+    }
+    &-description {
+      grid-area: Desc;
+      padding: 0 2rem;
+      margin-top: -18rem;
+      height: fit-content;
+      p {
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
+      }
+    }
+    &-logo {
+      grid-area: Logo;
+      z-index: 0;
+      margin: 0;
+      margin-top: -7rem;
+      justify-self: end;
+    }
+  }
+
 }
