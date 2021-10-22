@@ -11,7 +11,7 @@ const ImJustBaitPage = () => {
       <div className="IJB-image__first" />
       <div className="IJB-headings">
         <h1>DISCOVER OUR PEOPLE</h1>
-        <h2>FIND YOUR PLACE</h2>
+        <h2>FIND YOUR PLACE IN OUR FILM</h2>
       </div>
       <div className="IJB-description">
         <p>
