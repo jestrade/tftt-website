@@ -55,5 +55,49 @@
       background-repeat: no-repeat;
       background-position: 60% 0%;
     }
-  } 
+  }
+  @media (min-width: 318px) {
+    &-headings {
+      margin-top: -12rem;
+    }
+  }
+  @media (min-width: 380px) {
+    &-description p {
+      font-size: 1.125rem;
+      max-width: 444px;
+    }
+  }
+  @media (min-width: 480px) {
+    &-headings {
+      max-width: 460px;
+      margin-left: 2rem;
+    }
+    &-description {
+      padding: 1.8rem 2rem;
+      p {
+        margin-top: 2.25rem;
+        margin-bottom: 2.25rem;
+      }
+    }
+    &-image{
+      &__first{
+        background-position: 30% 30%;
+      }
+      &__last{
+        background-position: 60% 10%;
+      }
+    }
+  }
+  // Responsive for Tablets
+  @media (min-width: 696px) {
+    &-image{
+      &__first{
+        background-image: url("../assets/images/ImJustBaitLeft.png");
+      }
+      &__last{
+        object-fit: contain;
+        background-position: 60% 10%;
+      }
+    }
+  }
 }
