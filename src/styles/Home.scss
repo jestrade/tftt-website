@@ -2,6 +2,8 @@
 
 .tfttContainer {
   background-image: url("../assets/images/homeImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 1369px;
   width: 100%;
   padding-top: 70px;
@@ -14,6 +16,7 @@
   background-color: transparent;
   height: 1023px;
   width: 1523px;
+ 
 }
 
 .fade {
@@ -28,7 +31,7 @@
 
 .tfttContainer h1 {
   font-family: var(--titles);
-  font-size: 144px;
+  font-size: 130px;
   line-height: 162.72px;
   color: var(--white);
   animation: 3s animationFade ease; 
@@ -229,6 +232,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .ijbTitle {
@@ -350,4 +354,8 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
+}
+
+.mt-60{
+  margin-top: 100px;
 }

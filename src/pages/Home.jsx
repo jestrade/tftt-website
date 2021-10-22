@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
 
@@ -25,19 +25,19 @@ const Home = () => {
 
   return (
     <div>
-
-      <div className='tfttContainer animationHeader'>
-        <div className='tfttSubcontainer'>
-          <h1>TALES FROM THE<span> TRAP</span></h1>
-          <h3>FILM SYNOPSIS</h3>
-          <p>Is a gritty no holds barred look at the world faced by many  UK's streets and council estates youths of today. A tale of gang culture, knife crime and cross county drug deals, however more than that Tales From The Trap is a story of brotherhood, loyalty and a friendship that runs deeper than any family.</p>
-          <p>Slick is a rising star in the UK Rap & Drill Music scenes as part of the SE8 crew who are tearing up the music scene, however with a rise in success also comes a rise in status and all the dangers that come with it. Soon the SE8’s friendship is tested to the limit as rival gangs, bent coppers, older drillers and dealers, fate and circumstances force these youths hand with deadly consequences.</p>
-          <p className='paragraph'>Tales From The Trap is as powerful and hard hitting as it is heartwarming and tells the story, which is all too familiar on today’s streets and council estates</p>
-          <SocialMediaBar />
-          <img className='fade' src={fade} alt='Fade' />
+      <section>
+        <div className='tfttContainer animationHeader'>
+          <div className='tfttSubcontainer'>
+            <h1>TALES FROM THE<span> TRAP</span></h1>
+            <h3>FILM SYNOPSIS</h3>
+            <p>Is a gritty no holds barred look at the world faced by many  UK's streets and council estates youths of today. A tale of gang culture, knife crime and cross county drug deals, however more than that Tales From The Trap is a story of brotherhood, loyalty and a friendship that runs deeper than any family.</p>
+            <p>Slick is a rising star in the UK Rap & Drill Music scenes as part of the SE8 crew who are tearing up the music scene, however with a rise in success also comes a rise in status and all the dangers that come with it. Soon the SE8’s friendship is tested to the limit as rival gangs, bent coppers, older drillers and dealers, fate and circumstances force these youths hand with deadly consequences.</p>
+            <p className='paragraph'>Tales From The Trap is as powerful and hard hitting as it is heartwarming and tells the story, which is all too familiar on today’s streets and council estates</p>
+            <SocialMediaBar />
+            <img className='fade' src={fade} alt='Fade' />
+          </div>
         </div>
-      </div>
-
+      </section>
       <section className='terryStoneContainer' ref={element1}>
         {show1 &&
           <div className={show1 ? 'terryStoneContainer animation' : 'terryStoneContainer'}>
@@ -77,11 +77,11 @@ const Home = () => {
 
       <section className='discoverContainer' ref={element2}>
         {show2 &&
-          <div className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
+          <Link to='#' className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
             <h1 className='ijbTitle'>DISCOVER OUR PEOPLE</h1>
             <p className='ijbSubtitle'>FIND YOUR PLACE</p>
             <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
-          </div>}
+          </Link>}
       </section>
 
       <section className='sliderContainer' ref={element3}>

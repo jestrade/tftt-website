@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 
 export const Grid = styled.div`
@@ -27,11 +28,7 @@ export const Button = styled.button`
 export const Item = styled.button`
   display: grid;
   margin: 0px 25px;
-  img{
-    width: 332px;
-    height: 835px;
-    object-fit:cover;
-  }
+  
   p{
     margin:39px 0;
     color: white;
@@ -39,6 +36,28 @@ export const Item = styled.button`
     font-size: 24px;
   }
 
+`
+export const ImgContainer = styled.a`
+    width: 332px;
+    height: 835px;
+    background-image: url(${(props) => props.bgImg});
+    background-size: cover;
+    background-repeat: no-repeat;
+    img{
+      width: 341px;
+      height: 835px;
+      opacity: 0;
+      object-fit: cover;
+      position: relative;
+      left: -5px;
+      transition: all .5s;
+      &:hover{
+        opacity: 1;
+      }
+    }
+
+    
+    
 `
 export const Title = styled.button`
   font-family: 'cooper_hewittbold';

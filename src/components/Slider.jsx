@@ -1,12 +1,13 @@
 import React from 'react'
 
 // Styles
-import { Grid, Slide, Container, Button, Item, Title } from '@styles/SliderStyles'
+import { Grid, Slide, Container, Button, Item, Title, ImgContainer } from '@styles/SliderStyles'
 
 // Images
 import Image1 from '@images/slider/1IMG.png'
 import Image2 from '@images/slider/2IMG.png'
 import Image3 from '@images/slider/3IMG.png'
+import BePartImg from '@images/BePartOfTheFilm.png'
 
 // Icons
 import ArrowBack from '@icons/arrowBack.png'
@@ -45,15 +46,22 @@ export const Slider = () => {
 
         <Slide>
           <Item>
-            <img src={Image1} alt='' />
+            <ImgContainer href='#' bgImg={Image1}>
+              <img src={BePartImg} alt='Be Part Image' />
+            </ImgContainer>
+
             <p>BE IN THE FILM</p>
           </Item>
           <Item>
-            <img src={Image2} alt='' />
+            <ImgContainer href='#' bgImg={Image2}>
+              <img src={BePartImg} alt='Be Part Image' />
+            </ImgContainer>
             <p>UPLOAD YOUR MUSIC</p>
           </Item>
           <Item>
-            <img src={Image3} alt='' />
+            <ImgContainer href='#' bgImg={Image3}>
+              <img src={BePartImg} alt='Be Part Image' />
+            </ImgContainer>
             <p>UPLOAD YOUR VIDEO</p>
           </Item>
         </Slide>

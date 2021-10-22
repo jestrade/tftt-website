@@ -19,19 +19,19 @@ export const SocialMediaBar = () => {
   return (
     <Section>
       <Container>
-        <Item>
+        <Item href='#'>
           <img src={TWlogo} alt='twitter logo' />
         </Item>
-        <Item>
+        <Item href='#'>
           <img src={IGlogo} alt='instagram logo' />
         </Item>
-        <Item>
+        <Item href='#'>
           <img src={DDlogo} alt='discord logo' />
         </Item>
-        <Item>
+        <Item href='#'>
           <img src={FBlogo} alt='facebook logo' />
         </Item>
-        <Item>
+        <Item href='#'>
           <img src={TGlogo} alt='telegram logo' />
         </Item>
       </Container>
