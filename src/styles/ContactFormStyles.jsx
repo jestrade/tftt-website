@@ -4,7 +4,7 @@ export const Section = styled.section`
     display:flex;
     flex-flow: row nowrap;
     width: 1249px;
-    margin: 180px auto;
+    margin: 0 auto;
 `
 export const Image = styled.div`
   width: 694px;
@@ -30,6 +30,7 @@ export const Input = styled.div`
     color: #A9A9A9;
     margin-bottom: 10px;
     font-size: 16px;
+    font-family: "steinbeckregular";
   }
   input{
     height: 64px;
@@ -39,6 +40,7 @@ export const Input = styled.div`
     padding-left: 20px;
     font-size: 14px;
     outline: none;
+    font-family: "steinbeckregular";
   }
 
 `
@@ -49,6 +51,7 @@ export const InputLetUs = styled.div`
     color: #A9A9A9;
     margin-bottom: 10px;
     font-size: 16px;
+    font-family: "steinbeckregular";
   }
   textarea{
     height: 224px;
@@ -59,6 +62,7 @@ export const InputLetUs = styled.div`
     padding-top: 20px;
     font-size: 14px;
     outline:none;
+    font-family: "steinbeckregular";
     &::placeholder{
       color:white;
     }
@@ -74,53 +78,22 @@ export const Text = styled.div`
   width: 411px;
   height: 100px;
   margin: auto;
-  font-family: "steinbeckregular";
+  
   p:nth-child(1){
     font-size: 30px;
     margin-bottom: 10px;
+    font-weight: bolder;
+    font-family: "steinbeckregular";
   }
   p:nth-child(2){
     font-size: 18px;
+    font-family:"steinbeckregular";
   }
 `
 export const CheckInput = styled.div`
 margin-top: 20px;
 display: flex;
 align-items: center;
-  input{
-    display: none;
-  }
-  radio__input{
-
-  }
-  label{
-    
-    margin-left: 10px;
-    color: #A9A9A9;
-    font-size: 16px;
-  }
-  .radioBox{
-  width: 21px;
-  height: 21px;
-  background-color: white;
-  border-radius: 50%;
-  padding:3px;
-  &::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: green;
-    border-radius: 50%;
-    
-    transform: scale(0);
-  }
-
-  
-  }
-  input:checked + .radioBox::after{
-    transform: scale(1);
-  }
 `
 
 export const ButtonsContainer = styled.div`
@@ -138,13 +111,14 @@ export const SendButton = styled.button`
   height: 64px;
   background-color: white;
   border-radius: 6px;
+  cursor: pointer;
   span{
     font-size: 16px;
     margin-left: 10px;
   }
   img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   `
 
@@ -165,6 +139,11 @@ export const AttachFileButton = styled.a`
   }
   img{
     width: 24px;
-    height: 24px;
+    height: 22  px;
   }
   `
+export const ButtonTerms = styled.div`
+  display:flex;
+  cursor: pointer;
+  font-family: "steinbeckregular";
+ `

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Styles
 import {
@@ -13,7 +13,7 @@ import {
   ButtonsContainer,
   SendButton,
   AttachFileButton,
-
+  ButtonTerms,
   Hr
 } from '@styles/ContactFormStyles'
 
@@ -25,12 +25,17 @@ import iconMessageCheck from '@icons/messageCheck.png'
 import iconFolder from '@icons/folder.png'
 
 export const ContactForm = () => {
+  const [checkBox, setCheckBox] = useState(false)
+  const handleCheck = (e) => {
+    e.preventDefault()
+    setCheckBox(!checkBox)
+  }
   return (
 
     <Section>
       <Container>
         <Text>
-          <p>What’s up?</p>
+          <p> What’s up?</p>
           <p>Wanna talk with us? Let us know the deal and we will message you shortly.</p>
         </Text>
         <Hr />
@@ -48,9 +53,16 @@ export const ContactForm = () => {
             <textarea type='text' placeholder='Message' />
           </InputLetUs>
           <CheckInput>
-            <input id='checkTerms' type='radio' />
-            <div className='radioBox' />
-            <label for='checkTerms'>I agree to terms & conditions</label>
+            <ButtonTerms onClick={handleCheck}>
+              <div style={{ width: 21, height: 21, borderRadius: '50%', padding: 3, backgroundColor: 'white' }}>
+                {checkBox
+                  ? <div style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: '#F13D3C' }} />
+                  : <div />}
+              </div>
+              <div style={{ marginLeft: 10, color: 'white', fontSize: 16 }}>
+                I agree to terms & conditions
+              </div>
+            </ButtonTerms>
           </CheckInput>
           <ButtonsContainer>
             <SendButton type='submit'>
