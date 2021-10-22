@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Grid = styled.div`
@@ -11,10 +12,12 @@ export const Grid = styled.div`
 export const Slide = styled.div`
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
 `
 
 export const Container = styled.div`
   display: Grid;
+  width: 1328px;
   grid-template-columns: 1fr 10fr 1fr;
   margin: auto;
 `
@@ -23,11 +26,14 @@ export const Button = styled.button`
   border-radius: 50%;
   height: 200px;
   margin: auto 0;
+  position: relative;
+  cursor: pointer;
+  
 `
 
 export const Item = styled.button`
   display: grid;
-  margin: 0px 25px;
+  
   
   p{
     margin:39px 0;
@@ -37,14 +43,14 @@ export const Item = styled.button`
   }
 
 `
-export const ImgContainer = styled.a`
+export const ImgContainer = styled(Link)`
     width: 332px;
     height: 835px;
     background-image: url(${(props) => props.bgImg});
     background-size: cover;
     background-repeat: no-repeat;
     img{
-      width: 341px;
+      width: 342px;
       height: 835px;
       opacity: 0;
       object-fit: cover;
