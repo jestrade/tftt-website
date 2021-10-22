@@ -16,7 +16,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
         </Logo>
         <Menu fontColor={fontColor}>
           <li> <Link to='#'> ABOUT TTFT </Link> </li>
-          <li> <Link to='#'> I'M JUST BLIT </Link> </li>
+          <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='#'> PARTNERSHIPS </Link> </li>
           <li> <Link to='#'> STORE </Link> </li>
           <li> <Link to='#'> NEWS </Link> </li>
