@@ -1,11 +1,19 @@
 import styled from 'styled-components'
 
+import imageBg from '@images/bgGalleryVideos.png'
+import imageBg2 from '@images/bgSpray.png'
+
 export const Section = styled.section`
   padding-top: 240px;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
   
   width: 100%;
   background-color: white;
+  background-image: url(${imageBg2});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 180px;
 `
 
 export const Title = styled.section`
@@ -28,15 +36,17 @@ export const Title = styled.section`
 export const Container = styled.div`
   width: 100%;
   height: 575px;
-  background-image: url(${props => props.bgImg});
+  background-image: url(${imageBg});
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 40px;
 `
 export const Grid = styled.section`
+  padding: 28px 0px;
   display: grid;
   scale:1.3;
-  width:1800px;
-  margin: 120px auto;
+  width:100%;
+  margin: 0 auto;
   grid-template-columns: auto;
   grid-template-rows: auto ;
   grid-template-areas:"a a b c d d"
@@ -51,7 +61,7 @@ export const Item = styled.section`
   img{
     object-fit: cover;
     margin: auto;
-    scale:1;
+    scale: 1;
     transition: all 1s;
     &:hover{
       scale: 1.2;
