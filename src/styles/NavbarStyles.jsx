@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Grid = styled.nav`
+export const Grid = styled.section`
   width:100%;
   position: absolute;
   top:0px;
@@ -9,35 +9,27 @@ export const Grid = styled.nav`
 `
 
 export const NavbarSection = styled.nav`
-  display: grid;
-  grid-template-columns: 1fr 10fr 2fr;
+  display: flex;
+  flex-flow: row nowrap;
   height: 57px;
   margin: 42px 181px;
-  
+
 `
 export const Logo = styled(Link)`
   display: flex;
-  grid-column: 1;
-  margin: auto;
-  border: 1px solid ${(props) => props.borderColor};
-  padding:10px 15px;
   cursor: pointer;
-  img{
-    width: 93px;
-    height: 31px;
-  }
+  
 `
 export const Menu = styled.ul`
-  grid-column: 2;
   display:flex;
   width: 100%;
-  justify-content: end;
+  justify-content: space-between;
   flex-direction: row nowrap;
   list-style: none;
-  margin: auto ;
+  margin: auto 50px;
   font-family: "steinbeckregular";
   li{
-    margin-left: 70px;
+    
     
     a{
       text-decoration: none;
@@ -45,4 +37,22 @@ export const Menu = styled.ul`
       
     }
   }
+`
+export const LogoImg = styled.img`
+  width: 126px;
+  height: 57px;
+  
+`
+export const ButtonBox = styled.div`
+  display: flex;
+`
+export const RegisterButton = styled.button`
+  color:${({ fontColor }) => fontColor};;
+  width: 126;
+  height: 53;
+  border-radius: 17px;
+  border: 1px solid ${({ fontColor }) => fontColor};;
+  font-family: "cooper_hewittheavy";
+  font-size: 24px;
+  padding: 5px 15px;
 `

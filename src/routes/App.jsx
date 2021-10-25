@@ -11,24 +11,30 @@ import { Store } from '@pages/Store'
 import { News } from '@pages/News'
 import { Contact } from '@pages/Contact'
 import { Gallery } from '../pages/Gallery'
+import useNavbarState from '../hooks/useNavbarState'
+import Context from '../context/Context'
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Layout>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/im-just-bait' component={ImJustBaitPage} />
-          <Route exact path='/signup' component={SignUpForm} />
-          <Route path='/partnerships' component={Partnerships} />
-          <Route path='/store' component={Store} />
-          <Route path='/news' component={News} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/gallery' component={Gallery} />
-        </Switch>
-      </Layout>
+  const navbarState = useNavbarState()
 
-    </BrowserRouter>
+  return (
+    <Context.Provider value={navbarState}>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/im-just-bait' component={ImJustBaitPage} />
+            <Route exact path='/signup' component={SignUpForm} />
+            <Route path='/partnerships' component={Partnerships} />
+            <Route path='/store' component={Store} />
+            <Route path='/news' component={News} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/gallery' component={Gallery} />
+          </Switch>
+        </Layout>
+
+      </BrowserRouter>
+    </Context.Provider>
   )
 }
 

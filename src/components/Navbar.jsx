@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
+// Context
+import Context from '../context/Context'
+
 // Styles
-import { NavbarSection, Logo, Menu, Grid } from '@styles/NavbarStyles'
+import { NavbarSection, Logo, Menu, Grid, LogoImg, ButtonBox, RegisterButton } from '@styles/NavbarStyles'
 
 // Logos
-import tfttLogo from '@logos/tftt.png'
+import tfttBlackLogo from '@logos/tfttBlackLogo.png'
+import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
 
 export const Navbar = ({ fontColor = 'white' }) => {
+  const { navState } = useContext(Context)
   return (
     <Grid>
       <NavbarSection>
-        <Logo to='/' borderColor={fontColor}>
-          <img src={tfttLogo} alt='Logo' />
+        <Logo to='/'>
+          <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
         <Menu fontColor={fontColor}>
           <li> <Link to='#'> ABOUT TTFT </Link> </li>
@@ -23,6 +28,11 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <li> <Link to='/contact'> CONTACT </Link> </li>
           <li> <Link to='/gallery'> GALLERY </Link> </li>
         </Menu>
+        <ButtonBox>
+          <RegisterButton fontColor={fontColor}>
+            REGISTER
+          </RegisterButton>
+        </ButtonBox>
       </NavbarSection>
     </Grid>
   )

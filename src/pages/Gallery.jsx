@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useLocation } from 'react-router'
+// Context
+import Context from '../context/Context'
 
 // Styles
 import {
@@ -17,6 +20,11 @@ import imageE from '@images/videoE.png'
 import imageBg from '@images/bgGalleryVideos.png'
 
 export const Gallery = () => {
+  // This code is for identify if the page is Gallery
+  const location = useLocation()
+  const { changeNav } = useContext(Context)
+  changeNav(location.pathname)
+
   return (
 
     <Section>
