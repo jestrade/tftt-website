@@ -275,8 +275,23 @@
 
 .reel1 {
   position: relative;
-  top: 470px;
+  top: 460px;
   right: 718px;
+  width: 475px;
+  height: 338px;
+  cursor: pointer;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reel1 img {
+  z-index: 2;
+  position: absolute;
+  &:hover {
+    opacity: 0;
+  }
 }
 
 .reel2 {
@@ -284,22 +299,81 @@
   top: 134px;
   right: 240px;
   cursor: pointer;
+  width: 470px;
+  height: 342px;
   background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reel2 img {
+  z-index: 2;
+  position: absolute;
+  &:hover {
+    opacity: 0;
+  }
 }
 
 .reel3 {
   position: relative;
-  top: -199px;
+  top: -187px;
   right: -240px;
+  width: 466px;
+  height: 328px;
+  cursor: pointer;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reel3 img {
+  z-index: 2;
+  position: absolute;
+  &:hover {
+    opacity: 0;
+  }
 }
 
 .reel4 {
   position: relative;
-  top: -527px;
+  top: -510px;
   right: -715px;
+  width: 464px;
+  height: 326px;
+  cursor: pointer;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.graffitiContainer h1 {
+.reel4 img {
+  z-index: 2;
+  position: absolute;
+  &:hover {
+    opacity: 0;
+  }
+}
+
+.msjRed {
+  color: var(--white);
+  font-family: var(--titles);
+  font-size: 36px;
+  line-height: 50px;
+  z-index: 1;
+}
+
+.redBlock {
+  width: 458px;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gcTitle {
   font-family: var(--titles);
   font-size: 105px;
   line-height: 162.72px;

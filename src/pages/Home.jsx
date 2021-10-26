@@ -28,7 +28,6 @@ const Home = () => {
   const [show1, element1] = useNearScreen()
   const [show2, element2] = useNearScreen()
   const [show3, element3] = useNearScreen()
-  const [show4, element4] = useNearScreen()
 
   return (
     <div>
@@ -113,17 +112,38 @@ const Home = () => {
           </div>}
       </section>
 
-      <div className='graffitiContainer' ref={element4}>
-        {show4 &&
-          <div className={show4 ? 'graffitiContainer animation' : 'graffitiContainer'}>
-            <h1>EXPERIENCE THE <span>TRAP</span></h1>
-            <h3>FROM THE INSIDE OUT</h3>
-            <img className='reel' src={reel} alt='Movie reel' />
-            <img className='reel1' src={reel1} alt='Movie reel' />
-            <img className='reel2' src={reel2} alt='Movie reel' />
-            <img className='reel3' src={reel3} alt='Movie reel' />
-            <img className='reel4' src={reel4} alt='Movie reel' />
-          </div>}
+      <div className='graffitiContainer'>
+        <div className='graffitiContainer'>
+          <h1 className='gcTitle'>EXPERIENCE THE <span>TRAP</span></h1>
+          <h3>FROM THE INSIDE OUT</h3>
+          <img className='reel' src={reel} alt='Movie reel' />
+          <div className='reel1'>
+            <img src={reel1} alt='Movie reel' />
+            <div className='redBlock'>
+              <h1 className='msjRed'>PRIVATE MOVIE
+                SHOWING
+              </h1>
+            </div>
+          </div>
+          <div className='reel2'>
+            <img src={reel2} alt='Movie reel' />
+            <div className='redBlock'>
+              <h1 className='msjRed'>WALK ON THE RED CARPET</h1>
+            </div>
+          </div>
+          <div className='reel3'>
+            <img src={reel3} alt='Movie reel' />
+            <div className='redBlock'>
+              <h1 className='msjRed'>BE IN THE MOVIE</h1>
+            </div>
+          </div>
+          <div className='reel4'>
+            <img src={reel4} alt='Movie reel' />
+            <div className='redBlock'>
+              <h1 className='msjRed'>MEET THE STARS</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
