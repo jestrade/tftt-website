@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Layout from '@containers/Layout'
 import Home from '@pages/Home'
 import ImJustBaitPage from '@pages/ImJustBait'
-import SignUpForm from '@components/SignUpForm'
+import SignUpPage from '@pages/SignUp'
 import { Partnerships } from '@pages/Partnerships'
 import { Store } from '@pages/Store'
 import { News } from '@pages/News'
@@ -24,7 +24,7 @@ const App = () => {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/im-just-bait' component={ImJustBaitPage} />
-            <Route exact path='/signup' component={SignUpForm} />
+            <Route exact path='/signup' component={SignUpPage} />
             <Route path='/partnerships' component={Partnerships} />
             <Route path='/store' component={Store} />
             <Route path='/news' component={News} />
@@ -32,7 +32,6 @@ const App = () => {
             <Route path='/gallery' component={Gallery} />
           </Switch>
         </Layout>
-
       </BrowserRouter>
     </Context.Provider>
   )

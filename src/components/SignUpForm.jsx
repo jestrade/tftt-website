@@ -247,9 +247,9 @@ const SignUpForm = () => {
               </select>
               <input className='phoneInput' type='tel' />
             </div>
-            <div className='checkboxContainer'>
-              <input type='checkbox' />
-              <p>I agree to terms & conditions</p>
+            <div className='radioContainer'>
+              <input type='radio' />
+              <p>I agree to terms &amp; conditions</p>
             </div>
             <button type='submit'>Register Account</button>
           </form>
