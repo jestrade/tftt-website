@@ -14,7 +14,7 @@ export const Slide = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  ${fadeIn}
+  ${fadeIn({ time: '1s', type: 'ease' })}
 `
 
 export const Container = styled.div`

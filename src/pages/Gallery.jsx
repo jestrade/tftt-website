@@ -36,7 +36,7 @@ export const Gallery = () => {
 
         <Grid>
           <Item style={{ gridArea: 'a' }}>
-            <img src={imageA} alt='' width='483' height='490' />
+            <img src={imageA} alt='' />
           </Item>
           <Item style={{ gridArea: 'b' }}>
             <img src={imageB} alt='' />
