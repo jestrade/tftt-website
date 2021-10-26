@@ -1,11 +1,30 @@
 import styled from 'styled-components'
 
+import imageBg from '@images/bgGalleryVideos.png'
+import imageBg2 from '@images/bgSpray.png'
+
+import { cssResponsive } from '@hooks/useResponsive'
+
 export const Section = styled.section`
   padding-top: 240px;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
   
-  width: 100%;
+  
   background-color: white;
+  background-image: url(${imageBg2});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 180px;
+  ${cssResponsive('Desktop15')}{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 260px;
+  }
+  ${cssResponsive('Desktop13')}{
+    
+  }
 `
 
 export const Title = styled.section`
@@ -27,37 +46,71 @@ export const Title = styled.section`
 `
 export const Container = styled.div`
   width: 100%;
-  height: 575px;
-  background-image: url(${props => props.bgImg});
-  background-size: cover;
+  
+  background-image: url(${imageBg});
+  background-size: contain;
   background-repeat: no-repeat;
+  margin-top: 100px;
+  
+  
 `
 export const Grid = styled.section`
+  padding: 14px 100px;
   display: grid;
-  scale:1.3;
-  width:1800px;
-  margin: 120px auto;
-  grid-template-columns: auto;
-  grid-template-rows: auto ;
+  width:100%;
+  
+ 
   grid-template-areas:"a a b c d d"
                       "a a e e d d" ;
   
-  
+  ${cssResponsive('Desktop15')}{
+    grid-template-areas:"a a b b c c d d"
+                      "a a e e e e d d" ;
+    padding:10px 10px;
+  }
 
 `
 export const Item = styled.section`
   display: flex;
-  
+  margin: 10px;
   img{
-    object-fit: cover;
-    margin: auto;
-    scale:1;
-    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    
+    transition: transform 1s;
     &:hover{
-      scale: 1.2;
+      transform: scale(1.2);
       z-index: 10;
       position: relative;
     }
+    
+    ${cssResponsive('Desktop15')}{
+      width: 100%;
+      height: 100%;
+  }
+  
+  }
+
+ 
+
+    
+
+
+`
+
+export const GridScenes = styled.div`
+  display:flex;
+  flex-flow: row nowrap;
+  margin: 0px 118px;
+  font-family: "cooper_hewittheavy";
+  div:nth-child(1){
+    color: white;
+  }
+  div:nth-child(2){
+    margin-left: 25.5%;
+  }
+  div:nth-child(3){
+    margin-left: 43%;
   }
 
 `

@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { fadeIn } from '@styles/animations'
 
 export const Grid = styled.div`
   display: grid;
@@ -13,6 +14,7 @@ export const Slide = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  ${fadeIn({ time: '1s', type: 'ease' })}
 `
 
 export const Container = styled.div`

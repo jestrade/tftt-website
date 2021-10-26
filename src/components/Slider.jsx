@@ -24,9 +24,9 @@ export const Slider = () => {
     },
     {
       conten: [
-        { id: 1, img: 'NoImage', href: '#' },
-        { id: 2, img: 'NoImage', href: '#' },
-        { id: 3, img: 'NoImage', href: '#' }
+        { id: 1, img: Image1, href: '#' },
+        { id: 2, img: Image1, href: '#' },
+        { id: 3, img: Image1, href: '#' }
       ]
     }
   ]

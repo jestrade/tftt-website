@@ -26,15 +26,25 @@ export const Menu = styled.ul`
   justify-content: space-between;
   flex-direction: row nowrap;
   list-style: none;
-  margin: auto 50px;
+  margin: auto 60px;
   font-family: "steinbeckregular";
   li{
+    font-size: 18px;
     
+    span{
+      color: red;
+      
+    }
     
     a{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
       text-decoration: none;
       color: ${({ fontColor }) => fontColor};
-      
+      img{
+        position: absolute;
+      }
     }
   }
 `
@@ -51,7 +61,7 @@ export const RegisterButton = styled.button`
   width: 126;
   height: 53;
   border-radius: 17px;
-  border: 1px solid ${({ fontColor }) => fontColor};;
+  border: 1px solid ${({ fontColor }) => fontColor};  ;
   font-family: "cooper_hewittheavy";
   font-size: 24px;
   padding: 5px 15px;

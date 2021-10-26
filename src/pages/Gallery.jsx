@@ -9,7 +9,8 @@ import {
   Title,
   Grid,
   Item,
-  Container
+  Container,
+  GridScenes
 } from '@styles/GalleryStyles'
 // Images
 import imageA from '@images/videoA.png'
@@ -17,7 +18,6 @@ import imageB from '@images/videoB.png'
 import imageC from '@images/videoC.png'
 import imageD from '@images/videoD.png'
 import imageE from '@images/videoE.png'
-import imageBg from '@images/bgGalleryVideos.png'
 
 export const Gallery = () => {
   // This code is for identify if the page is Gallery
@@ -32,7 +32,7 @@ export const Gallery = () => {
         <p>GALLERY</p>
         <p>SNEAK PEEK</p>
       </Title>
-      <Container bgImg={imageBg}>
+      <Container>
 
         <Grid>
           <Item style={{ gridArea: 'a' }}>
@@ -51,6 +51,17 @@ export const Gallery = () => {
             <img src={imageE} alt='' />
           </Item>
         </Grid>
+        <GridScenes>
+          <div>
+            SCENE 5:30
+          </div>
+          <div>
+            SCENE 5:30
+          </div>
+          <div>
+            SCENE 5:30
+          </div>
+        </GridScenes>
       </Container>
     </Section>
   )
