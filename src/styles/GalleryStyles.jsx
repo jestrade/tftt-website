@@ -35,14 +35,14 @@ export const Title = styled.section`
 `
 export const Container = styled.div`
   width: 100%;
-  height: 575px;
+  height: 532px;
   background-image: url(${imageBg});
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 40px;
+  margin-top: 100px;
 `
 export const Grid = styled.section`
-  padding: 28px 0px;
+  padding: 30px 100px;
   display: grid;
   scale:1.3;
   width:100%;
@@ -68,6 +68,23 @@ export const Item = styled.section`
       z-index: 10;
       position: relative;
     }
+  }
+
+`
+
+export const GridScenes = styled.div`
+  display:flex;
+  flex-flow: row nowrap;
+  margin: 0px 118px;
+  font-family: "cooper_hewittheavy";
+  div:nth-child(1){
+    color: white;
+  }
+  div:nth-child(2){
+    margin-left: 425px;
+  }
+  div:nth-child(3){
+    margin-left: 705px;
   }
 
 `

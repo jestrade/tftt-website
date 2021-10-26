@@ -9,7 +9,8 @@ import {
   Title,
   Grid,
   Item,
-  Container
+  Container,
+  GridScenes
 } from '@styles/GalleryStyles'
 // Images
 import imageA from '@images/videoA.png'
@@ -35,7 +36,7 @@ export const Gallery = () => {
 
         <Grid>
           <Item style={{ gridArea: 'a' }}>
-            <img src={imageA} alt='' />
+            <img src={imageA} alt='' width='483' height='490' />
           </Item>
           <Item style={{ gridArea: 'b' }}>
             <img src={imageB} alt='' />
@@ -50,6 +51,17 @@ export const Gallery = () => {
             <img src={imageE} alt='' />
           </Item>
         </Grid>
+        <GridScenes>
+          <div>
+            SCENE 5:30
+          </div>
+          <div>
+            SCENE 5:30
+          </div>
+          <div>
+            SCENE 5:30
+          </div>
+        </GridScenes>
       </Container>
     </Section>
   )
