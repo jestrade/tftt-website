@@ -12,7 +12,9 @@ import {
   Menu, Grid,
   LogoImg,
   ButtonBox,
-  RegisterButton
+  RegisterButton,
+  ButtonContainer,
+  ButtonContainerLi
 } from '@styles/NavbarStyles'
 
 // Logos
@@ -44,11 +46,20 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <li> <Link to='/news'> NEWS </Link> </li>
           <li> <Link to='/contact'> CONTACT </Link> </li>
           <li> <Link to='/gallery'> GALLERY </Link> </li>
+
+          <ButtonContainerLi to='/signup'>
+            <RegisterButton fontColor={fontColor}>
+              REGISTER
+            </RegisterButton>
+          </ButtonContainerLi>
+
         </Menu>
         <ButtonBox>
-          <RegisterButton fontColor={fontColor}>
-            REGISTER
-          </RegisterButton>
+          <ButtonContainer to='/signup'>
+            <RegisterButton fontColor={fontColor}>
+              REGISTER
+            </RegisterButton>
+          </ButtonContainer>
           <MenuLogo onClick={onClick}>
             <img src={logoMenu} alt='' />
           </MenuLogo>

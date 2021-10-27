@@ -92,19 +92,38 @@ export const LogoImg = styled.img`
 export const ButtonBox = styled.div`
   display: flex;
 `
-export const RegisterButton = styled.button`
+
+export const ButtonContainer = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  ${cssResponsive('Mobile')}{
+    display: none;
+  }
+`
+export const ButtonContainerLi = styled(Link)`
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  ${cssResponsive('Mobile')}{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+`
+
+export const RegisterButton = styled.div`
   color:${({ fontColor }) => fontColor};;
-  width: 126;
-  height: 53;
   border-radius: 17px;
+  width: 126px;
+  height: 53px;
   border: 1px solid ${({ fontColor }) => fontColor};  ;
   font-family: "cooper_hewittheavy";
   font-size: 24px;
-  padding: 5px 15px;
-  ${cssResponsive('Mobile')}{
-
-    display: none;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 `
 
 export const MenuLogo = styled.button`
