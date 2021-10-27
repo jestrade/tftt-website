@@ -50,7 +50,7 @@ export const ContactForm = () => {
             <input type='text' placeholder='Wath´s up?  ' />
           </Input>
           <InputPhone>
-            <label htmlFor=''>Subjet</label>
+            <label htmlFor=''>Phone number</label>
             <div>
               <select name='code' id=''>
                 <option value='+1' selected>+ 1</option>
@@ -58,7 +58,7 @@ export const ContactForm = () => {
                 <option value='+3'>+ 3</option>
                 <option value='+4'>+ 4</option>
               </select>
-              <input type='text' placeholder='Wath´s up?  ' />
+              <input type='text' placeholder='' />
             </div>
           </InputPhone>
           <InputLetUs>
