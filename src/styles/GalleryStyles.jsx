@@ -72,10 +72,12 @@ export const Grid = styled.section`
 `
 export const Item = styled.section`
   display: flex;
-  margin: 10px;
+  padding: 14px 15px ;
+  width: 100%;
+  height: 100%;
   img{
-    width: 100%;
-    height: 100%;
+    
+    object-fit: cover;
     
     transition: transform 1s;
     &:hover{
@@ -111,6 +113,18 @@ export const GridScenes = styled.div`
   }
   div:nth-child(3){
     margin-left: 43%;
+  }
+  ${cssResponsive('Desktop15')}{
+    margin: 0px 20px;
+    div:nth-child(1){
+    color: white;
+    }
+    div:nth-child(2){
+      margin-left: 25.5%;
+    }
+    div:nth-child(3){
+      margin-left: 43%;
+    }
   }
 
 `

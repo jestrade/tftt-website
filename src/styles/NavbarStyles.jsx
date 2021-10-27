@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { cssResponsive } from '@hooks/useResponsive'
+import { fadeIn } from '@styles/animations'
 
 export const Grid = styled.section`
   width:100%;
@@ -13,6 +15,14 @@ export const NavbarSection = styled.nav`
   flex-flow: row nowrap;
   height: 57px;
   margin: 42px 181px;
+  ${cssResponsive('Desktop15')}{
+    margin: 42px 80px;
+  }
+  ${cssResponsive('Mobile')}{
+    justify-content: space-between;
+    align-items: center;
+    margin: 42px 40px;
+  }
 
 `
 export const Logo = styled(Link)`
@@ -47,6 +57,32 @@ export const Menu = styled.ul`
       }
     }
   }
+
+  ${cssResponsive('Desktop15')}{
+      li{
+        font-size: 16px;
+      }
+  }
+  ${cssResponsive('Mobile')}{
+      display:${props => props.dropMenu};
+      flex-flow: column nowrap;
+      position: absolute;
+      top: 150px;
+      left: 0px;
+      background-color: #00000044;
+      margin: auto 0px;
+      ${fadeIn({ time: '.5s', type: 'ease' })}
+      li{
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+        text-align: center;
+        &:hover{
+        background-color: #dbdbdb44;
+        }
+        
+      }
+  }
 `
 export const LogoImg = styled.img`
   width: 126px;
@@ -65,4 +101,18 @@ export const RegisterButton = styled.button`
   font-family: "cooper_hewittheavy";
   font-size: 24px;
   padding: 5px 15px;
+  ${cssResponsive('Mobile')}{
+
+    display: none;
+  }
+`
+
+export const MenuLogo = styled.button`
+  display: none;
+  ${cssResponsive('Mobile')}{
+    width: 44px;
+    height: 24px;
+    display: block;
+  
+  }
 `

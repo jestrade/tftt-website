@@ -1,25 +1,42 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // Context
 import Context from '../context/Context'
 
 // Styles
-import { NavbarSection, Logo, Menu, Grid, LogoImg, ButtonBox, RegisterButton } from '@styles/NavbarStyles'
+import {
+  MenuLogo,
+  NavbarSection,
+  Logo,
+  Menu, Grid,
+  LogoImg,
+  ButtonBox,
+  RegisterButton
+} from '@styles/NavbarStyles'
 
 // Logos
 import tfttBlackLogo from '@logos/tfttBlackLogo.png'
 import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
 import logoStore from '@logos/logoStore.png'
+import logoMenu from '@logos/menuNav.png'
+
 export const Navbar = ({ fontColor = 'white' }) => {
   const { navState } = useContext(Context)
+  const [dropMenu, setDropMenu] = useState(false)
+  const onClick = (e) => {
+    e.preventDefault()
+    setDropMenu(!dropMenu)
+    console.log(dropMenu)
+  }
+
   return (
     <Grid>
       <NavbarSection>
         <Logo to='/'>
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
-        <Menu fontColor={fontColor}>
+        <Menu fontColor={fontColor} dropMenu={dropMenu ? 'block' : 'none'}>
           <li> <Link to='#'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
@@ -32,6 +49,9 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <RegisterButton fontColor={fontColor}>
             REGISTER
           </RegisterButton>
+          <MenuLogo onClick={onClick}>
+            <img src={logoMenu} alt='' />
+          </MenuLogo>
         </ButtonBox>
       </NavbarSection>
     </Grid>
