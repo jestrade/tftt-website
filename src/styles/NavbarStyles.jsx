@@ -8,6 +8,11 @@ export const Grid = styled.section`
   position: absolute;
   top:0px;
   background-color: transparent;
+  
+  ${cssResponsive('Desktop15')}{
+    position:  ${props => props.positionGrid};
+    height: ${props => props.heightGrid};
+  }
 `
 
 export const NavbarSection = styled.nav`
@@ -22,6 +27,7 @@ export const NavbarSection = styled.nav`
     justify-content: space-between;
     align-items: center;
     margin: 42px 40px;
+    
   }
 
 `
