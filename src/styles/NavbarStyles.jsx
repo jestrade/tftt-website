@@ -83,9 +83,7 @@ export const Menu = styled.ul`
         justify-content: center;
         padding: 10px 10px;
         text-align: center;
-        &:hover{
-        background-color: #dbdbdb44;
-        }
+        
         
       }
   }
