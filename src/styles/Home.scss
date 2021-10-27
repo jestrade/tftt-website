@@ -122,7 +122,7 @@
 }
 
 .terryStoneContainer {
-  height: 1350px;
+  height: 1310px;
   width: 100%;
   background-color: black;
   color: var(--white);
@@ -533,7 +533,7 @@
 
 .treepicsContainer h1 {
   position: absolute;
-  top: 2770px;
+  top: 2840px;
   left: 170px;
   font-size: 48px;
   font-family: var(--titles);
@@ -543,7 +543,7 @@
 
 .treepicsContainer h2 {
   position: absolute;
-  top: 3260px;
+  top: 3390px;
   left: 1150px;
   font-size: 48px;
   font-family: var(--titles);
@@ -628,6 +628,37 @@
     font-size: 110px;
     top: 100px;
     left: 60px;
+  }
+
+  .treepicsContainer h1 {
+    top: 2720px;
+    left: 110px;
+    font-size: 28px;
+  }
+
+  .treepicsContainer h2 {
+    top: 3090px;
+    left: 780px;
+    font-size: 28px;
+  }
+
+  .pictureContainer1 {
+    height: 250px;
+  }
+  .pictureContainer2 {
+    height: 250px;
+  }
+  .pictureContainer3 {
+    height: 250px;
+  }
+
+  .treepicsContainer {
+    height: 410px;
+  }
+
+  .pictureContainer {
+    height: 250px;
+    margin-top: 70px;
   }
 }
 
