@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
 
 // Components
 import { SocialMediaBar } from '@components/SocialMediaBar'
 import { Slider } from '@components/Slider'
+import Context from '@context/Context'
 
 // Images
 import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
-import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
 import reel from '@images/moviereel.png'
@@ -28,6 +28,11 @@ const Home = () => {
   const [show1, element1] = useNearScreen()
   const [show2, element2] = useNearScreen()
   const [show3, element3] = useNearScreen()
+
+  // This code is for identify if the page is Gallery
+  const location = useLocation()
+  const { changeNav } = useContext(Context)
+  changeNav(location.pathname)
 
   return (
     <div>
@@ -56,6 +61,13 @@ const Home = () => {
               <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
               <div className='moviesContainer'>
                 <div className='imageWrapper'>
+                  <img className='movieCover1' src={rotf} alt='Movie cover' />
+                  <img className='movieCover' src={rotf} alt='Movie cover' />
+                  <img className='movieCover3' src={rotf} alt='Movie cover' />
+                  <img className='movieCover4' src={rotf} alt='Movie cover' />
+                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
+                </div>
+                <div className='imageWrapper'>
                   <img className='movieCover1' src={ouatil} alt='Movie cover' />
                   <img className='movieCover' src={ouatil} alt='Movie cover' />
                   <img className='movieCover3' src={ouatil} alt='Movie cover' />
@@ -68,20 +80,6 @@ const Home = () => {
                   <img className='movieCover3' src={rolling} alt='Movie cover' />
                   <img className='movieCover4' src={rolling} alt='Movie cover' />
                   <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={anuvahood} alt='Movie cover' />
-                  <img className='movieCover' src={anuvahood} alt='Movie cover' />
-                  <img className='movieCover3' src={anuvahood} alt='Movie cover' />
-                  <img className='movieCover4' src={anuvahood} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={rotf} alt='Movie cover' />
-                  <img className='movieCover' src={rotf} alt='Movie cover' />
-                  <img className='movieCover3' src={rotf} alt='Movie cover' />
-                  <img className='movieCover4' src={rotf} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
                 </div>
               </div>
             </div>
