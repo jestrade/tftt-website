@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 1285px;
   background-color: black;
-  padding-top: 256px;
+  height: auto;
 `

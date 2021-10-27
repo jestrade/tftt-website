@@ -2,14 +2,13 @@ import React, { useState } from 'react'
 
 // Styles
 import {
-  Section,
+  Contact,
   Image,
-  Container,
+  FormContainer,
   Form,
   Input,
   Text,
   InputLetUs,
-  CheckInput,
   ButtonsContainer,
   SendButton,
   AttachFileButton,
@@ -31,39 +30,36 @@ export const ContactForm = () => {
     setCheckBox(!checkBox)
   }
   return (
-
-    <Section>
-      <Container>
+    <Contact>
+      <FormContainer>
         <Text>
-          <p> What’s up?</p>
+          <h1> What’s up?</h1>
           <p>Wanna talk with us? Let us know the deal and we will message you shortly.</p>
         </Text>
         <Hr />
         <Form>
           <Input>
-            <label htmlFor=''> Contact Mail</label>
+            <label htmlFor=''>Contact Mail*</label>
             <input type='text' placeholder='Enter email address' />
           </Input>
           <Input>
             <label htmlFor=''>Subjet</label>
-            <input type='text' placeholder='Wath´s up?  ' />
+            <input type='text' placeholder="What's up?" />
           </Input>
           <InputLetUs>
             <label htmlFor=''> Let us know</label>
             <textarea type='text' placeholder='Message' />
           </InputLetUs>
-          <CheckInput>
-            <ButtonTerms onClick={handleCheck}>
-              <div style={{ width: 21, height: 21, borderRadius: '50%', padding: 3, backgroundColor: 'white' }}>
-                {checkBox
-                  ? <div style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: '#F13D3C' }} />
-                  : <div />}
-              </div>
-              <div style={{ marginLeft: 10, color: 'white', fontSize: 16 }}>
-                I agree to terms & conditions
-              </div>
-            </ButtonTerms>
-          </CheckInput>
+          <ButtonTerms onClick={handleCheck}>
+            <div>
+              {checkBox
+                ? <div style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: '#F13D3C' }} />
+                : <div />}
+            </div>
+            <p>
+              I agree to terms &amp; conditions
+            </p>
+          </ButtonTerms>
           <ButtonsContainer>
             <SendButton type='submit'>
               <img src={iconMessageCheck} alt='message check icon ' /> <span>Send</span>
@@ -73,11 +69,10 @@ export const ContactForm = () => {
             </AttachFileButton>
           </ButtonsContainer>
         </Form>
-      </Container>
+      </FormContainer>
       <Image>
         <img src={imgForm} alt='man with mask image' />
       </Image>
-    </Section>
-
+    </Contact>
   )
 }
