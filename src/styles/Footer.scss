@@ -34,3 +34,54 @@
   height: 530px;
   margin-bottom: 125px;
 }
+
+@media (min-width: 1240px) and (max-width: 1760px) {
+  .footer {
+    height: 900.92px;
+    width: 100%;
+  }
+
+  .lettersContainer {
+    display: flex;
+    width: 1198px;
+    height: 85px;
+    font-family: var(--titles);
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 93px;
+    margin-bottom: 70.6px;
+  }
+
+  .cardsContainer {
+    width: 1639px;
+    height: 312px;
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    width: 100%;
+    background-color: var(--main);
+    height: 1500px;
+    background-image: url("../assets/images/footerMobile.png");
+  }
+
+  .lettersContainer {
+    width: 1198px;
+    height: 85px;
+    font-family: var(--titles);
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 93px;
+    margin-bottom: 40.6px;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 600px;
+  }
+}
