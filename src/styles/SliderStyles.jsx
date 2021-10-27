@@ -99,6 +99,7 @@ export const Title = styled.div`
   
   font-family: 'cooper_hewittbold';
   font-size:90px;
+  text-align: center;
   color:#f10505;
   span{
     color:white
@@ -107,5 +108,6 @@ export const Title = styled.div`
     font-size: 40px;
     width: 200px;
     margin-left: 20px;
+    text-align: left;
   }
 `

@@ -1,25 +1,41 @@
 import styled from 'styled-components'
+import { cssResponsive } from '@hooks/useResponsive'
 
 export const Section = styled.section`
     display:flex;
     flex-flow: row nowrap;
-    width: 1249px;
+    width: 60%;
     margin: 0 auto;
+    ${cssResponsive('Desktop15')}{
+      width: 80%;
+    }
 `
 export const Image = styled.div`
-  width: 694px;
-  height: 872px;
-
+  width: 100%;
+  background-image: url(${props => props.bgImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  ${cssResponsive('Mobile')}{
+      display:none; 
+    }
+  
 `
 export const Container = styled.div`
-  width: 555px;
-  height: 872px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
   border: 1px white solid;
-  padding: 50px 0;
+  padding: 100px 60px;
+
+  ${cssResponsive('Mobile')}{
+      width: 100%;
+      padding: 70px 25px;
+    }
+
 `
 export const Form = styled.form`
-  width: 426px;
-  margin: auto;
+
+  
   font-family: "steinbeckregular";
 `
 
@@ -41,9 +57,57 @@ export const Input = styled.div`
     font-size: 14px;
     outline: none;
     font-family: "steinbeckregular";
+    border:1px solid white;
   }
 
 `
+
+export const InputPhone = styled.div`
+  display: grid;
+  margin-top: 20px;
+  div{
+    display: block;
+    select{
+    width: 70px;
+    height: 64px;
+    text-align: center;
+    font-family: "steinbeckregular";
+    font-size: 14px;
+    border-radius: 6px 0 0 6px;
+    background: transparent;
+    color: white;
+    outline: none;
+    width: 20%;
+    border:1px solid white;
+    option{
+      color: #1d1d1b;
+    }
+    }
+
+    input{
+        height: 64px;
+        border-radius: 0 6px 6px 0;
+        background-color: transparent;
+        color: white;
+        padding-left: 20px;
+        font-size: 14px;
+        outline: none;
+        font-family: "steinbeckregular";
+        width: 80%;
+        border:1px solid white;
+    }
+
+  }
+  
+  label{
+    color: #A9A9A9;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "steinbeckregular";
+  }
+  
+`
+
 export const InputLetUs = styled.div`
   display: grid;
   margin-top: 20px;
@@ -63,6 +127,7 @@ export const InputLetUs = styled.div`
     font-size: 14px;
     outline:none;
     font-family: "steinbeckregular";
+    border:1px solid white;
     &::placeholder{
       color:white;
     }
@@ -70,15 +135,13 @@ export const InputLetUs = styled.div`
 
 `
 export const Hr = styled.hr`
-  width: 427px;
+  width: 100%;
   color: #F5F5F5;
+  margin: 30px 0px;
  `
 export const Text = styled.div`
   color:white;
-  width: 411px;
-  height: 100px;
-  margin: auto;
-  
+
   p:nth-child(1){
     font-size: 30px;
     margin-bottom: 10px;

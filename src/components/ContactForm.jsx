@@ -14,6 +14,7 @@ import {
   SendButton,
   AttachFileButton,
   ButtonTerms,
+  InputPhone,
   Hr
 } from '@styles/ContactFormStyles'
 
@@ -48,6 +49,18 @@ export const ContactForm = () => {
             <label htmlFor=''>Subjet</label>
             <input type='text' placeholder='Wath´s up?  ' />
           </Input>
+          <InputPhone>
+            <label htmlFor=''>Subjet</label>
+            <div>
+              <select name='code' id=''>
+                <option value='+1' selected>+ 1</option>
+                <option value='+2'>+ 2</option>
+                <option value='+3'>+ 3</option>
+                <option value='+4'>+ 4</option>
+              </select>
+              <input type='text' placeholder='Wath´s up?  ' />
+            </div>
+          </InputPhone>
           <InputLetUs>
             <label htmlFor=''> Let us know</label>
             <textarea type='text' placeholder='Message' />
@@ -74,9 +87,7 @@ export const ContactForm = () => {
           </ButtonsContainer>
         </Form>
       </Container>
-      <Image>
-        <img src={imgForm} alt='man with mask image' />
-      </Image>
+      <Image bgImg={imgForm} />
     </Section>
 
   )
