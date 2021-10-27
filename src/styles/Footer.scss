@@ -12,7 +12,7 @@
 
 .lettersContainer {
   display: flex;
-  width: 1198px;
+  width: 100%;
   height: 85px;
   font-family: var(--titles);
   font-size: 50px;
@@ -43,7 +43,7 @@
 
   .lettersContainer {
     display: flex;
-    width: 1198px;
+    width: 100%;
     height: 85px;
     font-family: var(--titles);
     font-size: 30px;
@@ -54,7 +54,7 @@
   }
 
   .cardsContainer {
-    width: 1639px;
+    width: 100%;
     height: 312px;
     margin-bottom: 120px;
   }
@@ -69,7 +69,7 @@
   }
 
   .lettersContainer {
-    width: 1198px;
+    width: 100%;
     height: 85px;
     font-family: var(--titles);
     font-size: 14px;
