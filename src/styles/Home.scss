@@ -231,6 +231,9 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  @media only screen and (max-width:768px){
+    margin-top: 300px;
+  }
 }
 
 .ijbTitle {
@@ -403,6 +406,10 @@
   width: 100%;
   display: flex;
   align-items: center;
+  @media only screen and (max-width:768px){
+    margin-top: 200px;
+   flex-flow: column nowrap;
+  }
 }
 
 .pictureContainer1 {
@@ -416,6 +423,11 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
+  @media only screen and (max-width:768px){
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 .pictureContainer2 {
@@ -429,6 +441,11 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
+  @media only screen and (max-width:768px){
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 .pictureContainer3 {
@@ -442,6 +459,11 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
+  @media only screen and (max-width:768px){
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 .treepicsContainer h1 {
@@ -452,6 +474,13 @@
   font-family: var(--titles);
   color: white;
   font-style: italic;
+  @media only screen and (max-width:768px){
+    text-align: center;
+    top: 2714px;
+    left: 0px;
+
+  }
+ 
 }
 
 .treepicsContainer h2 {
@@ -462,6 +491,14 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
+  @media only screen and (max-width:768px){
+    display: block;
+    width: 100%;
+    margin-top:400px;
+    text-align: center;
+    
+    left: 0px;
+  }
 }
 
 .mt-60 {
