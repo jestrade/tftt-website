@@ -359,6 +359,7 @@ p.paragraph {
   @media screen and (max-width: 768px) {
     height: 1900px;
     align-items: none;
+    justify-content: start;
   }
 }
 .relImagesContainer {
@@ -373,15 +374,16 @@ p.paragraph {
   background-repeat: no-repeat;
   background-position-x: -10px;
 
-  @media screen and (max-width: 1900px) {
-
-  }
+ 
 
   @media screen and (max-width: 768px) {
+    display: flex;
+    grid-template-columns: none;
+    flex-flow: row nowrap;
     transform: rotate(90deg);
     background-size: contain;
     width: 1360px;
-    margin: 600px 0;
+    margin: 0;
     height: 327px;
     padding:  0;
     
@@ -441,7 +443,7 @@ p.paragraph {
     height: 327px;
     position: relative;
     top:-2px;
-    left:46px;
+    left:150px;
   }
 }
 
@@ -463,7 +465,7 @@ p.paragraph {
     height: 327px;
     position: relative;
     top:-2px;
-    left:46px;
+    left:257px;
   }
 }
 
@@ -485,7 +487,7 @@ p.paragraph {
     height: 327px;
     position: relative;
     top:-2px;
-    left:46px;
+    left:366px;
   }
 }
 
@@ -833,6 +835,10 @@ p.paragraph {
 }
 
 @media (max-width: 480px) {
+  .titleGrafContainer{
+    margin-top: 50px;
+    margin-bottom: 600px;
+  }
   .terryStoneContainer {
     height: 1200px;
     width: 100%;

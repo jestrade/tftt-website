@@ -102,7 +102,7 @@ const Home = () => {
 
       <div className='graffitiContainer'>
         <div className='graffitiContainer'>
-          <div>
+          <div className='titleGrafContainer'>
             <h1 className='gcTitle'>EXPERIENCE THE <span>TRAP</span></h1>
             <h3>FROM THE INSIDE OUT</h3>
           </div>
