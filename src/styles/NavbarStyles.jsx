@@ -13,6 +13,9 @@ export const Grid = styled.section`
     position:  ${props => props.positionGrid};
     height: ${props => props.heightGrid};
   }
+  ${cssResponsive('Mobile')}{
+    background-color: ${props => props.dropMenu ? 'black' : 'transparent'};
+  }
 `
 
 export const NavbarSection = styled.nav`
@@ -75,7 +78,7 @@ export const Menu = styled.ul`
       position: absolute;
       top: 150px;
       left: 0px;
-      background-color: #00000044;
+      background-color: black;
       margin: auto 0px;
       ${fadeIn({ time: '.5s', type: 'ease' })}
       li{

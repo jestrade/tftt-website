@@ -16,7 +16,7 @@
   background-color: transparent;
   width: 100%;
   padding: 9rem 1rem 6rem 1rem;
-  position: relative;
+  
   @media (min-width: 480px) {
     padding: 9rem 3rem 6rem 3rem;
   }
@@ -534,6 +534,7 @@ p.paragraph {
   font-size: 48px;
   line-height: 24px;
   color: var(--white);
+  text-align: center;
   @media screen and (max-width: 768px) {
     font-size: 25px;
     line-height: 35px;
@@ -844,7 +845,7 @@ p.paragraph {
     width: 100%;
     flex-direction: column;
     align-content: center;
-    margin-bottom: 805px;
+    margin-bottom: 905px;
   }
 
   .terryStone {
@@ -927,15 +928,15 @@ p.paragraph {
   }
 
   .movieCover1 {
-    visibility: hidden;
+    display:none;
   }
 
   .movieCover3 {
-    visibility: hidden;
+    display:none;
   }
 
   .movieCover4 {
-    visibility: hidden;
+    display:none;
   }
 
   #a1 {

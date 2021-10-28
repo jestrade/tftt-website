@@ -33,7 +33,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
   }
 
   return (
-    <Grid heightGrid={dropMenu && '500px'} positionGrid={dropMenu && 'static'}>
+    <Grid heightGrid={dropMenu && '500px'} dropMenu={dropMenu}>
       <NavbarSection>
         <Logo to='/'>
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
