@@ -1,0 +1,58 @@
+version: "2.1"
+orbs:
+  aws-s3: circleci/aws-s3@3.0
+jobs:
+  build_prod:
+    docker:
+      - image: "circleci/node:12.9.1-browsers"
+    steps:
+      - checkout
+      - run: npm install && npm run build
+      - aws-s3/sync:
+          from: build
+          to: "s3://tftt-prod/"
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+  build_staging:
+    docker:
+      - image: "circleci/node:12.9.1-browsers"
+    steps:
+      - checkout
+      - run: npm install && npm run build
+      - aws-s3/sync:
+          from: build
+          to: "s3://tftt-staging/"
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+  test:
+    docker:
+      - image: "circleci/node:12.9.1-browsers"
+    steps:
+      - checkout
+      - run: npm install && npm run test
+workflows:
+  all:
+    jobs:
+      - test
+  build_staging:
+    jobs:
+      - test
+      - build_staging:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - staging
+  build_prod:
+    jobs:
+      - test
+      - build_prod:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - production
