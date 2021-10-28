@@ -9,6 +9,9 @@ import { Section, Container } from '@styles/PartnershipsStyles'
 
 import BgImg from '@images/bgStoreImg.png'
 
+//  Components
+import { ComingSoon } from '@components/ComingSoon'
+
 export const Store = () => {
   // This code is for identify if the page is Gallery
   const location = useLocation()
@@ -17,7 +20,7 @@ export const Store = () => {
   return (
     <Section bgImg={BgImg}>
       <Container>
-        <h1 style={{ color: 'white' }}>Coming Soon Component Here!</h1>
+        <ComingSoon />
       </Container>
     </Section>
 

@@ -16,7 +16,7 @@
   background-color: transparent;
   width: 100%;
   padding: 9rem 1rem 6rem 1rem;
-  
+
   @media (min-width: 480px) {
     padding: 9rem 3rem 6rem 3rem;
   }
@@ -340,6 +340,7 @@ p.paragraph {
   background-image: url("../assets//images/blockshome.png");
   background-color: var(--main);
   padding-top: 136px;
+  height: auto;
 
   @media screen and (max-width: 768px) {
     padding-top: 50px;
@@ -374,8 +375,6 @@ p.paragraph {
   background-repeat: no-repeat;
   background-position-x: -10px;
 
- 
-
   @media screen and (max-width: 768px) {
     display: flex;
     grid-template-columns: none;
@@ -385,8 +384,7 @@ p.paragraph {
     width: 1360px;
     margin: 0;
     height: 327px;
-    padding:  0;
-    
+    padding: 0;
   }
 }
 
@@ -419,10 +417,9 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:46px;
+    top: -2px;
+    left: 46px;
   }
-  
 }
 
 .reel2 {
@@ -442,8 +439,8 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:150px;
+    top: -2px;
+    left: 150px;
   }
 }
 
@@ -464,8 +461,8 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:257px;
+    top: -2px;
+    left: 257px;
   }
 }
 
@@ -486,8 +483,8 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:366px;
+    top: -2px;
+    left: 366px;
   }
 }
 
@@ -497,7 +494,6 @@ p.paragraph {
   font-size: 36px;
   line-height: 50px;
   z-index: 1;
-  
 }
 .redBlock {
   height: 100%;
@@ -505,7 +501,7 @@ p.paragraph {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  &:hover{
+  &:hover {
     opacity: 1;
   }
   h1 {
@@ -836,7 +832,7 @@ p.paragraph {
 }
 
 @media (max-width: 480px) {
-  .titleGrafContainer{
+  .titleGrafContainer {
     margin-top: 50px;
     margin-bottom: 600px;
   }
@@ -845,7 +841,7 @@ p.paragraph {
     width: 100%;
     flex-direction: column;
     align-content: center;
-    margin-bottom: 905px;
+    margin-bottom: 805px;
   }
 
   .terryStone {
@@ -928,15 +924,15 @@ p.paragraph {
   }
 
   .movieCover1 {
-    display:none;
+    display: none;
   }
 
   .movieCover3 {
-    display:none;
+    display: none;
   }
 
   .movieCover4 {
-    display:none;
+    display: none;
   }
 
   #a1 {
