@@ -18,12 +18,10 @@
   padding: 9rem 1rem 6rem 1rem;
   position: relative;
   @media (min-width: 480px) {
-    padding: 0rem 3rem 6rem 3rem;
-    top: 146px;
+    padding: 9rem 3rem 6rem 3rem;
   }
-  @media screen and (max-width: 768px) {
-    padding-top: 0rem;
-    top: 146px;
+  @media screen and (min-width: 768px) {
+    padding-top: 14rem;
   }
   @media (min-width: 1024px) {
     display: flex;
@@ -35,11 +33,12 @@
 }
 
 .fade {
-  position: absolute;
-  bottom: 100px;
-  left: 0;
-  width: 100%;
-  height: auto;
+  // position: absolute;
+  // bottom: 100px;
+  // left: 0;
+  // width: 100%;
+  // height: auto;
+  display: none;
 }
 
 @import "animations";
@@ -106,7 +105,7 @@
   }
 }
 
-.paragraph {
+p.paragraph {
   margin-top: 2rem;
   margin-bottom: 4rem;
   @media (min-width: 768px) {
@@ -116,8 +115,7 @@
 
 @media (min-width: 1024px) {
   .tfttSubcontainer > h2,
-  .tfttSubcontainer > p,
-  .tfttSubcontainer > .paragraph {
+  .tfttSubcontainer > p {
     width: 50%;
     max-width: 706px;
   }
@@ -724,15 +722,14 @@
   }
 
   .treepicsContainer h1 {
-    top: 2720px;
-    left: 110px;
     font-size: 28px;
+    margin-left: 120px;
   }
 
   .treepicsContainer h2 {
-    top: 3090px;
-    left: 780px;
+    margin-top: 45px;
     font-size: 28px;
+    margin-right: 120px;
   }
 
   .pictureContainer1 {
@@ -746,7 +743,7 @@
   }
 
   .treepicsContainer {
-    height: 410px;
+    height: 520px;
   }
 
   .pictureContainer {
@@ -841,7 +838,7 @@
     width: 100%;
     flex-direction: column;
     align-content: center;
-    margin-bottom: 0px;
+    margin-bottom: 805px;
   }
 
   .terryStone {
@@ -878,17 +875,20 @@
     font-size: 35px;
     line-height: 42px;
     width: 20px;
-    position: absolute;
-    top: 2220px;
-    left: 50px;
+    position: relative;
+    top: 260px;
+    left: -180px;
+    margin-bottom: 0px;
   }
 
   .terryStoneTextContainer {
-    height: 948px;
+    height: 620px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .moviesContainer {
@@ -943,6 +943,6 @@
   }
 
   .treepicsContainer {
-    visibility: hidden;
+    display: none;
   }
 }
