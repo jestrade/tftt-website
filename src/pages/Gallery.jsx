@@ -29,14 +29,14 @@ export const Gallery = () => {
 
     <Section>
       <Title>
-        <p>GALLERY</p>
-        <p>SNEAK PEEK</p>
+        <h1>GALLERY</h1>
+        <h2>SNEAK PEEK</h2>
       </Title>
       <Container>
-
         <Grid>
           <Item style={{ gridArea: 'a' }}>
             <img src={imageA} alt='' />
+            <span>SCENE 5:30</span>
           </Item>
           <Item style={{ gridArea: 'b' }}>
             <img src={imageB} alt='' />
@@ -46,22 +46,13 @@ export const Gallery = () => {
           </Item>
           <Item style={{ gridArea: 'd' }}>
             <img src={imageD} alt='' />
+            <span>SCENE 5:30</span>
           </Item>
           <Item style={{ gridArea: 'e' }}>
             <img src={imageE} alt='' />
+            <span>SCENE 5:30</span>
           </Item>
         </Grid>
-        <GridScenes>
-          <div>
-            SCENE 5:30
-          </div>
-          <div>
-            SCENE 5:30
-          </div>
-          <div>
-            SCENE 5:30
-          </div>
-        </GridScenes>
       </Container>
     </Section>
   )
