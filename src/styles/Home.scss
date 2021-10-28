@@ -20,13 +20,10 @@
   @media (min-width: 480px) {
     padding: 0rem 3rem 6rem 3rem;
     top: 146px;
-    
   }
   @media screen and (max-width: 768px) {
     padding-top: 0rem;
     top: 146px;
-    
-    
   }
   @media (min-width: 1024px) {
     display: flex;
@@ -63,7 +60,6 @@
   @media (min-width: 1024px) {
     font-size: 88px;
     line-height: 92px;
-    text-align: right;
   }
   @media (min-width: 1280px) {
     font-size: 110px;
@@ -106,6 +102,7 @@
   @media (min-width: 768px) {
     font-size: 24px;
     line-height: 33.6px;
+    margin-bottom: 0px;
   }
 }
 
@@ -303,7 +300,6 @@
     height: 423px;
     align-items: flex-start;
     background-color: black;
-    
   }
 }
 
@@ -347,7 +343,7 @@
   background-color: var(--main);
   padding-top: 136px;
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     padding-top: 50px;
   }
 }
@@ -362,22 +358,22 @@
   background-image: url("../assets/images/graffiti.png");
   background-color: black;
 
-  @media screen and (max-width:768px){
-    height:1900px ;
+  @media screen and (max-width: 768px) {
+    height: 1900px;
     align-items: none;
   }
 }
-.relImagesContainer{
-  display:grid;
+.relImagesContainer {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  
+
   height: 470px;
   padding: 60px 0;
   background-image: url("../assets/images/moviereel.png");
   background-size: auto;
   background-repeat: no-repeat;
-  
-  @media screen and (max-width:768px){
+
+  @media screen and (max-width: 768px) {
     transform: rotate(90deg);
     width: 1300px;
     margin-top: 500px;
@@ -398,76 +394,68 @@
 } */
 
 .reel1 {
-  
   height: 338px;
   cursor: pointer;
   background-image: url("../assets/images/reel1.png");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 1s;
-  &:hover{
-    background-image:none;
+  &:hover {
+    background-image: none;
     background-color: red;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     transform: rotate(-90deg);
   }
 }
 
 .reel2 {
-  
   cursor: pointer;
   height: 338px;
   background-image: url("../assets/images/reel2.png");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 1s;
-  &:hover{
-    background-image:none;
+  &:hover {
+    background-image: none;
     background-color: red;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     transform: rotate(-90deg);
-   
   }
 }
 
-
-
 .reel3 {
-  
   height: 338px;
   cursor: pointer;
   background-image: url("../assets/images/reel3.png");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 1s;
-  &:hover{
-    background-image:none;
+  &:hover {
+    background-image: none;
     background-color: red;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     transform: rotate(-90deg);
   }
 }
 
 .reel4 {
-  
   height: 338px;
   cursor: pointer;
   background-image: url("../assets/images/reel3.png");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 1s;
-  &:hover{
-    background-image:none;
+  &:hover {
+    background-image: none;
     background-color: red;
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     transform: rotate(-90deg);
   }
 }
-
 
 .msjRed {
   color: var(--white);
@@ -476,15 +464,15 @@
   line-height: 50px;
   z-index: 1;
 }
- .redBlock {
+.redBlock {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  h1{
+  h1 {
     text-align: center;
   }
-} 
+}
 
 .gcTitle {
   font-family: var(--titles);
@@ -494,12 +482,11 @@
   span {
     color: var(--red);
   }
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     font-size: 50px;
     line-height: 60px;
     padding: 0 20px;
     text-align: center;
-   
   }
 }
 
@@ -508,12 +495,11 @@
   font-size: 48px;
   line-height: 24px;
   color: var(--white);
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     font-size: 25px;
     line-height: 35px;
     padding: 0 20px;
     text-align: center;
-    
   }
 }
 
@@ -526,9 +512,9 @@
   width: 100%;
   display: flex;
   align-items: center;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     margin-top: 200px;
-   flex-flow: column nowrap;
+    flex-flow: column nowrap;
   }
 }
 
@@ -543,7 +529,7 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -561,7 +547,7 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -579,7 +565,7 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -593,13 +579,11 @@
   font-family: var(--titles);
   color: white;
   font-style: italic;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     text-align: center;
     top: 2714px;
     left: 0px;
-
   }
- 
 }
 
 .treepicsContainer h2 {
@@ -611,12 +595,12 @@
   font-family: var(--titles);
   color: white;
   text-decoration: underline;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     display: block;
     width: 100%;
-    margin-top:400px;
+    margin-top: 400px;
     text-align: center;
-    
+
     left: 0px;
   }
 }
@@ -856,7 +840,7 @@
     line-height: 42px;
     width: 20px;
     position: absolute;
-    top: 2420px;
+    top: 2220px;
     left: 50px;
   }
 
