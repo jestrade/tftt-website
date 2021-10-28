@@ -366,18 +366,27 @@
 .relImagesContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  margin-top: 100px;
+  width: 100%;
   height: 470px;
   padding: 60px 0;
   background-image: url("../assets/images/moviereel.png");
   background-size: auto;
   background-repeat: no-repeat;
+  background-position-x: -10px;
+
+  @media screen and (max-width: 1900px) {
+
+  }
 
   @media screen and (max-width: 768px) {
     transform: rotate(90deg);
-    width: 1300px;
-    margin-top: 500px;
-    margin-bottom: 500px;
+    background-size: contain;
+    width: 1360px;
+    margin: 600px 0;
+    height: 327px;
+    padding:  0;
+    
   }
 }
 
@@ -405,8 +414,15 @@
     background-color: red;
   }
   @media screen and (max-width: 768px) {
+    background-image: url("../assets/images/reel1Mob.png");
     transform: rotate(-90deg);
+    width: 233px;
+    height: 327px;
+    position: relative;
+    top:-2px;
+    left:46px;
   }
+  
 }
 
 .reel2 {
@@ -421,7 +437,13 @@
     background-color: red;
   }
   @media screen and (max-width: 768px) {
+    background-image: url("../assets/images/reel2Mob.png");
     transform: rotate(-90deg);
+    width: 233px;
+    height: 327px;
+    position: relative;
+    top:-2px;
+    left:46px;
   }
 }
 
@@ -437,14 +459,20 @@
     background-color: red;
   }
   @media screen and (max-width: 768px) {
+    background-image: url("../assets/images/reel3Mob.png");
     transform: rotate(-90deg);
+    width: 233px;
+    height: 327px;
+    position: relative;
+    top:-2px;
+    left:46px;
   }
 }
 
 .reel4 {
   height: 338px;
   cursor: pointer;
-  background-image: url("../assets/images/reel3.png");
+  background-image: url("../assets/images/reel4.png");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 1s;
@@ -453,7 +481,13 @@
     background-color: red;
   }
   @media screen and (max-width: 768px) {
+    background-image: url("../assets/images/reel4Mob.png");
     transform: rotate(-90deg);
+    width: 233px;
+    height: 327px;
+    position: relative;
+    top:-2px;
+    left:46px;
   }
 }
 
@@ -463,12 +497,17 @@
   font-size: 36px;
   line-height: 50px;
   z-index: 1;
+  
 }
 .redBlock {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  &:hover{
+    opacity: 1;
+  }
   h1 {
     text-align: center;
   }
