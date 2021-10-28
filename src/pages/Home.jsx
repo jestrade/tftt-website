@@ -11,15 +11,10 @@ import { Slider } from '@components/Slider'
 import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
-import anuvahood from '@images/anuvahood.png'
+// import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
-import reel from '@images/moviereel.png'
 import rotf from '@images/rotf.png'
-import reel1 from '@images/reel1.png'
-import reel2 from '@images/reel2.png'
-import reel3 from '@images/reel3.png'
-import reel4 from '@images/reel4.png'
 
 // Hooks
 import { useNearScreen } from '../hooks/userNearScreen'
@@ -56,6 +51,13 @@ const Home = () => {
               <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
               <div className='moviesContainer'>
                 <div className='imageWrapper'>
+                  <img className='movieCover1' src={rotf} alt='Movie cover' />
+                  <img className='movieCover' src={rotf} alt='Movie cover' />
+                  <img className='movieCover3' src={rotf} alt='Movie cover' />
+                  <img className='movieCover4' src={rotf} alt='Movie cover' />
+                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
+                </div>
+                <div className='imageWrapper'>
                   <img className='movieCover1' src={ouatil} alt='Movie cover' />
                   <img className='movieCover' src={ouatil} alt='Movie cover' />
                   <img className='movieCover3' src={ouatil} alt='Movie cover' />
@@ -68,20 +70,6 @@ const Home = () => {
                   <img className='movieCover3' src={rolling} alt='Movie cover' />
                   <img className='movieCover4' src={rolling} alt='Movie cover' />
                   <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={anuvahood} alt='Movie cover' />
-                  <img className='movieCover' src={anuvahood} alt='Movie cover' />
-                  <img className='movieCover3' src={anuvahood} alt='Movie cover' />
-                  <img className='movieCover4' src={anuvahood} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={rotf} alt='Movie cover' />
-                  <img className='movieCover' src={rotf} alt='Movie cover' />
-                  <img className='movieCover3' src={rotf} alt='Movie cover' />
-                  <img className='movieCover4' src={rotf} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
                 </div>
               </div>
             </div>
@@ -114,18 +102,39 @@ const Home = () => {
 
       <div className='graffitiContainer'>
         <div className='graffitiContainer'>
-          <h1 className='gcTitle'>EXPERIENCE THE <span>TRAP</span></h1>
-          <h3>FROM THE INSIDE OUT</h3>
-          <img className='reel' src={reel} alt='Movie reel' />
-          <div className='reel1'>
-            <img src={reel1} alt='Movie reel' />
-            <div className='redBlock'>
-              <h1 className='msjRed'>PRIVATE MOVIE
-                SHOWING
-              </h1>
-            </div>
+          <div>
+            <h1 className='gcTitle'>EXPERIENCE THE <span>TRAP</span></h1>
+            <h3>FROM THE INSIDE OUT</h3>
           </div>
-          <div className='reel2'>
+          {/*  <img className='reel' src={reel} alt='Movie reel' /> */}
+
+          <div className='relImagesContainer'>
+            <div className='reel1'>
+              <div className='redBlock'>
+                <h1 className='msjRed'>PRIVATE MOVIE
+                  SHOWING
+                </h1>
+              </div>
+            </div>
+            <div className='reel2'>
+              <div className='redBlock'>
+                <h1 className='msjRed'>WALK ON THE RED CARPET</h1>
+              </div>
+            </div>
+            <div className='reel3'>
+              <div className='redBlock'>
+                <h1 className='msjRed'>BE IN THE MOVIE</h1>
+              </div>
+            </div>
+            <div className='reel4'>
+              <div className='redBlock'>
+                <h1 className='msjRed'>MEET THE STARS</h1>
+              </div>
+            </div>
+
+          </div>
+
+          {/* <div className='reel2'>
             <img src={reel2} alt='Movie reel' />
             <div className='redBlock'>
               <h1 className='msjRed'>WALK ON THE RED CARPET</h1>
@@ -142,7 +151,7 @@ const Home = () => {
             <div className='redBlock'>
               <h1 className='msjRed'>MEET THE STARS</h1>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
