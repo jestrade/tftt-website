@@ -18,12 +18,10 @@
   padding: 9rem 1rem 6rem 1rem;
   position: relative;
   @media (min-width: 480px) {
-    padding: 0rem 3rem 6rem 3rem;
-    top: 146px;
+    padding: 9rem 3rem 6rem 3rem;
   }
-  @media screen and (max-width: 768px) {
-    padding-top: 0rem;
-    top: 146px;
+  @media screen and (min-width: 768px) {
+    padding-top: 14rem;
   }
   @media (min-width: 1024px) {
     display: flex;
@@ -35,11 +33,12 @@
 }
 
 .fade {
-  position: absolute;
-  bottom: 100px;
-  left: 0;
-  width: 100%;
-  height: auto;
+  // position: absolute;
+  // bottom: 100px;
+  // left: 0;
+  // width: 100%;
+  // height: auto;
+  display: none;
 }
 
 @import "animations";
@@ -106,7 +105,7 @@
   }
 }
 
-.paragraph {
+p.paragraph {
   margin-top: 2rem;
   margin-bottom: 4rem;
   @media (min-width: 768px) {
@@ -116,8 +115,7 @@
 
 @media (min-width: 1024px) {
   .tfttSubcontainer > h2,
-  .tfttSubcontainer > p,
-  .tfttSubcontainer > .paragraph {
+  .tfttSubcontainer > p {
     width: 50%;
     max-width: 706px;
   }
