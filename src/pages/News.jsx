@@ -6,8 +6,10 @@ import Context from '../context/Context'
 import { Section, Container } from '@styles/PartnershipsStyles'
 
 // Images
-
 import BgImg from '@images/bgNewsImg.png'
+
+//  Components
+import { ComingSoon } from '@components/ComingSoon'
 
 export const News = () => {
   // This code is for identify if the page is Gallery
@@ -17,7 +19,7 @@ export const News = () => {
   return (
     <Section bgImg={BgImg}>
       <Container>
-        <h1 style={{ color: 'white' }}>Coming Soon Component Here!</h1>
+        <ComingSoon />
       </Container>
     </Section>
 

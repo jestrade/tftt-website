@@ -7,7 +7,7 @@ import { cssResponsive } from '@hooks/useResponsive'
 export const Grid = styled.div`
   display: grid;
   width: 100%;
-  height: 1300px;
+  height: auto;
   ${cssResponsive('Mobile')}{
     display:flex;
     flex-flow: column nowrap;

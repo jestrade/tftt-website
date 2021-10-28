@@ -25,6 +25,9 @@ import Image3Mob from '@images/slider/3IMGMob.png'
 import ArrowBack from '@icons/arrowBack.png'
 import ArrowForward from '@icons/arrowForward.png'
 
+// Components
+import { ComingSoon } from '@components/ComingSoon'
+
 export const Slider = () => {
   const slides = [
     {
@@ -116,6 +119,7 @@ export const Slider = () => {
         </Button>
 
       </Container>
+      <ComingSoon />
     </Grid>
   )
 }
