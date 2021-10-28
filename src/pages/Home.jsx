@@ -84,6 +84,14 @@ const Home = () => {
         </div>
         <h2>YOUR IN THE RIGHT PLACE</h2>
       </section>
+
+      <section className='sliderContainer' ref={element3}>
+        {show3 &&
+          <div className={show3 ? 'sliderContainer animation' : 'sliderContainer'}>
+            <Slider />
+          </div>}
+      </section>
+
       <section className='discoverContainer' ref={element2}>
         {show2 &&
           <Link to='/signup' className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
@@ -91,13 +99,6 @@ const Home = () => {
             <p className='ijbSubtitle'>FIND YOUR PLACE</p>
             <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
           </Link>}
-      </section>
-
-      <section className='sliderContainer' ref={element3}>
-        {show3 &&
-          <div className={show3 ? 'sliderContainer animation' : 'sliderContainer'}>
-            <Slider />
-          </div>}
       </section>
 
       <div className='graffitiContainer'>

@@ -7,7 +7,6 @@ import { cssResponsive } from '@hooks/useResponsive'
 
 export const Section = styled.section`
   padding-top: 9.5rem;
-  // padding-bottom: 200px;
   background-color: white;
   background-image: url(${imageBg2});
   background-size: cover;
@@ -25,7 +24,6 @@ export const Section = styled.section`
 export const Title = styled.div`
   text-align: center;
   h1 {
-    // font-size: 138px;
     font-size: 50px;
     line-height: 85%;
     font-family: "cooper_hewittheavy";
@@ -39,7 +37,6 @@ export const Title = styled.div`
     }
   }
   h2 {
-    // font-size: 48px;
     font-size: 25px;
     line-height: 95%;
     font-family: "cooper_hewittbook";
