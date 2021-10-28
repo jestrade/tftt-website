@@ -13,6 +13,7 @@ import { Contact } from '@pages/Contact'
 import { Gallery } from '../pages/Gallery'
 import useNavbarState from '../hooks/useNavbarState'
 import Context from '../context/Context'
+import { About } from '../pages/About'
 
 const App = () => {
   const navbarState = useNavbarState()
@@ -30,6 +31,7 @@ const App = () => {
             <Route path='/news' component={News} />
             <Route path='/contact' component={Contact} />
             <Route path='/gallery' component={Gallery} />
+            <Route path='/about' component={About} />
           </Switch>
         </Layout>
       </BrowserRouter>

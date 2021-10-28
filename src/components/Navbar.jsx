@@ -39,7 +39,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
         <Menu fontColor={fontColor} dropMenu={dropMenu ? 'block' : 'none'}>
-          <li> <Link to='#'> ABOUT TTF<span>T</span>  </Link> </li>
+          <li> <Link to='/about'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
           <li> <Link to='/store'> <img src={logoStore} alt='Store' /> <p style={{ marginLeft: 43 }}>STORE</p>  </Link> </li>
