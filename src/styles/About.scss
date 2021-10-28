@@ -2,14 +2,22 @@
 
 $customPadding: 0 195px;
 
+section.bannerAbout{
+  background-image:url('../assets/images/bannerAbout.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+
 .bannerContainer{
   height: 1121px;
   width: 100%;
   padding: $customPadding;
   display: flex;
   align-items: center;
-
-  background-image:url('../assets/images/bannerAbout.png');
+  background: linear-gradient(to top, black, 30%, rgba(0, 0, 0, 0));
   h1{
     color: white;
     font-family: var(--titles);
@@ -19,6 +27,7 @@ $customPadding: 0 195px;
     }
   }
 }
+
 
 .gridProducer{
   width: 100%;
@@ -61,6 +70,8 @@ $customPadding: 0 195px;
   height: auto;
   color: white;
   padding: $customPadding;
+  
+  background: linear-gradient(to bottom, black, 30%, rgba(0, 0, 0, 0));
   .title{
     font-family: var(--titles);
     font-size: 48px;
@@ -126,5 +137,5 @@ $customPadding: 0 195px;
 }
 .bgBricks{
   background-image: url("../assets/images/BRICKS.png");
-  padding: 100px 0;
+  padding-bottom: 100px;
 }

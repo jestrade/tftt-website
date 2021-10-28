@@ -15,7 +15,7 @@ export const About = () => {
 
   return (
     <>
-      <section>
+      <section className='bannerAbout'>
         <div className='bannerContainer'>
           <h1>
             <p>WELCOMES TO TALES </p>
