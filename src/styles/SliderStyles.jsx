@@ -28,7 +28,7 @@ export const Slide = styled.div`
 
 export const Container = styled.div`
   display: Grid;
-  width: 1328px;
+  width: 100%;
   grid-template-columns: 1fr 10fr 1fr;
   margin: auto;
   ${cssResponsive('Mobile')}{
