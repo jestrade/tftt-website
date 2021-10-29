@@ -210,8 +210,10 @@ section.bannerAbout{
     display: flex;
     flex-flow: column nowrap;
     padding: 0 0;
+
     .textBox{
       padding: $customPaddMobile;
+      margin-right: 0px;
       .title{
         font-size: 30px;
       }
