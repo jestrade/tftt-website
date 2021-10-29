@@ -38,42 +38,24 @@ jobs:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
-  test:
-    docker:
-      - image: "circleci/node:12.9.1-browsers"
-    steps:
-      - checkout
-      - run: npm install && npm run test
 workflows:
-  all:
-    jobs:
-      - test
   build-staging:
     jobs:
-      - test
       - build_staging:
-          requires:
-            - test
           filters:
             branches:
               only:
                 - staging
   build-dev:
     jobs:
-      - test
       - build_dev:
-          requires:
-            - test
           filters:
             branches:
               only:
                 - development
   build-prod:
     jobs:
-      - test
       - build_prod:
-          requires:
-            - test
           filters:
             branches:
               only:
