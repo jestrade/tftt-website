@@ -10,7 +10,7 @@ jobs:
       - run: npm install && npm run build
       - aws-s3/sync:
           from: build
-          to: "s3://tftt-prod/"
+          to: "s3://prod-tftt/"
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
@@ -22,7 +22,19 @@ jobs:
       - run: npm install && npm run build
       - aws-s3/sync:
           from: build
-          to: "s3://tftt-staging/"
+          to: "s3://stg-tftt/"
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+  build_dev:
+    docker:
+      - image: "circleci/node:12.9.1-browsers"
+    steps:
+      - checkout
+      - run: npm install && npm run build
+      - aws-s3/sync:
+          from: build
+          to: "s3://dev-tftt/"
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
@@ -36,7 +48,7 @@ workflows:
   all:
     jobs:
       - test
-  build_staging:
+  build-staging:
     jobs:
       - test
       - build_staging:
@@ -46,7 +58,17 @@ workflows:
             branches:
               only:
                 - staging
-  build_prod:
+  build-dev:
+    jobs:
+      - test
+      - build_dev:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - development
+  build-prod:
     jobs:
       - test
       - build_prod:
