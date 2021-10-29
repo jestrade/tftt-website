@@ -1,6 +1,7 @@
 @import "vars";
 
 $customPadding: 0 195px;
+$customPaddMobile: 0 58px;
 
 section.bannerAbout{
   background-image:url('../assets/images/bannerAbout.png');
@@ -8,8 +9,6 @@ section.bannerAbout{
   background-size: cover;
   
 }
-
-
 
 .bannerContainer{
   height: 1121px;
@@ -28,13 +27,13 @@ section.bannerAbout{
   }
 }
 
-
 .gridProducer{
   width: 100%;
-  height: 700px;
+  height: auto;
   padding: $customPadding;
   color: white;
   margin:100px 0;
+  margin-bottom: 200px;
   .title{
     font-family: var(--titles);
     font-size: 48px;
@@ -138,4 +137,107 @@ section.bannerAbout{
 .bgBricks{
   background-image: url("../assets/images/BRICKS.png");
   padding-bottom: 100px;
+}
+
+@media screen and (max-width:768px){
+
+  section.bannerAbout{
+    background-position-x: -517px;
+  }
+  .bannerContainer{
+    padding: $customPaddMobile;
+    
+    h1{
+      font-size: 50px;
+    }
+  }
+
+  .gridProducer{
+    padding: $customPaddMobile;
+    flex-flow: column nowrap;
+    .title{
+      font-size: 35px;
+    }
+    .grid{
+      display: flex;
+      flex-flow: column nowrap;
+      font-size: 18px;
+      div:nth-child(1){
+        padding-right: 0px;
+      }
+      div:nth-child(2){
+        padding-left: 0px;
+      }
+    }
+
+  }
+
+  .gridSynopsis{
+    padding: 0 0;
+    background: linear-gradient(to bottom, black, 5%, rgba(0, 0, 0, 0));
+    .title{
+      padding: $customPaddMobile;
+      font-size: 35px;
+     
+    }
+    .grid{
+      display: flex;
+      flex-flow: column nowrap;
+      div:nth-child(1){
+        margin-bottom: 60px;
+        img{
+          width: 100%;
+        }
+      }
+      div:nth-child(2){
+        margin: 0px 0px;
+        padding: $customPaddMobile;
+        margin-bottom: 60px;
+        font-size: 18px;
+      }
+      div:nth-child(3){
+        font-size: 18px;
+        font-weight: bolder;
+        padding: $customPaddMobile;
+      }
+
+    }
+  }
+
+  
+
+  .gridBecome{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 0;
+    .textBox{
+      padding: $customPaddMobile;
+      .title{
+        font-size: 30px;
+      }
+      p{
+        font-family:var( --subtitles);
+  
+  
+        &:nth-child(2), &:nth-child(3) {
+            font-size: 18px;
+          }
+        &:nth-child(4){
+          font-size: 18px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+    div:nth-child(2){
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .bgBricks{
+    background-size: auto;
+    padding-bottom: 100px;
+  }
+
 }
