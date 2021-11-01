@@ -337,8 +337,9 @@ p.paragraph {
 }
 
 .sliderContainer {
-  background-image: url("../assets//images/blockshome.png");
-  background-color: var(--main);
+  
+ /*  background-color: var(--main); */
+ background-color: black;
   padding-top: 136px;
   height: auto;
 

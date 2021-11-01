@@ -1,7 +1,8 @@
 
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { fadeIn } from '@styles/animations'
+/* import { fadeIn } from '@styles/animations' */
+import { slideAnimate } from '@styles/animations'
 import { cssResponsive } from '@hooks/useResponsive'
 
 export const Grid = styled.div`
@@ -18,7 +19,15 @@ export const Slide = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  ${fadeIn({ time: '1s', type: 'ease' })}
+  position: relative;
+  margin: 0 auto;
+  max-width: 1340px;
+  ${props => props.animation
+  ? slideAnimate({ time: '1s', direction: 'right' })
+  : slideAnimate({ time: '1s', direction: 'left' })
+  }
+  
+
   ${cssResponsive('Mobile')}{
     
     flex-flow: column nowrap;

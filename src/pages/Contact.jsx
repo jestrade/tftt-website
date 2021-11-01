@@ -14,6 +14,7 @@ export const Contact = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+
   return (
     <Section>
       <ContactForm />

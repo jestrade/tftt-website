@@ -22,6 +22,7 @@ import tfttBlackLogo from '@logos/tfttBlackLogo.png'
 import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
 import logoStore from '@logos/logoStore.png'
 import logoMenu from '@logos/menuNav.png'
+import logoMenuBlack from '@logos/menuNavBlack.png'
 
 export const Navbar = ({ fontColor = 'white' }) => {
   const { navState } = useContext(Context)
@@ -33,12 +34,12 @@ export const Navbar = ({ fontColor = 'white' }) => {
   }
 
   return (
-    <Grid heightGrid={dropMenu && '500px'} dropMenu={dropMenu}>
+    <Grid heightGrid={dropMenu && '500px'} dropMenu={dropMenu} navState={navState}>
       <NavbarSection>
         <Logo to='/'>
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
-        <Menu fontColor={fontColor} dropMenu={dropMenu ? 'block' : 'none'}>
+        <Menu fontColor={fontColor} dropMenu={dropMenu ? 'block' : 'none'} navState={navState}>
           <li> <Link to='/about'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
@@ -61,7 +62,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
             </RegisterButton>
           </ButtonContainer>
           <MenuLogo onClick={onClick}>
-            <img src={logoMenu} alt='' />
+            <img src={navState ? logoMenuBlack : logoMenu} alt='' />
           </MenuLogo>
         </ButtonBox>
       </NavbarSection>
