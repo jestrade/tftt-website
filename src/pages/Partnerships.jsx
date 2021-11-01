@@ -17,10 +17,11 @@ export const Partnerships = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+  const name = 'PARTNERSHIPS'
   return (
     <Section bgImg={BgImg}>
       <Container>
-        <ComingSoon />
+        <ComingSoon name={name} />
       </Container>
     </Section>
 

@@ -16,10 +16,11 @@ export const News = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+  const name = 'NEWS'
   return (
     <Section bgImg={BgImg}>
       <Container>
-        <ComingSoon />
+        <ComingSoon name={name} />
       </Container>
     </Section>
 

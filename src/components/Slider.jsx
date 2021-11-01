@@ -56,6 +56,8 @@ export const Slider = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
+  const name = 'LEARN MORE'
+
   return (
     <Grid>
       <Title>
@@ -119,7 +121,7 @@ export const Slider = () => {
         </Button>
 
       </Container>
-      <ComingSoon />
+      <ComingSoon name={name} />
     </Grid>
   )
 }

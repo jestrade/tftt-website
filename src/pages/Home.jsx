@@ -11,6 +11,7 @@ import { Slider } from '@components/Slider'
 import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
+import auhood from '@images/anuvahood.png'
 // import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
@@ -70,6 +71,13 @@ const Home = () => {
                   <img className='movieCover3' src={rolling} alt='Movie cover' />
                   <img className='movieCover4' src={rolling} alt='Movie cover' />
                   <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
+                </div>
+                <div className='imageWrapper'>
+                  <img className='movieCover1' src={auhood} alt='Movie cover' />
+                  <img className='movieCover' src={auhood} alt='Movie cover' />
+                  <img className='movieCover3' src={auhood} alt='Movie cover' />
+                  <img className='movieCover4' src={auhood} alt='Movie cover' />
+                  <a href='https://www.gateway-films.com/films.php?film=rolling' id='a4'>+</a>
                 </div>
               </div>
             </div>

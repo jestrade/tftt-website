@@ -152,6 +152,7 @@ p.paragraph {
   font-size: 24px;
   line-height: 33.6px;
   margin-bottom: 50px;
+  text-align: justify;
 }
 
 .terryText2 {
@@ -159,6 +160,8 @@ p.paragraph {
   font-size: 24px;
   line-height: 33.6px;
   margin-bottom: 50px;
+  text-align: justify;
+  font-weight: bolder;
 }
 
 .terrySubtitle {
@@ -190,6 +193,10 @@ p.paragraph {
 }
 
 .imageWrapper:hover #a3 {
+  color: var(--red);
+}
+
+.imageWrapper:hover #a4 {
   color: var(--red);
 }
 
@@ -275,6 +282,12 @@ p.paragraph {
   text-decoration: none;
 }
 
+#a4 {
+  font-size: 110px;
+  top: 100px;
+  left: 40px;
+}
+
 .moviesContainer {
   display: flex;
 }
@@ -306,6 +319,7 @@ p.paragraph {
   font-size: 96px;
   line-height: 81.6px;
   margin-bottom: 27px;
+  text-decoration: underline;
   @media (max-width: 480px) {
     font-size: 38px;
     text-decoration: underline;
@@ -719,6 +733,12 @@ p.paragraph {
     left: 60px;
   }
 
+  #a4 {
+    font-size: 110px;
+    top: 100px;
+    left: 40px;
+  }
+
   .treepicsContainer h1 {
     font-size: 28px;
     margin-left: 120px;
@@ -780,53 +800,59 @@ p.paragraph {
     height: 948px;
     margin-left: 40px;
     padding-left: 20px;
-    width: 710px;
+    width: 770px;
   }
 
   .imageWrapper {
-    width: 180px;
+    width: 140px;
     height: 310px;
     margin-right: 40px;
   }
 
   .movieCover {
-    width: 180px;
+    width: 140px;
     height: 310px;
   }
 
   .movieCover1 {
-    width: 180px;
+    width: 140px;
     height: 310px;
   }
 
   .movieCover3 {
-    width: 180px;
+    width: 140px;
     height: 310px;
   }
 
   .movieCover4 {
-    width: 180px;
+    width: 140px;
     height: 310px;
   }
 
   .moviesContainer {
     padding-left: 10px;
+    width: 100%;
   }
 
   #a1 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 40px;
   }
   #a2 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 40px;
   }
   #a3 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 40px;
+  }
+  #a4 {
+    font-size: 110px;
+    top: 100px;
+    left: 40px;
   }
 }
 
@@ -876,11 +902,8 @@ p.paragraph {
   .terrySubtitle {
     font-size: 35px;
     line-height: 42px;
-    width: 20px;
-    position: relative;
-    top: 260px;
-    left: -180px;
-    margin-bottom: 0px;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   .terryStoneTextContainer {
@@ -916,10 +939,6 @@ p.paragraph {
     clip-path: none;
     transform: translate(0px, 0px);
     transition: transform 0ms;
-  }
-
-  .moviesContainer .imageWrapper:nth-child(1) {
-    grid-column-start: 2;
   }
 
   .movieCover1 {
