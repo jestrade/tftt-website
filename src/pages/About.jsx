@@ -18,8 +18,9 @@ export const About = () => {
       <section className='bannerAbout'>
         <div className='bannerContainer'>
           <h1>
-            <p>WELCOMES TO TALES </p>
-            <p> FROM THE <span>TRAP</span> </p>
+            WELCOME TO
+            <br />
+            TALES FROM THE <span>TRAP</span>
           </h1>
         </div>
       </section>
