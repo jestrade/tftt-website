@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
 
@@ -19,8 +19,14 @@ import rotf from '@images/rotf.png'
 
 // Hooks
 import { useNearScreen } from '../hooks/userNearScreen'
+import Context from '../context/Context'
 
 const Home = () => {
+  // This code is for identify if the page is Gallery
+  const location = useLocation()
+  const { changeNav } = useContext(Context)
+  changeNav(location.pathname)
+
   const [show1, element1] = useNearScreen()
   const [show2, element2] = useNearScreen()
   const [show3, element3] = useNearScreen()
