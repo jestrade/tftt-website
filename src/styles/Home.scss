@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .tfttSubcontainer {
@@ -33,12 +34,11 @@
 }
 
 .fade {
-  // position: absolute;
-  // bottom: 100px;
-  // left: 0;
-  // width: 100%;
-  // height: auto;
-  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 @import "animations";
@@ -48,6 +48,7 @@
   font-size: 50px;
   line-height: 54px;
   color: var(--white);
+  text-align: center;
   animation: 3s animationFade ease;
   span {
     color: var(--red);
@@ -71,7 +72,6 @@
   @media (min-width: 1700px) {
     font-size: 144px;
     line-height: 162.72px;
-    margin-right: 3rem;
   }
 }
 
@@ -79,8 +79,8 @@
   margin-left: 0.5rem;
   margin-top: 1rem;
   font-family: var(--titles);
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 35px;
+  line-height: 38px;
   text-decoration: underline;
   color: var(--white);
   @media (min-width: 768px) {
@@ -98,6 +98,7 @@
   line-height: 27.6px;
   font-family: var(--subtitles);
   margin-top: 1.5rem;
+  text-align: justify;
   @media (min-width: 768px) {
     font-size: 24px;
     line-height: 33.6px;
@@ -108,9 +109,7 @@
 p.paragraph {
   margin-top: 2rem;
   margin-bottom: 4rem;
-  @media (min-width: 768px) {
-    // Font Bold goes here
-  }
+  font-weight: bolder;
 }
 
 @media (min-width: 1024px) {
