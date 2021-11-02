@@ -1,245 +1,219 @@
 @import "vars";
 
 $customPadding: 0 195px;
-$customPaddMobile: 0 58px;
+$bannerPadding: 16.25rem 1rem;
+$customPaddMobile: 0 1rem;
 
 section.bannerAbout{
   background-image:url('../assets/images/bannerAbout.png');
   background-repeat: no-repeat;
   background-size: cover;
-  
+  background-position-x: 35%;
 }
 
 .bannerContainer{
-  height: 1121px;
+  height: auto;
+  padding: $bannerPadding;
   width: 100%;
-  padding: $customPadding;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to top, black, 30%, rgba(0, 0, 0, 0));
+  @media (min-width: 768px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+  }
+  @media (min-width: 1024px) {
+    $bannerPadding: 20rem 3rem;
+    position: relative;
+    padding: $bannerPadding;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 14rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to top, black, 30%, rgba(0, 0, 0, 0));
+    }
+  }
+  @media (min-width: 1440px) {
+    $bannerPadding: 25rem 10rem;
+    padding: $bannerPadding;
+  }
   h1{
-    color: white;
     font-family: var(--titles);
-    font-size: 144px;
-    span{
-      color:red
+    font-size: 50px;
+    line-height: 54px;
+    color: var(--white);
+    animation: 3s animationFade ease;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    span {
+      color: var(--red);
+    }
+    @media (min-width: 768px) {
+      font-size: 70px;
+      line-height: 74px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 88px;
+      line-height: 92px;
+    }
+    @media (min-width: 1280px) {
+      font-size: 110px;
+      line-height: 114px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 125px;
+      line-height: 132px;
+    }
+    @media (min-width: 1700px) {
+      font-size: 144px;
+      line-height: 162.72px;
     }
   }
+
 }
 
-.gridProducer{
-  width: 100%;
-  height: auto;
-  padding: $customPadding;
-  color: white;
-  margin:100px 0;
-  margin-bottom: 200px;
-  .title{
+$producerPadding: 0 1rem 2rem 1rem;
+section.producer {
+  margin-top: -3rem;
+  color: var(--white);
+  padding: $producerPadding;
+  @media (min-width: 480px) {
+    $producerPadding: 0 2rem 2rem;
+    padding: $producerPadding;
+  }
+  @media (min-width: 768px) {
+    $producerPadding: 0 4rem 4rem;
+    padding: $producerPadding;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 0;
+    padding-bottom: 9rem;
+  }
+  @media (min-width: 1440px) {
+    $producerPadding: 0 10rem 12rem 12rem;
+    padding: $producerPadding;
+  }
+  h2, h3 {
     font-family: var(--titles);
-    font-size: 48px;
-    p{
-      margin-bottom:30px ;
-    }
-    p:nth-child(2){
-      color: red;
+    font-size: 2.125rem;
+    line-height: 60px;
+    @media (min-width: 768px) {
+      font-size: 3rem;
     }
   }
-  .grid{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    font-family: var( --subtitles);
-    font-size: 24px;
-    div{
-      p{
-        margin-bottom: 20px;
-      }
+  h2 {
+    text-decoration: underline;
+  }
+  h3 {
+    color: var(--red);
+    @media (min-width: 768px) {
+      margin-top: 2rem;
     }
-    div:nth-child(1){
-      padding-right: 100px;
-    }
-    div:nth-child(2){
-      padding-left: 20px;
-      font-weight: bolder;
+    @media (min-width: 1024px) {
+      margin-bottom: 4.5rem;
     }
   }
-}
-
-.gridSynopsis{
-  width: 100%;
-  height: auto;
-  color: white;
-  padding: $customPadding;
-  
-  background: linear-gradient(to bottom, black, 30%, rgba(0, 0, 0, 0));
-  .title{
-    font-family: var(--titles);
-    font-size: 48px;
-    margin-bottom: 68px;
-  }
-  .grid{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr ;
-    font-family: var( --subtitles);
-    font-size: 24px;
-
-    div:nth-child(2){
-      margin: 0px 30px;
+  p {
+    font-family: var(--subtitles);
+    text-indent: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 27.6px;
+    margin-top: 1.5rem;
+    text-align: justify;
+    @media (min-width: 768px) {
+      padding: 0 1.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-top: 2rem;
     }
-    div:nth-child(3){
-      font-weight: bolder;
-      font-size: 30px;
+    @media (min-width: 1024px) {
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+      text-indent: 3.5rem;
+    }
+    @media (min-width: 1700px) {
+      margin-left: 6rem;
+      margin-right: initial;
     }
   }
-  hr{
-    width: 100%;
-    color: white;
-    margin: 80px 0px;
+  p:last-child{
+    font-weight: bolder;
   }
 }
 
-.gridBecome{
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  
-  padding: $customPadding;
-
-  .textBox{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    color: white;
-    margin-right: 50px;
-    .title{
-      font-family: var(--titles);
-      font-size: 48px;
-      margin-bottom: 137px;
-    }
-    p{
-      font-family:var( --subtitles);
-
-
-      &:nth-child(2), &:nth-child(3) {
-          font-size: 24px;
-          margin-bottom: 30px;
-        }
-      &:nth-child(4){
-        font-size: 30px;
-        font-weight: bolder;
-      }
-    }
-    
-    
-  }
- 
-}
 .bgBricks{
+  $bricksPadding: 2rem 1rem;
   background-image: url("../assets/images/BRICKS.png");
-  padding-bottom: 100px;
-}
-
-@media screen and (max-width:768px){
-
-  section.bannerAbout{
-    background-position-x: -517px;
-  }
-  .bannerContainer{
-    padding: $customPaddMobile;
-    
-    h1{
-      font-size: 50px;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: var(--subtitles);
+  section {
+    padding: $bricksPadding;
+    @media (min-width: 480px) {
+      $bricksPadding: 2rem 2rem;
+      padding: $bricksPadding;
+    }
+    @media (min-width: 768px) {
+      $bricksPadding: 4rem 4rem;
+      padding: $bricksPadding;
+    }
+    @media (min-width: 1024px) {
+      $bricksPadding: 5rem 6rem;
+      padding: $bricksPadding;
     }
   }
-
-  .gridProducer{
-    padding: $customPaddMobile;
-    flex-flow: column nowrap;
-    .title{
-      font-size: 35px;
+  @media (min-width: 1440px) {
+    section:first-child {
+      padding: 12rem 10rem 1rem 12rem;
     }
-    .grid{
-      display: flex;
-      flex-flow: column nowrap;
-      font-size: 18px;
-      div:nth-child(1){
-        padding-right: 0px;
-      }
-      div:nth-child(2){
-        padding-left: 0px;
-      }
-    }
-
-  }
-
-  .gridSynopsis{
-    padding: 0 0;
-    background: linear-gradient(to bottom, black, 5%, rgba(0, 0, 0, 0));
-    .title{
-      padding: $customPaddMobile;
-      font-size: 35px;
-     
-    }
-    .grid{
-      display: flex;
-      flex-flow: column nowrap;
-      div:nth-child(1){
-        margin-bottom: 60px;
-        img{
-          width: 100%;
-        }
-      }
-      div:nth-child(2){
-        margin: 0px 0px;
-        padding: $customPaddMobile;
-        margin-bottom: 60px;
-        font-size: 18px;
-      }
-      div:nth-child(3){
-        font-size: 18px;
-        font-weight: bolder;
-        padding: $customPaddMobile;
-      }
-
+    section:last-child {
+      padding: 5rem 10rem 12rem 12rem;
     }
   }
-
-  
-
-  .gridBecome{
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 0 0;
-
-    .textBox{
-      padding: $customPaddMobile;
-      margin-right: 0px;
-      .title{
-        font-size: 30px;
-      }
-      p{
-        font-family:var( --subtitles);
-  
-  
-        &:nth-child(2), &:nth-child(3) {
-            font-size: 18px;
-          }
-        &:nth-child(4){
-          font-size: 18px;
-          margin-bottom: 60px;
-        }
-      }
+  h2 {
+    font-family: var(--titles);
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    @media (min-width: 480px) {
+      font-size: 2.125rem;
+      line-height: 60px;
     }
-    div:nth-child(2){
-      img{
-        width: 100%;
-      }
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      margin-bottom: 3rem;
     }
   }
-
-  .bgBricks{
-    background-size: auto;
-    padding-bottom: 100px;
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-indent: 1.5rem;
+    text-align: justify;
+    margin-top: 1.5rem;
+    @media (min-width: 768px) {
+      padding: 0 1.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 1024px) {
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+      text-indent: 3.5rem;
+    }
+    @media (min-width: 1700px) {
+      margin-left: 6rem;
+      margin-right: initial;
+    }
   }
-
+  p:last-child {
+    font-weight: bolder;
+  }
+  hr {
+    margin: 3rem 0;
+    @media (min-width: 1440px) {
+      margin: 5rem 10rem;
+    }
+  }
 }
