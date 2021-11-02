@@ -299,60 +299,62 @@ p.paragraph {
 }
 
 .discoverContainer {
-  background-image: url("../assets/images/discoverourpeople.png");
+  background-image: url("../assets/images/discoverMobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 572px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   background-color: black;
-  background-size: cover;
-  @media (max-width: 480px) {
-    text-align: start;
-    background-image: url("../assets/images/discoverMobile.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 423px;
-    align-items: flex-start;
-    background-color: black;
+  padding: 13rem 0 1.5rem 2rem;
+  @media (min-width: 768px) {
+    padding: 9rem 0 5rem;
+    gap: 4rem;
+  }
+  @media (min-width: 1024px) {
+    background-image: url("../assets/images/discoverourpeople.png");
   }
 }
 
 .ijbTitle {
   color: var(--white);
   font-family: var(--titles);
-  font-size: 96px;
-  line-height: 81.6px;
-  margin-bottom: 27px;
+  font-size: 38px;
+  line-height: 44px;
   text-decoration: underline;
-  @media (max-width: 480px) {
-    font-size: 38px;
-    text-decoration: underline;
-    width: 250px;
-    line-height: 50px;
-    margin-left: 40px;
+  max-width: 270px;
+  @media (min-width: 768px) {
+    line-height: 70px;
+    font-size: 60px;
+    text-align: center;
+    max-width: initial;
+  }
+  @media (min-width: 1024px) {
+    font-size: 96px;
+    line-height: 105%;
   }
 }
 
 .ijbSubtitle {
   color: var(--white);
   font-family: var(--subtitles);
-  font-size: 24px;
-  line-height: 27.96px;
-  margin-bottom: 27px;
-  @media (max-width: 480px) {
-    font-size: 38px;
-    margin-left: 40px;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.3rem;
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
   }
 }
 
 .ijbImg {
-  @media (max-width: 480px) {
-    width: 177px;
-    height: 62px;
-    margin-left: 40px;
+  width: 177px;
+  height: 62px;
+  @media (min-width: 768px) {
+    margin: 0 auto;
   }
 }
 
