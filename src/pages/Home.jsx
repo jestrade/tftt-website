@@ -125,22 +125,22 @@ const Home = () => {
 
           <div className='relImagesContainer'>
             <div className='reel1'>
-              <Link to='/store' className='redBlock'>
+              <Link to='/contact' className='redBlock'>
                 <h1 className='msjRed'>MEET THE STARS</h1>
               </Link>
             </div>
             <div className='reel2'>
-              <Link to='/store' className='redBlock'>
+              <Link to='/contact' className='redBlock'>
                 <h1 className='msjRed'>BE IN THE MOVIE</h1>
               </Link>
             </div>
             <div className='reel3'>
-              <Link to='/store' className='redBlock'>
+              <Link to='/contact' className='redBlock'>
                 <h1 className='msjRed'>PRIVATE MOVIE SHOWING</h1>
               </Link>
             </div>
             <div className='reel4'>
-              <Link to='/store' className='redBlock'>
+              <Link to='/contact' className='redBlock'>
                 <h1 className='msjRed'>WORK ON THE RED CARPET</h1>
               </Link>
             </div>
