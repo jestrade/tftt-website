@@ -60,78 +60,57 @@ export const About = () => {
           platform within the last Qtr. 2021”
         </p>
       </section>
-      <section className='bgBricks'>
+      <div className='bgBricks'>
         <section>
-          <div className='gridSynopsis'>
-            <div className='title'>FILM SYNOPSIS</div>
-            <div className='grid'>
-              <div>
-                <img src={imgSyn} alt='' />
-              </div>
-              <div>
-                <p>
-                  TALES FROM THE TRAP is a gritty no holds barred look at the
-                  world faced by many UK's streets and council estates youths of
-                  today. A tale of gang culture, knife crime and cross county drug
-                  deals, however more than that TALES FROM THE TRAP is a story of
-                  brotherhood, loyalty and a friendship that runs deeper than any
-                  family.
-                </p>
-                <p>
-                  Slick is a rising star in the UK Rap &amp; Drill Music scenes as
-                  part of the SE8 crew who are tearing up the music scene, however
-                  with a rise in success also comes a rise in status and all the
-                  dangers that come with it. Soon the SE8’s friendship is tested
-                  to the limit as rival gangs, bent coppers, older drillers and
-                  dealers, fate and circumstances force these youths hand with
-                  deadly consequences.
-                </p>
-              </div>
-              <div>
-                TALES FROM THE TRAP is as powerful and hard hitting as it is
-                heartwarming and tells the story, which is all too familiar on
-                today’s UK streets and council estates.
-              </div>
-            </div>
-            <hr />
-          </div>
+          <h2>FILM SYNOPSIS</h2>
+          <p>
+            TALES FROM THE TRAP is a gritty no holds barred look at the
+            world faced by many UK's streets and council estates youths of
+            today. A tale of gang culture, knife crime and cross county drug
+            deals, however more than that TALES FROM THE TRAP is a story of
+            brotherhood, loyalty and a friendship that runs deeper than any
+            family.
+          </p>
+          <p>
+            Slick is a rising star in the UK Rap &amp; Drill Music scenes as
+            part of the SE8 crew who are tearing up the music scene, however
+            with a rise in success also comes a rise in status and all the
+            dangers that come with it. Soon the SE8’s friendship is tested
+            to the limit as rival gangs, bent coppers, older drillers and
+            dealers, fate and circumstances force these youths hand with
+            deadly consequences.
+          </p>
+          <p>
+            TALES FROM THE TRAP is as powerful and hard hitting as it is
+            heartwarming and tells the story, which is all too familiar on
+            today’s UK streets and council estates.
+          </p>
         </section>
+        <hr />
         <section>
-          <div className='gridBecome'>
-
-            <div className='textBox'>
-              <div className='title'>
-                YOU CAN BECOME A SHAREHOLDER IN THE FILM &amp; TV FRANCHISE
-              </div>
-              <p>
-                “TALES FROM THE TRAP’s (“TFTT”) Film &amp; Television Franchise will
-                leverage from the anticipated exponential growing demand of digital
-                assets in the Film, Television, social media, music and the
-                graphic/art content industries.
-              </p>
-              <p>
-                TFTT will create a market place for
-                the sale and resale of the Film &amp; Television franchise assets and
-                all related content through amongst others the highly sort after non
-                fungible tokens. TFTT will commercialize through tokenomics and
-                create digital intellectual property for the benefit of the TFTT
-                loyal fanbase.”
-              </p>
-              <p>
-                TFTT will create a market place for
-                the sale and resale of the Film &amp; Television franchise assets and
-                all related content through amongst others the highly sort after non
-                fungible tokens. TFTT will commercialize through tokenomics and
-                create digital intellectual property for the benefit of the TFTT
-                loyal fanbase.”
-              </p>
-            </div>
-            <div>
-              <img src={imgBec} alt='' />
-            </div>
-          </div>
+          <h2>
+            YOU CAN BECOME A SHAREHOLDER IN THE FILM &amp; TV FRANCHISE
+          </h2>
+          <p>
+            “TALES FROM THE TRAP’s (“TFTT”) Film &amp; Television Franchise will
+            leverage from the anticipated exponential growing demand of digital
+            assets in the Film, Television, social media, music and the
+            graphic/art content industries.
+          </p>
+          <p>
+            TFTT will create a market place for
+            the sale and resale of the Film &amp; Television franchise assets and
+            all related content through amongst others the highly sort after non
+            fungible tokens. TFTT will commercialize through tokenomics and
+            create digital intellectual property for the benefit of the TFTT
+            loyal fanbase.”
+          </p>
+          <p>
+            Anyone and everyone will have the opportunity to become a Part
+            Shareholder in the TFT Film &amp; Television franchise.
+          </p>
         </section>
-      </section>
+      </div>
     </>
   )
 }
