@@ -24,14 +24,14 @@ const App = () => {
         <Layout>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/im-just-bait' component={ImJustBaitPage} />
-            <Route path='/signup' component={SignUpPage} />
-            <Route path='/partnerships' component={Partnerships} />
-            <Route path='/store' component={Store} />
-            <Route path='/news' component={News} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/gallery' component={Gallery} />
-            <Route path='/about' component={About} />
+            <Route exact path='/im-just-bait' component={ImJustBaitPage} />
+            <Route exact path='/signup' component={SignUpPage} />
+            <Route exact path='/partnerships' component={Partnerships} />
+            <Route exact path='/store' component={Store} />
+            <Route exact path='/news' component={News} />
+            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/gallery' component={Gallery} />
+            <Route exact path='/about' component={About} />
           </Switch>
         </Layout>
       </BrowserRouter>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useLayoutEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
@@ -30,6 +30,9 @@ const Home = () => {
   const [show1, element1] = useNearScreen()
   const [show2, element2] = useNearScreen()
   const [show3, element3] = useNearScreen()
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <div>

@@ -1,17 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useLayoutEffect } from 'react'
 
 import '@styles/About.scss'
 import { useLocation } from 'react-router'
 import Context from '../context/Context'
 
 // Images
-import imgSyn from '@images/imgSynopsis.png'
-import imgBec from '@images/imgBecome.png'
+
 export const About = () => {
   // This code is for identify if the page is Gallery
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <>

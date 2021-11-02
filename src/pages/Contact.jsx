@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useLayoutEffect } from 'react'
 import { useLocation } from 'react-router'
 // Context
 import Context from '../context/Context'
@@ -14,6 +14,9 @@ export const Contact = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
     <Section>
