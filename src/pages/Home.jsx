@@ -125,9 +125,9 @@ const Home = () => {
 
           <div className='relImagesContainer'>
             <div className='reel1'>
-              <div className='redBlock'>
+              <Link to='/store' className='redBlock'>
                 <h1 className='msjRed'>MEET THE STARS</h1>
-              </div>
+              </Link>
             </div>
             <div className='reel2'>
               <div className='redBlock'>
@@ -135,14 +135,14 @@ const Home = () => {
               </div>
             </div>
             <div className='reel3'>
-              <div className='redBlock'>
+              <Link to='/store' className='redBlock'>
                 <h1 className='msjRed'>PRIVATE MOVIE SHOWING</h1>
-              </div>
+              </Link>
             </div>
             <div className='reel4'>
-              <div className='redBlock'>
+              <Link to='/store' className='redBlock'>
                 <h1 className='msjRed'>WORK ON THE RED CARPET</h1>
-              </div>
+              </Link>
             </div>
 
           </div>
