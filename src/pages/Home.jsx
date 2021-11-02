@@ -92,9 +92,9 @@ const Home = () => {
       <section className='treepicsContainer'>
         <h1>IF YOU WATCHED...</h1>
         <div className='pictureContainer'>
-          <div className='pictureContainer1'>"BLUE STORY",</div>
-          <div className='pictureContainer2'>"TOP BOY"&amp;</div>
-          <div className='pictureContainer3'>"ADULTHOOD"</div>
+          <div className='pictureContainer1' />
+          <div className='pictureContainer2' />
+          <div className='pictureContainer3' />
         </div>
         <h2>YOUR IN THE RIGHT PLACE</h2>
       </section>
@@ -126,24 +126,22 @@ const Home = () => {
           <div className='relImagesContainer'>
             <div className='reel1'>
               <div className='redBlock'>
-                <h1 className='msjRed'>PRIVATE MOVIE
-                  SHOWING
-                </h1>
+                <h1 className='msjRed'>MEET THE STARS</h1>
               </div>
             </div>
             <div className='reel2'>
               <div className='redBlock'>
-                <h1 className='msjRed'>WALK ON THE RED CARPET</h1>
+                <h1 className='msjRed'>BE IN THE MOVIE</h1>
               </div>
             </div>
             <div className='reel3'>
               <div className='redBlock'>
-                <h1 className='msjRed'>BE IN THE MOVIE</h1>
+                <h1 className='msjRed'>PRIVATE MOVIE SHOWING</h1>
               </div>
             </div>
             <div className='reel4'>
               <div className='redBlock'>
-                <h1 className='msjRed'>MEET THE STARS</h1>
+                <h1 className='msjRed'>WORK ON THE RED CARPET</h1>
               </div>
             </div>
 

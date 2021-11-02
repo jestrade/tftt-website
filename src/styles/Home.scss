@@ -174,10 +174,10 @@ p.paragraph {
 }
 
 .imageWrapper {
-  width: 295px;
+  width: 230px;
   height: 486px;
   position: relative;
-  margin-right: 40px;
+  margin-right: 30px;
   &:hover img {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -209,7 +209,7 @@ p.paragraph {
 }
 
 .movieCover {
-  width: 295px;
+  width: 230px;
   height: 486px;
   cursor: pointer;
   z-index: 1;
@@ -219,7 +219,7 @@ p.paragraph {
 }
 
 .movieCover1 {
-  width: 295px;
+  width: 230px;
   height: 486px;
   cursor: pointer;
   z-index: 1;
@@ -230,7 +230,7 @@ p.paragraph {
 }
 
 .movieCover3 {
-  width: 295px;
+  width: 230px;
   height: 486px;
   cursor: pointer;
   z-index: 1;
@@ -240,7 +240,7 @@ p.paragraph {
 }
 
 .movieCover4 {
-  width: 295px;
+  width: 230px;
   height: 486px;
   cursor: pointer;
   z-index: 1;
@@ -256,7 +256,7 @@ p.paragraph {
   color: transparent;
   font-size: 140px;
   top: 170px;
-  left: 110px;
+  left: 75px;
   z-index: 5;
   text-decoration: none;
 }
@@ -267,7 +267,7 @@ p.paragraph {
   color: transparent;
   font-size: 140px;
   top: 170px;
-  left: 110px;
+  left: 75px;
   z-index: 5;
   text-decoration: none;
 }
@@ -278,15 +278,20 @@ p.paragraph {
   color: transparent;
   font-size: 140px;
   top: 170px;
-  left: 110px;
+  left: 75px;
   z-index: 5;
   text-decoration: none;
 }
 
 #a4 {
-  font-size: 110px;
-  top: 100px;
-  left: 40px;
+  position: absolute;
+  font-family: var(--titles);
+  color: transparent;
+  font-size: 140px;
+  top: 170px;
+  left: 75px;
+  z-index: 5;
+  text-decoration: none;
 }
 
 .moviesContainer {
@@ -303,6 +308,7 @@ p.paragraph {
   align-items: center;
   text-decoration: none;
   background-color: black;
+  background-size: cover;
   @media (max-width: 480px) {
     text-align: start;
     background-image: url("../assets/images/discoverMobile.png");
@@ -351,10 +357,9 @@ p.paragraph {
 }
 
 .sliderContainer {
-  
- /*  background-color: var(--main); */
- background-color: black;
-  padding-top: 136px;
+  /*  background-color: var(--main); */
+  background-color: black;
+  padding-top: 10px;
   height: auto;
 
   @media screen and (max-width: 768px) {
@@ -371,6 +376,7 @@ p.paragraph {
   align-items: center;
   background-image: url("../assets/images/graffiti.png");
   background-color: black;
+  background-size: cover;
 
   @media screen and (max-width: 768px) {
     height: 1900px;
