@@ -130,9 +130,9 @@ const Home = () => {
               </Link>
             </div>
             <div className='reel2'>
-              <div className='redBlock'>
+              <Link to='/store' className='redBlock'>
                 <h1 className='msjRed'>BE IN THE MOVIE</h1>
-              </div>
+              </Link>
             </div>
             <div className='reel3'>
               <Link to='/store' className='redBlock'>
