@@ -573,7 +573,7 @@ p.paragraph {
   display: flex;
   align-items: center;
   @media only screen and (max-width: 768px) {
-    margin-top: 200px;
+    margin-top: 25px;
     flex-flow: column nowrap;
   }
 }
@@ -639,11 +639,6 @@ p.paragraph {
   font-family: var(--titles);
   color: white;
   font-style: italic;
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-    top: 2714px;
-    left: 0px;
-  }
 }
 
 .treepicsContainer h2 {
@@ -656,12 +651,9 @@ p.paragraph {
   color: white;
   text-decoration: underline;
   @media only screen and (max-width: 768px) {
-    display: block;
     width: 100%;
-    margin-top: 400px;
     text-align: center;
-
-    left: 0px;
+    margin-top: 20px;
   }
 }
 
@@ -974,7 +966,11 @@ p.paragraph {
     visibility: hidden;
   }
 
-  .treepicsContainer {
-    display: none;
+  .treepicsContainer h1 {
+    font-size: 28px;
+    margin-left: 19px;
+  }
+  .treepicsContainer h2 {
+    font-size: 28px;
   }
 }
