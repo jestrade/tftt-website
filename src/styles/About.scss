@@ -15,6 +15,11 @@ section.bannerAbout{
   height: auto;
   padding: $bannerPadding;
   width: 100%;
+  @media (min-width: 768px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+  }
   @media (min-width: 1024px) {
     $bannerPadding: 20rem 3rem;
     position: relative;
@@ -30,7 +35,7 @@ section.bannerAbout{
     }
   }
   @media (min-width: 1440px) {
-    $bannerPadding: 25rem 7rem;
+    $bannerPadding: 25rem 10rem;
     padding: $bannerPadding;
   }
   h1{
@@ -67,27 +72,77 @@ section.bannerAbout{
 
 }
 
-@media (max-width:768px){
-
-  .gridProducer{
-    padding: $customPaddMobile;
-    flex-flow: column nowrap;
-    .title{
-      font-size: 35px;
-    }
-    .grid{
-      display: flex;
-      flex-flow: column nowrap;
-      font-size: 18px;
-      div:nth-child(1){
-        padding-right: 0px;
-      }
-      div:nth-child(2){
-        padding-left: 0px;
-      }
-    }
-
+$producerPadding: 0 1rem 2rem 1rem;
+section.producer {
+  margin-top: -3rem;
+  color: var(--white);
+  padding: $producerPadding;
+  @media (min-width: 480px) {
+    $producerPadding: 0 2rem 2rem;
+    padding: $producerPadding;
   }
+  @media (min-width: 768px) {
+    $producerPadding: 0 4rem 4rem;
+    padding: $producerPadding;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 0;
+    padding-bottom: 9rem;
+  }
+  @media (min-width: 1440px) {
+    $producerPadding: 0 10rem 12rem 12rem;
+    padding: $producerPadding;
+  }
+  h2, h3 {
+    font-family: var(--titles);
+    font-size: 2.125rem;
+    line-height: 60px;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+  h2 {
+    text-decoration: underline;
+  }
+  h3 {
+    color: var(--red);
+    @media (min-width: 768px) {
+      margin-top: 2rem;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 4.5rem;
+    }
+  }
+  p {
+    font-family: var(--subtitles);
+    text-indent: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 27.6px;
+    margin-top: 1.5rem;
+    text-align: justify;
+    @media (min-width: 768px) {
+      padding: 0 1.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 1024px) {
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+      text-indent: 3.5rem;
+    }
+    @media (min-width: 1700px) {
+      margin-left: 6rem;
+      margin-right: initial;
+    }
+  }
+  p:last-child{
+    font-weight: bolder;
+  }
+}
+
+@media (max-width:768px){
 
   .gridSynopsis{
     padding: 0 0;
@@ -161,42 +216,6 @@ section.bannerAbout{
 
 }
 
-.gridProducer{
-  width: 100%;
-  height: auto;
-  padding: $customPadding;
-  color: white;
-  margin:100px 0;
-  margin-bottom: 200px;
-  .title{
-    font-family: var(--titles);
-    font-size: 48px;
-    p{
-      margin-bottom:30px ;
-    }
-    p:nth-child(2){
-      color: red;
-    }
-  }
-  .grid{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    font-family: var( --subtitles);
-    font-size: 24px;
-    div{
-      p{
-        margin-bottom: 20px;
-      }
-    }
-    div:nth-child(1){
-      padding-right: 100px;
-    }
-    div:nth-child(2){
-      padding-left: 20px;
-      font-weight: bolder;
-    }
-  }
-}
 
 .gridSynopsis{
   width: 100%;
