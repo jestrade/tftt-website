@@ -156,7 +156,7 @@
     &-description {
       grid-area: Desc;
       padding: 0 $align;
-      margin-top: -21rem;
+      margin-top: -23rem;
       height: fit-content;
       p {
         margin-top: 2.25rem;
@@ -174,7 +174,7 @@
     }
   }
   @media (min-width: 1440px) {
-    $align: 5rem;
+    $align: 7.5rem;
     $container-height: 60rem;
     &-container {
       grid-template-rows: $container-height;
@@ -187,7 +187,7 @@
       }
     }
     &-description {
-      margin-top: -23rem;
+      margin-top: -28rem;
       padding: 0 $align;
       p {
         font-size: 1.375rem;

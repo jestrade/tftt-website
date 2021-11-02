@@ -23,7 +23,9 @@ const ImJustBaitPage = () => {
       </div>
       <div className='IJB-description'>
         <p>
-          Created in 2014 by Anthony Robb (aka Antz), who's just 22 years old,
+          Created in 2014 by Anthony Robb (aka Antz), who's just 22 years old.
+        </p>
+        <p>
           IMJUSTBAIT started out as an Instagram meme page that has skyrocketed
           to success within the past six years.
         </p>
