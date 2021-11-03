@@ -32,6 +32,10 @@
     padding-bottom: 14rem;
   }
 }
+.previousFilms {
+  padding-left: 101px;
+  margin-bottom: 40px;
+}
 
 .fade {
   position: absolute;
@@ -122,8 +126,10 @@ p.paragraph {
 }
 
 .terryStoneContainer {
-  height: 1310px;
+  height: auto;
+  padding-top: 15px;
   width: 100%;
+  margin-bottom: 40px;
   background-color: black;
   color: var(--white);
   display: flex;
@@ -132,13 +138,21 @@ p.paragraph {
 
 .terryStone {
   width: 710px;
-  height: 1117px;
+  height: 624px;
 }
 
 .terryStoneTextContainer {
-  height: 1117px;
-  margin-right: 82px;
+  height: auto;
+  margin-right: 92px;
   margin-left: 92px;
+}
+
+.terryStoneTextContainer h2 {
+  color: var(--red);
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: var(--titles);
+  margin-bottom: 20px;
 }
 
 .terryTitle {
@@ -146,21 +160,23 @@ p.paragraph {
   font-size: 48px;
   line-height: 24px;
   margin-bottom: 43px;
+  text-decoration: underline;
+  margin-bottom: 28px;
 }
 
 .terryText {
   font-family: var(--subtitles);
-  font-size: 24px;
-  line-height: 33.6px;
+  font-size: 18px;
+  line-height: 25.2px;
   margin-bottom: 50px;
   text-align: justify;
 }
 
 .terryText2 {
   font-family: var(--subtitles);
-  font-size: 24px;
-  line-height: 33.6px;
-  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
   text-align: justify;
   font-weight: bolder;
 }
@@ -171,13 +187,14 @@ p.paragraph {
   line-height: 24px;
   margin-bottom: 84px;
   text-decoration: underline;
+  color: white;
 }
 
 .imageWrapper {
-  width: 230px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   position: relative;
-  margin-right: 30px;
+  margin-right: 100px;
   &:hover img {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -209,8 +226,8 @@ p.paragraph {
 }
 
 .movieCover {
-  width: 230px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
@@ -219,8 +236,8 @@ p.paragraph {
 }
 
 .movieCover1 {
-  width: 230px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(0 0, 0 32%, 28% 0);
@@ -230,8 +247,8 @@ p.paragraph {
 }
 
 .movieCover3 {
-  width: 230px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
@@ -240,8 +257,8 @@ p.paragraph {
 }
 
 .movieCover4 {
-  width: 230px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
@@ -255,8 +272,8 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 75px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -266,8 +283,8 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 75px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -277,8 +294,8 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 75px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -288,8 +305,8 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 75px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -585,10 +602,9 @@ p.paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-family: var(--titles);
+  font-size: 24px;
+  font-family: var(--subtitles);
   color: white;
-  text-decoration: underline;
   @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
@@ -603,10 +619,9 @@ p.paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-family: var(--titles);
+  font-size: 24px;
+  font-family: var(--subtitles);
   color: white;
-  text-decoration: underline;
   @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
@@ -621,8 +636,8 @@ p.paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-family: var(--titles);
+  font-size: 24px;
+  font-family: var(--subtitles);
   color: white;
   text-decoration: underline;
   @media only screen and (max-width: 768px) {
@@ -664,12 +679,12 @@ p.paragraph {
 @media screen and (min-width: 1200px) and (max-width: 1390px) {
   .terryTitle {
     font-size: 44px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 
   .terryText {
-    font-size: 20px;
-    margin-bottom: 18px;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .terrySubtitle {
@@ -679,67 +694,68 @@ p.paragraph {
 
   .terryStone {
     width: 557px;
-    height: 948px;
+    height: 589px;
   }
 
   .terryStoneContainer {
-    height: 1100px;
+    height: auto;
     width: 100%;
   }
 
   .terryStoneTextContainer {
-    height: 948px;
+    height: auto;
     margin-left: 40px;
     padding-left: 20px;
+    margin-right: 55px;
     width: 660px;
   }
 
   .imageWrapper {
-    width: 150px;
-    height: 310px;
-    margin-right: 60px;
+    width: 201px;
+    height: 309px;
+    margin-right: 110px;
   }
 
   .movieCover {
-    width: 125px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover1 {
-    width: 125px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover3 {
-    width: 125px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover4 {
-    width: 125px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   #a1 {
     font-size: 110px;
     top: 100px;
-    left: 40px;
+    left: 70px;
   }
   #a2 {
     font-size: 110px;
     top: 100px;
-    left: 40px;
+    left: 70px;
   }
   #a3 {
     font-size: 110px;
     top: 100px;
-    left: 40px;
+    left: 70px;
   }
 
   #a4 {
     font-size: 110px;
     top: 100px;
-    left: 40px;
+    left: 70px;
   }
 
   .treepicsContainer h1 {
@@ -755,12 +771,21 @@ p.paragraph {
 
   .pictureContainer1 {
     height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
   .pictureContainer2 {
     height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
   .pictureContainer3 {
     height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
 
   .treepicsContainer {
@@ -771,6 +796,20 @@ p.paragraph {
     height: 250px;
     margin-top: 70px;
   }
+  .terryText2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  .terryStoneTextContainer h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .terryStoneTextContainer h1 {
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1760px) {
@@ -779,9 +818,20 @@ p.paragraph {
     margin-bottom: 28px;
   }
 
+  .terryStoneTextContainer h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .terryStoneTextContainer h1 {
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
   .terryText {
-    font-size: 20px;
-    margin-bottom: 18px;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .terrySubtitle {
@@ -791,45 +841,46 @@ p.paragraph {
 
   .terryStone {
     width: 557px;
-    height: 948px;
+    height: 589px;
   }
 
   .terryStoneContainer {
-    height: 1100px;
+    height: auto;
     width: 100%;
   }
 
   .terryStoneTextContainer {
-    height: 948px;
+    height: auto;
     margin-left: 40px;
     padding-left: 20px;
+    margin-right: 55px;
     width: 770px;
   }
 
   .imageWrapper {
-    width: 140px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
     margin-right: 40px;
   }
 
   .movieCover {
-    width: 140px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover1 {
-    width: 140px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover3 {
-    width: 140px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover4 {
-    width: 140px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .moviesContainer {
@@ -857,19 +908,45 @@ p.paragraph {
     top: 100px;
     left: 40px;
   }
+
+  .terryText2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  .pictureContainer1 {
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+  .pictureContainer2 {
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+  .pictureContainer3 {
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 780px) {
   .titleGrafContainer {
     margin-top: 50px;
     margin-bottom: 600px;
   }
   .terryStoneContainer {
-    height: 1200px;
+    height: 1500px;
     width: 100%;
     flex-direction: column;
     align-content: center;
-    margin-bottom: 1055px;
+    background-image: url("../assets/images/terrymobilebackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
   }
 
   .terryStone {
@@ -882,9 +959,10 @@ p.paragraph {
   }
 
   .terryTitle {
-    font-size: 44px;
+    font-size: 24px;
     margin-bottom: 1px;
     position: relative;
+    line-height: 24px;
     top: -470px;
   }
 
@@ -903,20 +981,25 @@ p.paragraph {
   }
 
   .terrySubtitle {
-    font-size: 35px;
+    font-size: 20px;
     line-height: 42px;
     text-align: center;
     margin-bottom: 30px;
+    color: white;
   }
 
   .terryStoneTextContainer {
-    height: 620px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .terryStoneTextContainer h2 {
+    text-align: center;
   }
 
   .moviesContainer {
@@ -978,5 +1061,27 @@ p.paragraph {
   }
   .treepicsContainer h2 {
     font-size: 28px;
+  }
+
+  .previousFilms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0px;
+    margin-bottom: 25px;
+    background-image: url("../assets/images/terrymobilebackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .pictureContainer1 {
+    font-size: 18px;
+  }
+  .pictureContainer2 {
+    font-size: 18px;
+  }
+  .pictureContainer3 {
+    font-size: 18px;
   }
 }

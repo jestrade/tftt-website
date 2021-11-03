@@ -58,50 +58,56 @@ const Home = () => {
           <div className={show1 ? 'terryStoneContainer animation' : 'terryStoneContainer'}>
             <img className='terryStone' src={terrystone} alt='Terry Stone' />
             <div className='terryStoneTextContainer'>
-              <h1 className='terryTitle'>TERRY STONE</h1>
+              <h1 className='terryTitle'>PRODUCTION</h1>
+              <h2>Bafta nominated and Raindance best feature winner Terry Stone</h2>
+              <p className='terryText'>Terry Stone began his Acting & Producing career in May 2003 and over the past 18 years has carved an impressive career on both sides of the camera. Terry's naturalistic style of acting has seen him play some memorable leading roles such as a corrupt cop Detective Sargent Andy White in the Bafta Nominated and Raindance Film Festival Award winning "Rollin' With The Nines"; Tony Tucker in the Rise of The Footsoldier True Crime Film Franchise and as Jack Spot in the 1930's - 1950's period crime film "Once Upon a Time in London".</p>
               <p className='terryText'>“TALES FROM THE TRAP’s (“TFT<span>T</span>”) Film &amp; Television Franchise will leverage from the anticipated exponential growing demand of digital assets in the Film, Television, social media, music and the graphic/art content industries.</p>
               <p className='terryText'>TFT<span>T</span> will create a market place for the sale and resale of the Film &amp; Television franchise assets and all related content through amongst others the highly sort after non fungible tokens. TFT<span>T</span> will commercialize through tokenomics and create digital intellectual property for the benefit of the TFT<span>T</span> loyal fanbase.”</p>
               <p className='terryText2'>Anyone and everyone will have the opportunity to become a Part Shareholder in the TFT<span>T</span> Film &amp; Television franchise.</p>
-              <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
-              <div className='moviesContainer'>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={rotf} alt='Movie cover' />
-                  <img className='movieCover' src={rotf} alt='Movie cover' />
-                  <img className='movieCover3' src={rotf} alt='Movie cover' />
-                  <img className='movieCover4' src={rotf} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={ouatil} alt='Movie cover' />
-                  <img className='movieCover' src={ouatil} alt='Movie cover' />
-                  <img className='movieCover3' src={ouatil} alt='Movie cover' />
-                  <img className='movieCover4' src={ouatil} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={rolling} alt='Movie cover' />
-                  <img className='movieCover' src={rolling} alt='Movie cover' />
-                  <img className='movieCover3' src={rolling} alt='Movie cover' />
-                  <img className='movieCover4' src={rolling} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
-                </div>
-                <div className='imageWrapper'>
-                  <img className='movieCover1' src={auhood} alt='Movie cover' />
-                  <img className='movieCover' src={auhood} alt='Movie cover' />
-                  <img className='movieCover3' src={auhood} alt='Movie cover' />
-                  <img className='movieCover4' src={auhood} alt='Movie cover' />
-                  <a href='https://www.gateway-films.com/films.php?film=rolling' id='a4'>+</a>
-                </div>
-              </div>
             </div>
           </div>}
       </section>
+
+      <section className='previousFilms'>
+        <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
+        <div className='moviesContainer'>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={rotf} alt='Movie cover' />
+            <img className='movieCover' src={rotf} alt='Movie cover' />
+            <img className='movieCover3' src={rotf} alt='Movie cover' />
+            <img className='movieCover4' src={rotf} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={ouatil} alt='Movie cover' />
+            <img className='movieCover' src={ouatil} alt='Movie cover' />
+            <img className='movieCover3' src={ouatil} alt='Movie cover' />
+            <img className='movieCover4' src={ouatil} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={rolling} alt='Movie cover' />
+            <img className='movieCover' src={rolling} alt='Movie cover' />
+            <img className='movieCover3' src={rolling} alt='Movie cover' />
+            <img className='movieCover4' src={rolling} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={auhood} alt='Movie cover' />
+            <img className='movieCover' src={auhood} alt='Movie cover' />
+            <img className='movieCover3' src={auhood} alt='Movie cover' />
+            <img className='movieCover4' src={auhood} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=rolling' id='a4'>+</a>
+          </div>
+        </div>
+      </section>
+
       <section className='treepicsContainer'>
         <h1>IF YOU WATCHED...</h1>
         <div className='pictureContainer'>
-          <div className='pictureContainer1' />
-          <div className='pictureContainer2' />
-          <div className='pictureContainer3' />
+          <div className='pictureContainer1'>"BLUE STORY"</div>
+          <div className='pictureContainer2'>"TOP BOY"</div>
+          <div className='pictureContainer3'>"ADULTHOOD</div>
         </div>
         <h2>YOUR IN THE RIGHT PLACE</h2>
       </section>
