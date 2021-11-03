@@ -53,6 +53,29 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <SectionActors ref={element4}>
+        {show4 &&
+          <div className='actors-container animation'>
+            <TitleMb>CAST & CREW</TitleMb>
+            <div className='row-actors'>
+              <div className='col-img'>
+                <div className='img1' alt='' />
+              </div>
+              <div className='col-img end'>
+                <Title>CAST & CREW</Title>
+                <div className='img2' alt='' />
+              </div>
+              <div className='col-img'>
+                <div className='img3' alt='' />
+              </div>
+              <div className='col-img end'>z
+                <div className='img4' alt='' />
+              </div>
+            </div>
+          </div>}
+      </SectionActors>
+
       <section className='terryStoneContainer' ref={element1}>
         {show1 &&
           <div className={show1 ? 'terryStoneContainer animation' : 'terryStoneContainer'}>
@@ -111,28 +134,6 @@ const Home = () => {
         </div>
         <h2>YOUR IN THE RIGHT PLACE</h2>
       </section>
-
-      <SectionActors ref={element4}>
-        {show4 &&
-          <div className='actors-container animation'>
-            <TitleMb>CAST & CREW</TitleMb>
-            <div className='row-actors'>
-              <div className='col-img'>
-                <div className='img1' alt='' />
-              </div>
-              <div className='col-img end'>
-                <Title>CAST & CREW</Title>
-                <div className='img2' alt='' />
-              </div>
-              <div className='col-img'>
-                <div className='img3' alt='' />
-              </div>
-              <div className='col-img end'>z
-                <div className='img4' alt='' />
-              </div>
-            </div>
-          </div>}
-      </SectionActors>
 
       <section className='sliderContainer' ref={element3}>
         {show3 &&

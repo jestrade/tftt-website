@@ -147,10 +147,11 @@ export const TitleMb = styled.div`
   width: 100%;
   color: white;
   font-family: "cooper_hewittheavy";
-  font-size: 40px;
+  font-size: 28px;
   text-decoration: underline;
   text-align: right;
-  margin: 0 20px;
+  margin-right: 40px;
+  margin-bottom: 20px;
   ${cssResponsive('Mobile')}{
     display: Block;
   }

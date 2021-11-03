@@ -4,12 +4,16 @@ import styled from 'styled-components'
 /* import { fadeIn } from '@styles/animations' */
 import { slideAnimate } from '@styles/animations'
 import { cssResponsive } from '@hooks/useResponsive'
+import Bricks from '@images/BRICKS.png'
 import BePartImg from '@images/BePartOfTheFilm.png'
 
 export const Grid = styled.div`
   display: grid;
   width: 100%;
   height: auto;
+  background-image: url(${Bricks});
+  background-size: cover;
+  
   ${cssResponsive('Mobile')}{
     display:flex;
     flex-flow: column nowrap;
