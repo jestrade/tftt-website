@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
-import { SectionActors } from '@styles/StylesHome'
+import { SectionActors, Title, TitleMb } from '@styles/HomeStyles'
 
 // Components
 import { SocialMediaBar } from '@components/SocialMediaBar'
@@ -115,11 +115,13 @@ const Home = () => {
       <SectionActors ref={element4}>
         {show4 &&
           <div className='actors-container animation'>
+            <TitleMb>CAST & CREW</TitleMb>
             <div className='row-actors'>
               <div className='col-img'>
                 <div className='img1' alt='' />
               </div>
               <div className='col-img end'>
+                <Title>CAST & CREW</Title>
                 <div className='img2' alt='' />
               </div>
               <div className='col-img'>

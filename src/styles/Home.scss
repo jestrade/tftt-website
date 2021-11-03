@@ -18,7 +18,7 @@
   width: 100%;
   padding: 9rem 1rem 6rem 1rem;
 
-  @media (min-width: 480px) {
+  @media (min-width: 420px) {
     padding: 9rem 3rem 6rem 3rem;
   }
   @media screen and (min-width: 768px) {
@@ -82,18 +82,16 @@
 
 .tfttSubcontainer h2 {
   margin-left: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  text-align: center;
   font-family: var(--titles);
-  font-size: 35px;
+  font-size: 24px;
   line-height: 38px;
   text-decoration: underline;
   color: var(--white);
-  @media (min-width: 768px) {
-    font-size: 48px;
-    line-height: 60px;
-  }
   @media (min-width: 1024px) {
-    margin-top: 6rem;
+    margin-top: 7rem;
+    text-align: left;
   }
 }
 
@@ -326,6 +324,9 @@ p.paragraph {
   text-decoration: none;
   background-color: black;
   padding: 13rem 0 1.5rem 2rem;
+  @media (min-width: 420px) {
+    padding-left: 3rem;
+  }
   @media (min-width: 768px) {
     padding: 9rem 0 5rem;
     gap: 4rem;
