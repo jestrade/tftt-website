@@ -22,6 +22,8 @@ import Image6 from '@images/slider/3IMG(2).png'
 import Image1Mob from '@images/slider/1IMGMob.png'
 import Image2Mob from '@images/slider/2IMGMob.png'
 import Image3Mob from '@images/slider/3IMGMob.png'
+import Image4Mob from '@images/slider/1IMGMob(2).png'
+import Image5Mob from '@images/slider/2IMGMob(2).png'
 
 // import BePartImg from '@images/BePartOfTheFilm.png'
 
@@ -43,8 +45,8 @@ export const Slider = () => {
     },
     {
       conten: [
-        { id: 1, img: Image4, imgMob: Image1Mob, href: '/signup' },
-        { id: 2, img: Image5, imgMob: Image2Mob, href: '/signup' },
+        { id: 1, img: Image4, imgMob: Image4Mob, href: '/signup' },
+        { id: 2, img: Image5, imgMob: Image5Mob, href: '/signup' },
         { id: 3, img: Image6, imgMob: Image3Mob, href: '/signup' }
       ]
     }
@@ -63,6 +65,24 @@ export const Slider = () => {
     setAnimation(false)
   }
 
+  // Handle swiped mobile
+  const [startX, setStartX] = useState(0)
+  const [moveX, setMoveX] = useState(0)
+
+  const setStart = (e) => {
+    setStartX(e.touches[0].clientX)
+  }
+  const setMoving = (e) => {
+    setMoveX(e.touches[0].clientX)
+  }
+  const setDir = (e) => {
+    if (startX + 100 < moveX) {
+      prevSlide()
+    } else if (startX - 100 > moveX) {
+      nextSlide()
+    }
+  }
+
   const name = 'LEARN MORE'
 
   return (
@@ -70,7 +90,7 @@ export const Slider = () => {
       <Title>
         STEP INTO THE <span> TRAP</span>
       </Title>
-      <Container>
+      <Container onTouchStart={setStart} onTouchMove={setMoving} onTouchEnd={setDir}>
         <Button onClick={prevSlide} style={{ gridColum: 1 }}>
           <img src={ArrowBack} alt='' />
         </Button>
