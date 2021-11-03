@@ -12,6 +12,11 @@ import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
 import auhood from '@images/anuvahood.png'
+import imgActor1 from '@images/imgActors.png'
+import imgActor4 from '@images/imgActors1.png'
+import imgActor3 from '@images/imgActors2.png'
+import imgActor2 from '@images/imgActors3.png'
+
 // import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
@@ -30,6 +35,8 @@ const Home = () => {
   const [show1, element1] = useNearScreen()
   const [show2, element2] = useNearScreen()
   const [show3, element3] = useNearScreen()
+  const [show4, element4] = useNearScreen()
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   })
@@ -100,6 +107,26 @@ const Home = () => {
           <div className='pictureContainer3' />
         </div>
         <h2>YOUR IN THE RIGHT PLACE</h2>
+      </section>
+
+      <section className='section-actors' ref={element4}>
+        {show4 &&
+          <div className='actors-container animation'>
+            <div className='row-actors'>
+              <div className='col-img'>
+                <img src={imgActor1} alt='' />
+              </div>
+              <div className='col-img end'>
+                <img src={imgActor2} alt='' />
+              </div>
+              <div className='col-img'>
+                <img src={imgActor3} alt='' />
+              </div>
+              <div className='col-img end'>z
+                <img src={imgActor4} alt='' />
+              </div>
+            </div>
+          </div>}
       </section>
 
       <section className='sliderContainer' ref={element3}>
