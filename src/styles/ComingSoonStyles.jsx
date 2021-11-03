@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CountdownContainer = styled.p`
+export const CountdownContainer = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;

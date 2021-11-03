@@ -142,11 +142,11 @@ const Home = () => {
           </div>}
       </section>
 
-      <section className='' ref={element2}>
+      <section ref={element2}>
         {show2 &&
           <Link to='/signup' className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
-            <h2 className='ijbTitle'>DISCOVER OUR PEOPLE</h2>
-            <h3 className='ijbSubtitle'>FIND YOUR PLACE</h3>
+            <span className='ijbTitle'>DISCOVER OUR PEOPLE</span>
+            <span className='ijbSubtitle'>FIND YOUR PLACE</span>
             <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
           </Link>}
       </section>

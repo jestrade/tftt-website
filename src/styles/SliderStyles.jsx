@@ -68,7 +68,13 @@ export const Button = styled.button`
 export const Item = styled(Link)`
   display: grid;
   text-decoration: none;
-  
+  span{
+    margin:39px 0;
+    color: white;
+    font-family: 'steinbeckregular';
+    font-size: 24px;
+    text-align: center;
+  }
   p{
     margin:39px 0;
     color: white;
@@ -108,11 +114,8 @@ export const ImgContainer = styled.div`
       margin:auto;
       
     }
-
-    
-    
 `
-export const Title = styled.div`
+export const Title = styled.h1`
   
   font-family: 'cooper_hewittbold';
   font-size:90px;

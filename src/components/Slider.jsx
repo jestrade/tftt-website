@@ -83,15 +83,15 @@ export const Slider = () => {
                   <Item to={slide.conten[0].href}>
                     <ImgContainer bgImg={slide.conten[0].img} bgImgMob={slide.conten[0].imgMob} />
 
-                    <p>BE IN THE FILM</p>
+                    <span>BE IN THE FILM</span>
                   </Item>
                   <Item to={slide.conten[1].href}>
                     <ImgContainer bgImg={slide.conten[1].img} bgImgMob={slide.conten[1].imgMob} />
-                    <p>UPLOAD YOUR MUSIC</p>
+                    <span>UPLOAD YOUR MUSIC</span>
                   </Item>
                   <Item to={slide.conten[2].href}>
                     <ImgContainer bgImg={slide.conten[2].img} bgImgMob={slide.conten[2].imgMob} />
-                    <p>UPLOAD YOUR VIDEO</p>
+                    <span>UPLOAD YOUR VIDEO</span>
                   </Item>
                   {/* eslint-disable-next-line react/jsx-indent */}
                                       </Slide>}
