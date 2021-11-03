@@ -72,7 +72,8 @@
           border-radius: 6px;
           margin-top: 0.25rem;
           select {
-            width: 5rem;
+            width: 30%;
+            max-width: 7rem;
             border-top-left-radius: 6px;
             border-bottom-left-radius: 6px;
             background-color: transparent;
@@ -81,15 +82,15 @@
             font-family: var(--subtitles);
             font-size: 13px;
             line-height: 13px;
-            padding-left: 5px;
-            padding-right: 5px;
+            padding-left: 0.25rem;
             outline: none;
+            text-align: center;
             option {
               background-color: black;
             }
           }
           .phoneInput {
-            width: 100%;
+            width: 70%;
             height: 100%;
             background-color: transparent;
             border-left: solid white 1px;
@@ -207,11 +208,10 @@
           height: $height;
           margin-top: 1rem;
           select {
-            width: 6rem;
             font-size: 18px;
             line-height: 18px;
-            padding-left: 1.5rem;
-            padding-right: 0.5rem;
+            padding-left: 0.75rem;
+            // padding-right: 0.5rem;
           }
           .phoneInput {
             width: 100%;
@@ -292,6 +292,9 @@
         width: 40%;
         max-width: 555px;
         padding: 2.5rem;
+        .formMain > .phoneDiv > select {
+          width: 6rem;
+        }
       }
     }
   }
