@@ -2,6 +2,7 @@ import React, { useContext, useLayoutEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
+import { SectionActors } from '@styles/StylesHome'
 
 // Components
 import { SocialMediaBar } from '@components/SocialMediaBar'
@@ -12,10 +13,6 @@ import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
 import auhood from '@images/anuvahood.png'
-import imgActor1 from '@images/imgActors.png'
-import imgActor4 from '@images/imgActors1.png'
-import imgActor3 from '@images/imgActors2.png'
-import imgActor2 from '@images/imgActors3.png'
 
 // import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
@@ -109,25 +106,25 @@ const Home = () => {
         <h2>YOUR IN THE RIGHT PLACE</h2>
       </section>
 
-      <section className='section-actors' ref={element4}>
+      <SectionActors ref={element4}>
         {show4 &&
           <div className='actors-container animation'>
             <div className='row-actors'>
               <div className='col-img'>
-                <img src={imgActor1} alt='' />
+                <div className='img1' alt='' />
               </div>
               <div className='col-img end'>
-                <img src={imgActor2} alt='' />
+                <div className='img2' alt='' />
               </div>
               <div className='col-img'>
-                <img src={imgActor3} alt='' />
+                <div className='img3' alt='' />
               </div>
               <div className='col-img end'>z
-                <img src={imgActor4} alt='' />
+                <div className='img4' alt='' />
               </div>
             </div>
           </div>}
-      </section>
+      </SectionActors>
 
       <section className='sliderContainer' ref={element3}>
         {show3 &&
