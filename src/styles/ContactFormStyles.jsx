@@ -325,7 +325,8 @@ display: none;
   max-width: 739px;
   height: 100%;
   img {
-    height: auto;
+    height: 100%;
+    width: auto;
     object-fit: initial;
     object-position: initial;
     flex-grow: 1;
