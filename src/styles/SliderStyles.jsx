@@ -4,6 +4,7 @@ import styled from 'styled-components'
 /* import { fadeIn } from '@styles/animations' */
 import { slideAnimate } from '@styles/animations'
 import { cssResponsive } from '@hooks/useResponsive'
+import BePartImg from '@images/BePartOfTheFilm.png'
 
 export const Grid = styled.div`
   display: grid;
@@ -85,11 +86,14 @@ export const ImgContainer = styled.div`
     background-image: url(${(props) => props.bgImg});
     background-size: cover;
     background-repeat: no-repeat;
-    transition: all 1s;
+    transition: all .5s;
     &:hover{
-      background-image: url(${(props) => props.bePartImg});
+      background-image: url(${BePartImg});
       background-size: cover;
       background-repeat: no-repeat;
+      ${cssResponsive('Mobile')}{
+        background-position-y: -330px;
+      }
     }
     ${cssResponsive('Mobile')}{
       width: 375px ;

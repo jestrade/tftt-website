@@ -18,7 +18,7 @@ import Image3 from '@images/slider/3IMG.png'
 import Image4 from '@images/slider/1IMG(2).png'
 import Image5 from '@images/slider/2IMG(2).png'
 import Image6 from '@images/slider/3IMG(2).png'
-import BePartImg from '@images/BePartOfTheFilm.png'
+
 import Image1Mob from '@images/slider/1IMGMob.png'
 import Image2Mob from '@images/slider/2IMGMob.png'
 import Image3Mob from '@images/slider/3IMGMob.png'
@@ -81,16 +81,16 @@ export const Slider = () => {
               <div key={index}>
                 {index === current && <Slide animation={animation}>
                   <Item to={slide.conten[0].href}>
-                    <ImgContainer bgImg={slide.conten[0].img} bePartImg={BePartImg} bgImgMob={slide.conten[0].imgMob} />
+                    <ImgContainer bgImg={slide.conten[0].img} bgImgMob={slide.conten[0].imgMob} />
 
                     <p>BE IN THE FILM</p>
                   </Item>
                   <Item to={slide.conten[1].href}>
-                    <ImgContainer bgImg={slide.conten[1].img} bePartImg={BePartImg} bgImgMob={slide.conten[1].imgMob} />
+                    <ImgContainer bgImg={slide.conten[1].img} bgImgMob={slide.conten[1].imgMob} />
                     <p>UPLOAD YOUR MUSIC</p>
                   </Item>
                   <Item to={slide.conten[2].href}>
-                    <ImgContainer bgImg={slide.conten[2].img} bePartImg={BePartImg} bgImgMob={slide.conten[2].imgMob} />
+                    <ImgContainer bgImg={slide.conten[2].img} bgImgMob={slide.conten[2].imgMob} />
                     <p>UPLOAD YOUR VIDEO</p>
                   </Item>
                   {/* eslint-disable-next-line react/jsx-indent */}
