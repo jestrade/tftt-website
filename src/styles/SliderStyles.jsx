@@ -118,6 +118,8 @@ export const Title = styled.div`
   font-size:90px;
   text-align: center;
   color:#f10505;
+  margin-top: 100px;
+  margin-bottom: 20px;
   span{
     color:white
   }
@@ -127,5 +129,7 @@ export const Title = styled.div`
     margin-left: 20px;
     text-align: center;
     margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
   }
 `
