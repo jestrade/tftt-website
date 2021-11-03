@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router'
 // Context
 import Context from '../context/Context'
@@ -11,6 +11,9 @@ const ImJustBaitPage = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='IJB-container'>
       <div className='IJB-image__first' />
@@ -20,7 +23,9 @@ const ImJustBaitPage = () => {
       </div>
       <div className='IJB-description'>
         <p>
-          Created in 2014 by Anthony Robb (aka Antz), who's just 22 years old,
+          Created in 2014 by Anthony Robb (aka Antz), who's just 22 years old.
+        </p>
+        <p>
           IMJUSTBAIT started out as an Instagram meme page that has skyrocketed
           to success within the past six years.
         </p>

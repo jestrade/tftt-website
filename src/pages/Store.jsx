@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router'
 // Context
 import Context from '../context/Context'
@@ -9,15 +9,22 @@ import { Section, Container } from '@styles/PartnershipsStyles'
 
 import BgImg from '@images/bgStoreImg.png'
 
+//  Components
+import { ComingSoon } from '@components/ComingSoon'
+
 export const Store = () => {
   // This code is for identify if the page is Gallery
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
+  const name = 'NFT STORE'
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <Section bgImg={BgImg}>
       <Container>
-        <h1 style={{ color: 'white' }}>Coming Soon Component Here!</h1>
+        <ComingSoon name={name} />
       </Container>
     </Section>
 

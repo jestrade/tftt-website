@@ -1,11 +1,23 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { cssResponsive } from '@hooks/useResponsive'
+import { fadeIn } from '@styles/animations'
 
 export const Grid = styled.section`
   width:100%;
   position: absolute;
   top:0px;
   background-color: transparent;
+  z-index: 10;
+  
+  ${cssResponsive('Desktop15')}{
+    position:  ${props => props.positionGrid};
+    height: ${props => props.heightGrid};
+  }
+  ${cssResponsive('Mobile')}{
+    background: transparent;
+    
+  }
 `
 
 export const NavbarSection = styled.nav`
@@ -13,6 +25,15 @@ export const NavbarSection = styled.nav`
   flex-flow: row nowrap;
   height: 57px;
   margin: 42px 181px;
+  ${cssResponsive('Desktop15')}{
+    margin: 42px 80px;
+  }
+  ${cssResponsive('Mobile')}{
+    justify-content: space-between;
+    align-items: center;
+    margin: 42px 40px;
+    
+  }
 
 `
 export const Logo = styled(Link)`
@@ -47,6 +68,35 @@ export const Menu = styled.ul`
       }
     }
   }
+
+  ${cssResponsive('Desktop15')}{
+      li{
+        font-size: 16px;
+       
+      }
+  }
+  ${cssResponsive('Mobile')}{
+      display:${props => props.dropMenu};
+      flex-flow: column nowrap;
+      position: absolute;
+      top: 150px;
+      left: 0px;
+      background-color: ${props => props.navState ? 'white' : 'black'};
+      margin: auto 0px;
+      height: 500px;
+      padding-top: 150px;
+      top: 0;
+      z-index: -1;
+      ${fadeIn({ time: '.5s', type: 'ease' })}
+      li{
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+        text-align: center;
+        
+        
+      }
+  }
 `
 export const LogoImg = styled.img`
   width: 126px;
@@ -56,13 +106,50 @@ export const LogoImg = styled.img`
 export const ButtonBox = styled.div`
   display: flex;
 `
-export const RegisterButton = styled.button`
+
+export const ButtonContainer = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  ${cssResponsive('Mobile')}{
+    display: none;
+  }
+`
+export const ButtonContainerLi = styled(Link)`
+  display: none;
+  text-decoration: none;
+  cursor: pointer;
+  ${cssResponsive('Mobile')}{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+`
+
+export const RegisterButton = styled.div`
   color:${({ fontColor }) => fontColor};;
-  width: 126;
-  height: 53;
   border-radius: 17px;
+  width: 126px;
+  height: 53px;
   border: 1px solid ${({ fontColor }) => fontColor};  ;
   font-family: "cooper_hewittheavy";
   font-size: 24px;
-  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+`
+
+export const MenuLogo = styled.button`
+  display: none;
+  ${cssResponsive('Mobile')}{
+    width: 28px;
+    height: 16px;
+    display: block;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  
+  }
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { cssResponsive } from '@hooks/useResponsive'
 
 
 /* Responsive styles */
@@ -103,11 +104,79 @@ export const Input = styled.div`
       font-size: 16px;
       line-height: 16px;
       padding: 1.5rem 2rem;
-      margin-top: 0.25rem;
     }
   }
 
 `
+
+export const InputPhone = styled.div`
+  div {
+    display: flex;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    @media (min-width: 640px) {
+      height: 4rem;
+    }
+    select {
+      height: 100%;
+      width: 30%;
+      text-align: center;
+      border-radius: 6px 0 0 6px;
+      background: transparent;
+      color: white;
+      outline: none;
+      border: 1px solid white;
+      max-width: 7rem;
+      font-family: "steinbeckregular";
+      font-size: 14px;
+      line-height: 14px;
+      padding-left: 0.25rem;
+      @media (min-width: 640px) {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 0.75rem;
+      }
+      option{
+        color: #1d1d1b;
+      }
+    }
+
+    input{
+      height: 100%;
+      border-radius: 0 6px 6px 0;
+      background-color: transparent;
+      color: white;
+      outline: none;
+      width: 70%;
+      border:1px solid white;
+      padding: 1rem;
+      font-family: "steinbeckregular";
+      font-size: 14px;
+      line-height: 14px;
+      @media (min-width: 420px) {
+        flex-grow: 1;
+      }
+      @media (min-width: 640px) {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 1.5rem 2rem;
+      }
+    }
+
+  }
+
+  label{
+    color: #A9A9A9;
+    font-size: 13px;
+    line-height: 13px;
+    @media (min-width: 640px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+`
+
 export const InputLetUs = styled.div`
   display: flex;
   flex-direction: column;

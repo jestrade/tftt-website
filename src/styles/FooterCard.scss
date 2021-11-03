@@ -2,51 +2,76 @@
 
 .footerCardsContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  height: 1000px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom: 2rem;
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #c4c4c4;
+  }
+  @media (min-width: 480px) {
+    height: 800px;
+    margin-bottom: 5rem;
+  }
+  @media (min-width: 768px) {
+    gap: 1.75rem;
+    width: 70%;
+    height: 550px;
+    overflow-y: initial;
+    overflow-x: scroll;
+    flex-direction: row;
+  }
+  @media (min-width: 1600px) {
+    justify-content: center;
+    width: 1600px;
+    overflow-x: initial;
+  }
 }
 
 .card {
-  height: 530px;
-  width: 364px;
+  font-family: var(--subtitles);
+  color: var(--white);
   border: 1px solid var(--white);
   border-radius: 15px;
-  margin-right: 40px;
-}
-
-.cardPPTitle {
-  display: flex;
-}
-
-.cardPP {
-  margin-left: 19px;
-  margin-top: 26px;
-  margin-bottom: 6px;
-}
-
-.cardTitleContainer {
-  margin-top: 26px;
-  margin-left: 17px;
-  margin-bottom: 6px;
-}
-
-.cardTitle {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: var(--subtitles);
-  color: var(--white);
-}
-
-.cardMsg {
-  margin-left: 19px;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: var(--subtitles);
-  color: var(--white);
-  margin-bottom: 9px;
-}
-
-.cardImg {
-  margin-left: 15px;
-  width: 324px;
-  height: 361px;
+  max-width: 360px;
+  @media (min-width: 768px) {
+    width: 360px;
+    max-width: initial;
+    flex-shrink: 0;
+  }
+  .cardPPTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .cardMsg {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 0.5rem;
+  }
+  .cardPPTitle,
+  .cardMsg {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .cardImg {
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
 }
