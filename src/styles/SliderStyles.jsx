@@ -121,6 +121,6 @@ export const Title = styled.div`
     font-size: 40px;
     width: 200px;
     margin-left: 20px;
-    text-align: left;
+    text-align: center;
   }
 `
