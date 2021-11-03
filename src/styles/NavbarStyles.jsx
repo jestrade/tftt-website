@@ -143,9 +143,13 @@ export const RegisterButton = styled.div`
 export const MenuLogo = styled.button`
   display: none;
   ${cssResponsive('Mobile')}{
-    width: 44px;
-    height: 24px;
+    width: 28px;
+    height: 16px;
     display: block;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   
   }
 `

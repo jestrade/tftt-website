@@ -6,6 +6,8 @@ import imgActor2 from '@images/imgActors3.png'
 import bgImage from '@images/bgActors.png'
 import bgImageMob from '@images/bgActorsMobile.png'
 
+import { cssResponsive } from '../hooks/useResponsive'
+
 export const SectionActors = styled.section`
   min-height: 500px;
   background-color: black;
@@ -19,7 +21,8 @@ export const SectionActors = styled.section`
     background-position-x: center;
     background-position-y: center;
     padding:100px 0 ;
-    @media only screen and (max-width:768px){
+    ${cssResponsive('Mobile')}{
+      flex-direction: column;
       background-image: url(${bgImageMob});
       background-size: 100% 100%;
       padding:200px 0 ;
@@ -28,10 +31,11 @@ export const SectionActors = styled.section`
     .row-actors{
       display:grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      height: 800px;
+      height: 990px;
       width: 100%;
       .col-img{
         display: flex;
+        flex-wrap: wrap;
         height: 100%;
         align-items: flex-start;
         &.end{
@@ -57,6 +61,7 @@ export const SectionActors = styled.section`
         background-size: cover;
         background-position-x:center;
         margin:0 20px;
+
       }
       .img3{
         
@@ -78,7 +83,7 @@ export const SectionActors = styled.section`
         background-position-x:center;
       }
 
-      @media only screen and (max-width:768px){
+      ${cssResponsive('Mobile')}{
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         height: 840px;
@@ -122,4 +127,32 @@ export const SectionActors = styled.section`
     }
   }
       
+`
+export const Title = styled.div`
+  display: block;
+  width: 100%;
+  color: white;
+  font-family: "cooper_hewittheavy";
+  font-size: 40px;
+  text-decoration: underline;
+  text-align: right;
+  margin: 0 20px;
+  ${cssResponsive('Mobile')}{
+    display: none;
+  }
+
+`
+export const TitleMb = styled.div`
+  display: none;
+  width: 100%;
+  color: white;
+  font-family: "cooper_hewittheavy";
+  font-size: 40px;
+  text-decoration: underline;
+  text-align: right;
+  margin: 0 20px;
+  ${cssResponsive('Mobile')}{
+    display: Block;
+  }
+
 `

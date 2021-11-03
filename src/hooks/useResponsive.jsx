@@ -7,7 +7,7 @@ export const cssResponsive = (type = 'Desktop15', isMin = false) => {
     Desktop13: '1400px',
     Desktop15: '1830px'
   }
-  if (!isMin){
+  if (!isMin) {
     return (
       css`@media only screen and (max-width:${screens[type]})`
     )
