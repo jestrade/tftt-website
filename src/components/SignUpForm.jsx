@@ -16,7 +16,10 @@ const SignUpForm = () => {
         <img src={rapper} alt='Rapper' />
         <div className='signupform'>
           <h1>Step into the trap</h1>
-          <p>Register to be part of the team, in Tales from the trap you can upload your own videos and get special treatment for registering.</p>
+          <p>
+            Register to be part of the team, in TALES FROM THE TRAP you can
+            upload your own videos and get special VIP treatment for registering.
+          </p>
           <hr />
           <form className='formMain'>
             <label>Email Address*</label>
