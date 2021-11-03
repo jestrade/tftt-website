@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router'
 // Context
 import Context from '../context/Context'
@@ -18,9 +18,9 @@ export const Partnerships = () => {
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
   const name = 'PARTNERSHIPS'
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
   return (
     <Section bgImg={BgImg}>
       <Container>

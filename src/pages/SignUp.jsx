@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 // Components
 import SignUpForm from '@components/SignUpForm'
@@ -10,9 +10,9 @@ const SignUpPage = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
   return (
     <SignUpForm />
   )

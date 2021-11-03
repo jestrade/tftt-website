@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router'
 // Context
 import Context from '../context/Context'
@@ -11,9 +11,9 @@ const ImJustBaitPage = () => {
   const location = useLocation()
   const { changeNav } = useContext(Context)
   changeNav(location.pathname)
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
   return (
     <div className='IJB-container'>
       <div className='IJB-image__first' />
