@@ -72,6 +72,8 @@
           border-radius: 6px;
           margin-top: 0.25rem;
           select {
+            -webkit-appearance: none;
+            padding-right: 20px;
             width: 30%;
             max-width: 7rem;
             border-top-left-radius: 6px;
@@ -87,6 +89,7 @@
             text-align: center;
             option {
               background-color: black;
+              
             }
           }
           .phoneInput {
@@ -293,7 +296,8 @@
         max-width: 555px;
         padding: 2.5rem;
         .formMain > .phoneDiv > select {
-          width: 6rem;
+          width: 8rem;
+          max-width: 8rem;
         }
       }
     }
@@ -305,6 +309,28 @@
         padding: 3.25rem 2.5rem;;
       }
     }
+    .phoneDiv{
+      select{
+        width: 8rem;
+        max-width: 8rem;
+      }
+    }
+  }
+}
+
+.icon-select{
+  position: relative;
+  pointer-events: none;
+  height: 100%;
+  width: 0px;
+  right:15px;
+  top: 32%;
+  img{
+    width: 10px;
+    height: 6px;
+  }
+  @media only screen and (max-width:768px){
+    top: 24%;
   }
 }
 

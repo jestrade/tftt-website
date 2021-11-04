@@ -269,9 +269,8 @@ export const ContactForm = () => {
                 <option data-countrycode='ZM' value='260'>(+260) Zambia</option>
                 <option data-countrycode='ZW' value='263'>(+263) Zimbabwe</option>
               </select>
-
               <IconSelect>
-                <img src={arrowDown} alt='' />
+                <img src={arrowDown} alt='icon select row down' />
               </IconSelect>
               <input type='text' placeholder='' />
             </div>

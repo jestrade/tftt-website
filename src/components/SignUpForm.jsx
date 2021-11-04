@@ -8,6 +8,8 @@ import rapper from '@images/rapper.png'
 import google from '@images/googlelogo.png'
 import facebook from '@images/facebooklogo.png'
 import icloud from '@images/icloudlogo.png'
+// Icons
+import arrowDown from '@icons/arrowDownSelect.png'
 
 const SignUpForm = () => {
   return (
@@ -247,6 +249,9 @@ const SignUpForm = () => {
                 <option data-countrycode='ZM' value='260'>(+260) Zambia</option>
                 <option data-countrycode='ZW' value='263'>(+263) Zimbabwe</option>
               </select>
+              <div className='icon-select'>
+                <img src={arrowDown} alt='' />
+              </div>
               <input className='phoneInput' type='tel' />
             </div>
             <div className='radioContainer'>
