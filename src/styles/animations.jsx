@@ -23,7 +23,6 @@ const leftKeyFrames = keyframes`
     opacity:1;
   }
 `
-
 const rightKeyFrames = keyframes`
   from{
     right:-200px;
@@ -32,6 +31,14 @@ const rightKeyFrames = keyframes`
   to{
     right:0;
     opacity:1;
+  }
+`
+const loadingKeyFrames = keyframes`
+  from{
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(356deg)
   }
 `
 
@@ -43,3 +50,7 @@ export const slideAnimate = ({ time = '3s', type = 'ease', direction = 'left' } 
   direction === 'left'
     ? css`animation: ${time} ${leftKeyFrames} ${type};`
     : css`animation: ${time} ${rightKeyFrames} ${type};`
+
+export const loadingAnimate = ({ time = '3s', type = 'ease' } = {}) => css`
+  animation: ${time} ${loadingKeyFrames} ${type};
+`

@@ -4,7 +4,6 @@ import { useLocation } from 'react-router'
 import Context from '../context/Context'
 // components
 import { ContactForm } from '@components/ContactForm'
-
 // styles
 
 import { Section } from '@styles/ContactStyles'
