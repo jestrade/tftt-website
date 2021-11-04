@@ -130,7 +130,7 @@ const Home = () => {
         <div className='pictureContainer'>
           <div className='pictureContainer1'>"BLUE STORY"</div>
           <div className='pictureContainer2'>"TOP BOY"</div>
-          <div className='pictureContainer3'>"ADULTHOOD</div>
+          <div className='pictureContainer3'>"ADULTHOOD"</div>
         </div>
         <h2>YOUR IN THE RIGHT PLACE</h2>
       </section>
