@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { cssResponsive } from '@hooks/useResponsive'
 
-
 /* Responsive styles */
 export const Contact = styled.div`
   display:flex;
@@ -110,6 +109,7 @@ export const Input = styled.div`
 `
 
 export const InputPhone = styled.div`
+  
   div {
     display: flex;
     height: 2.5rem;
@@ -119,6 +119,7 @@ export const InputPhone = styled.div`
       height: 4rem;
     }
     select {
+      -webkit-appearance: none;
       height: 100%;
       width: 30%;
       text-align: center;
@@ -132,6 +133,9 @@ export const InputPhone = styled.div`
       font-size: 14px;
       line-height: 14px;
       padding-left: 0.25rem;
+      
+
+
       @media (min-width: 640px) {
         font-size: 16px;
         line-height: 16px;
@@ -174,6 +178,22 @@ export const InputPhone = styled.div`
       font-size: 16px;
       line-height: 16px;
     }
+  }
+`
+
+export const IconSelect = styled.div`
+  position: relative;
+  pointer-events: none;
+  height: 100%;
+  width: 0px;
+  right:15px;
+  top: 32%;
+  img{
+    width: 10px;
+    height: 6px;
+  }
+  ${cssResponsive('Mobile')}{
+    top: 24%;
   }
 `
 
@@ -267,6 +287,7 @@ export const SendButton = styled.button`
   border-radius: 6px;
   cursor: pointer;
   span{
+    color: black;
     margin-left: 0.5rem;
     font-size: 14px;
     line-height: 14px;

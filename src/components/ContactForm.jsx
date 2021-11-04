@@ -14,6 +14,7 @@ import {
   AttachFileButton,
   ButtonTerms,
   InputPhone,
+  IconSelect,
   Hr
 } from '@styles/ContactFormStyles'
 
@@ -23,6 +24,7 @@ import imgForm from '@images/contactFormImage.png'
 // Icons
 import iconMessageCheck from '@icons/messageCheck.png'
 import iconFolder from '@icons/folder.png'
+import arrowDown from '@icons/arrowDownSelect.png'
 
 export const ContactForm = () => {
   const [checkBox, setCheckBox] = useState(false)
@@ -44,15 +46,14 @@ export const ContactForm = () => {
             <input type='text' placeholder='Enter email address' />
           </Input>
           <Input>
-            <label htmlFor=''>Subjet</label>
+            <label htmlFor=''>Subject</label>
             <input type='text' placeholder="What's up?" />
           </Input>
           <InputPhone>
             <label htmlFor=''>Phone number</label>
             <div>
               <select name='code' id=''>
-
-              <option data-countrycode='GB' value='44' defaultValue>(+44) UK</option>
+                <option data-countrycode='GB' value='44' defaultValue>(+44) UK</option>
                 <option data-countrycode='DZ' value='213'>(+213) Algeria</option>
                 <option data-countrycode='AD' value='376'>(+376) Andorra</option>
                 <option data-countrycode='AO' value='244'>(+244) Angola</option>
@@ -268,6 +269,10 @@ export const ContactForm = () => {
                 <option data-countrycode='ZM' value='260'>(+260) Zambia</option>
                 <option data-countrycode='ZW' value='263'>(+263) Zimbabwe</option>
               </select>
+
+              <IconSelect>
+                <img src={arrowDown} alt='' />
+              </IconSelect>
               <input type='text' placeholder='' />
             </div>
           </InputPhone>
