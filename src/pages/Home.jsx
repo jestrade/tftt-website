@@ -82,7 +82,7 @@ const Home = () => {
             <img className='terryStone' src={terrystone} alt='Terry Stone' />
             <div className='terryStoneTextContainer'>
               <h1 className='terryTitle'>PRODUCTION</h1>
-              <h2>Bafta nominated and Raindance best feature winner Terry Stone</h2>
+              <h2>BAFTA nominated and Raindance best feature winner Terry Stone</h2>
               <p className='terryText'>Terry Stone began his Acting & Producing career in May 2003 and over the past 18 years has carved an impressive career on both sides of the camera. Terry's naturalistic style of acting has seen him play some memorable leading roles such as a corrupt cop Detective Sargent Andy White in the Bafta Nominated and Raindance Film Festival Award winning "Rollin' With The Nines"; Tony Tucker in the Rise of The Footsoldier True Crime Film Franchise and as Jack Spot in the 1930's - 1950's period crime film "Once Upon a Time in London".</p>
               <p className='terryText'>“TALES FROM THE TRAP’s (“TFT<span>T</span>”) Film &amp; Television Franchise will leverage from the anticipated exponential growing demand of digital assets in the Film, Television, social media, music and the graphic/art content industries.</p>
               <p className='terryText'>TFT<span>T</span> will create a market place for the sale and resale of the Film &amp; Television franchise assets and all related content through amongst others the highly sort after non fungible tokens. TFT<span>T</span> will commercialize through tokenomics and create digital intellectual property for the benefit of the TFT<span>T</span> loyal fanbase.”</p>
@@ -149,6 +149,10 @@ const Home = () => {
             <span className='ijbSubtitle'>FIND YOUR PLACE</span>
             <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
           </Link>}
+      </section>
+
+      <section className='brickellContainer'>
+        <div />
       </section>
 
       <div className='graffitiContainer'>
