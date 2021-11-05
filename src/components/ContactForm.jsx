@@ -30,13 +30,40 @@ import iconMessageCheck from '@icons/messageCheck.png'
 import iconFolder from '@icons/folder.png'
 import arrowDown from '@icons/arrowDownSelect.png'
 
+// Form Validation
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+// Form Schema
+const schema = yup.object().shape({
+  contactMail: yup.string().email("Must be a valid email").required("Required"),
+  subject: yup.string().required("Required"),
+  indicative: yup.string(),
+  phone: yup.string(),
+  letUs: yup.string().required("Required"),
+});
+
 export const ContactForm = () => {
+  // State
   const [checkBox, setCheckBox] = useState(false)
+  const [uplopading, setUploading] = useState(false)
+
+  // Functions
   const handleCheck = (e) => {
     e.preventDefault()
     setCheckBox(!checkBox)
   }
-  const [uplopading, setUploading] = useState(true)
+
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmitHandler = (data) => {
+    console.log({ data });
+    reset();
+  };
+
   return (
     <Contact>
       <FormContainer>
@@ -49,19 +76,21 @@ export const ContactForm = () => {
                 <p>Wanna talk with us? Let us know the deal and we will message you shortly.</p>
               </Text>
               <Hr />
-              <Form>
+              <Form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
                 <Input>
-                  <label htmlFor=''>Contact Mail*</label>
-                  <input type='text' placeholder='Enter email address' />
+                  <label htmlFor='contactMail'>Contact Mail*</label>
+                  <input {...register("contactMail")} type='email' placeholder='Enter email address' />
+                  {errors.contactMail?.message && <p role='alert'>{errors.contactMail?.message}</p>}
                 </Input>
                 <Input>
-                  <label htmlFor=''>Subject</label>
-                  <input type='text' placeholder="What's up?" />
+                  <label htmlFor='subject'>Subject*</label>
+                  <input {...register("subject")} type='text' placeholder="What's up?" />
+                  {errors.subject?.message && <p role='alert'>{errors.subject?.message}</p>}
                 </Input>
                 <InputPhone>
-                  <label htmlFor=''>Phone number</label>
+                  <label htmlFor='phone'>Phone number</label>
                   <div>
-                    <select name='code' id=''>
+                    <select {...register("indicative")} name='code' id=''>
                       <option data-countrycode='GB' value='44' defaultValue>(+44) UK</option>
                       <option data-countrycode='DZ' value='213'>(+213) Algeria</option>
                       <option data-countrycode='AD' value='376'>(+376) Andorra</option>
@@ -281,12 +310,13 @@ export const ContactForm = () => {
                     <IconSelect>
                       <img src={arrowDown} alt='icon select row down' />
                     </IconSelect>
-                    <input type='text' placeholder='' />
+                    <input {...register("phone")} type='text' placeholder='000-000-0000' />
                   </div>
                 </InputPhone>
                 <InputLetUs>
-                  <label htmlFor=''> Let us know</label>
-                  <textarea type='text' placeholder='Message' />
+                  <label htmlFor='letUs'>Let us know*</label>
+                  <textarea {...register("letUs")} type='text' placeholder='Message' />
+                  {errors.letUs?.message && <p role='alert'>{errors.letUs?.message}</p>}
                 </InputLetUs>
                 <ButtonTerms onClick={handleCheck}>
                   <div>
@@ -300,20 +330,18 @@ export const ContactForm = () => {
                 </ButtonTerms>
                 <ButtonsContainer>
                   <SendButton type='submit'>
-                    <img src={iconMessageCheck} alt='message check icon ' /> <span>Send</span>
+                    <img src={iconMessageCheck} alt='message check icon' /> <span>Send</span>
                   </SendButton>
                   <AttachFileButton href='#'>
                     <img src={iconFolder} alt='folder icon' /><span>Attach file</span>
                   </AttachFileButton>
                 </ButtonsContainer>
               </Form>
-              </>
+            </>
         }
 
       </FormContainer>
-      <Image>
-        <img src={imgForm} alt='man with mask image' />
-      </Image>
+      <Image src={imgForm} />
     </Contact>
   )
 }
