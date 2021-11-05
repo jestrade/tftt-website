@@ -1009,23 +1009,52 @@ p.paragraph {
     align-items: center;
   }
 
-  .imageWrapper {
+  .moviesContainer div:nth-child(1) {
     width: 388px;
     height: 221px;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 10px;
+    background-image: url("../assets/images/anuvahoodmobile.png");
+  }
+
+  .moviesContainer div:nth-child(2) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/rollingmobile.png");
+  }
+
+  .moviesContainer div:nth-child(3) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/roftmobile.png");
+  }
+
+  .moviesContainer div:nth-child(4) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/londonmobile.png");
   }
 
   .movieCover {
-    width: 388px;
+    /*     width: 388px;
     height: 221px;
     margin: 0px;
     margin-bottom: 10px;
     clip-path: none;
     transform: translate(0px, 0px);
     transition: transform 0ms;
-    object-fit: cover;
+    object-fit: cover; */
+    display: none;
   }
 
   .movieCover1 {
