@@ -10,8 +10,7 @@ export const Contact = styled.div`
   margin-bottom: 5.25rem;
   @media (min-width: 1024px) {
     flex-direction: row;
-    max-width: 1249px;
-    max-height: 872px;
+    max-width: 1280px;
   }
 `
 
@@ -105,11 +104,19 @@ export const Input = styled.div`
       padding: 1.5rem 2rem;
     }
   }
-
+  p[role="alert"] {
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--red);
+    margin-bottom: 1rem;
+    @media (min-width: 640px) {
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
 `
 
 export const InputPhone = styled.div`
-  
   div {
     display: flex;
     height: 2.5rem;
@@ -167,9 +174,7 @@ export const InputPhone = styled.div`
         padding: 1.5rem 2rem;
       }
     }
-
   }
-
   label{
     color: #A9A9A9;
     font-size: 13px;
@@ -218,6 +223,7 @@ export const InputLetUs = styled.div`
     border: solid white 1px;
     padding: 1rem;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
     outline: none;
     font-family: "steinbeckregular";
     font-size: 14px;
@@ -240,11 +246,19 @@ export const InputLetUs = styled.div`
       font-size: 16px;
       line-height: 16px;
       height: 14rem;
-      margin-top: 0.25rem;
       padding: 1.5rem 2rem;
     }
   }
-
+  p[role="alert"] {
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--red);
+    margin-bottom: 1rem;
+    @media (min-width: 640px) {
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
 `
 
 export const ButtonTerms = styled.div`
@@ -342,27 +356,21 @@ export const AttachFileButton = styled.a`
 
 export const Image = styled.div`
 display: none;
+background-image: url(${props => props.src});
+background-size: cover;
+background-position: 40% 35%;
+background-repeat: no-repeat;
 @media (min-width: 768px) {
   display: inline;
   // Render before Form
   order: -1;
-  img {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    object-position: 40% 35%;
-  }
+  width: 100%;
+  height: 20rem;
 }
 @media (min-width: 1024px) {
   order: 0;
-  max-width: 739px;
-  height: 100%;
-  img {
-    height: 100%;
-    width: auto;
-    object-fit: initial;
-    object-position: initial;
-    flex-grow: 1;
-  }
+  height: auto;
+  width: 100%;
+  flex-grow: 1;
 }
 `
