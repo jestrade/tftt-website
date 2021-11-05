@@ -44,6 +44,7 @@ export const Container = styled.div`
   width: 100%;
   grid-template-columns: 1fr 10fr 1fr;
   margin: auto;
+  overflow: hidden; // disable scroll 
   ${cssResponsive('Mobile')}{
     display:block;
     grid-template-columns:none;
@@ -60,6 +61,7 @@ export const Button = styled.button`
   cursor: pointer;
   ${cssResponsive('Mobile')}{
     display: none;
+    pointer-events: none;
   }
   
 `
@@ -145,5 +147,34 @@ export const Title = styled.h1`
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 20px;
+  }
+`
+export const Paginator = styled.ul`
+  list-style: none;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  li{
+    margin:0 10px
+  }
+  ${cssResponsive('Mobile')}{
+    display: flex;
+  }
+ `
+
+export const ItemPaginator = styled.div`
+  display:flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px red ;
+  .center{
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
   }
 `
