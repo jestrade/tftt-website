@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: npm install && npm run build
       - aws-s3/sync:
-          from: build
+          from: dist
           to: "s3://prod-tftt/"
           arguments: |
             --acl public-read \
@@ -21,7 +21,7 @@ jobs:
       - checkout
       - run: npm install && npm run build
       - aws-s3/sync:
-          from: build
+          from: dist
           to: "s3://stg-tftt/"
           arguments: |
             --acl public-read \
@@ -33,7 +33,7 @@ jobs:
       - checkout
       - run: npm install && npm run build
       - aws-s3/sync:
-          from: build
+          from: dist
           to: "s3://dev-tftt/"
           arguments: |
             --acl public-read \
