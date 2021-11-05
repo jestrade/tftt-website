@@ -210,6 +210,7 @@ export const InputLetUs = styled.div`
     }
   }
   textarea{
+    resize: none;
     height: 10rem;
     border-radius: 6px;
     background-color: transparent;
