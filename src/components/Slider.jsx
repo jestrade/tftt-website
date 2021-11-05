@@ -101,16 +101,22 @@ export const Slider = () => {
               <div key={index}>
                 {index === current && <Slide animation={animation}>
                   <Item to={slide.conten[0].href}>
-                    <ImgContainer bgImg={slide.conten[0].img} bgImgMob={slide.conten[0].imgMob} />
+                    <ImgContainer bgImg={slide.conten[0].img} bgImgMob={slide.conten[0].imgMob}>
+                      <span>BE PART IN THE FILM</span>
+                    </ImgContainer>
 
                     <span>BE IN THE FILM</span>
                   </Item>
                   <Item to={slide.conten[1].href}>
-                    <ImgContainer bgImg={slide.conten[1].img} bgImgMob={slide.conten[1].imgMob} />
+                    <ImgContainer bgImg={slide.conten[1].img} bgImgMob={slide.conten[1].imgMob}>
+                      <span>UPLOAD YOUR MUSIC</span>
+                    </ImgContainer>
                     <span>UPLOAD YOUR MUSIC</span>
                   </Item>
                   <Item to={slide.conten[2].href}>
-                    <ImgContainer bgImg={slide.conten[2].img} bgImgMob={slide.conten[2].imgMob} />
+                    <ImgContainer bgImg={slide.conten[2].img} bgImgMob={slide.conten[2].imgMob}>
+                      <span>UPLOAD YOUR VIDEO</span>
+                    </ImgContainer>
                     <span>UPLOAD YOUR VIDEO</span>
                   </Item>
                   {/* eslint-disable-next-line react/jsx-indent */}

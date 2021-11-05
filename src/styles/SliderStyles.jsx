@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { slideAnimate } from '@styles/animations'
 import { cssResponsive } from '@hooks/useResponsive'
 import Bricks from '@images/BRICKS.png'
-import BePartImg from '@images/BePartOfTheFilm.png'
 
 export const Grid = styled.div`
   display: grid;
@@ -97,13 +96,25 @@ export const ImgContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     transition: all .5s;
+    span{
+      display:none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      font-family: "cooper_hewittheavy";
+      font-size:40px;
+      font-weight: bolder;
+      margin: 0;
+      padding: 0px 80px
+    }
     &:hover{
-      background-image: url(${BePartImg});
-      background-size: cover;
-      background-repeat: no-repeat;
-      ${cssResponsive('Mobile')}{
-        background-position-y: -330px;
+      background-image: none;
+      background-color: #f10505;
+      span{
+        display: flex;
       }
+      
     }
     ${cssResponsive('Mobile')}{
       width: 375px ;
