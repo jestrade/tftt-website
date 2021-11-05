@@ -36,7 +36,8 @@ export const ContactForm = () => {
     e.preventDefault()
     setCheckBox(!checkBox)
   }
-  const [uplopading, setUploading] = useState(true)
+  const [uplopading, setUploading] = useState(false)
+  
   return (
     <Contact>
       <FormContainer>
