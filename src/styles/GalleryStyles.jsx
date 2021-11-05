@@ -6,10 +6,7 @@ import imageBg2 from '@images/bgSpray.png'
 import { cssResponsive } from '@hooks/useResponsive'
 
 export const Section = styled.section`
-  padding-top: 240px;
-  padding-bottom: 200px;
-  
-  
+  padding-top: 9.5rem;
   background-color: white;
   background-image: url(${imageBg2});
   background-size: cover;
@@ -22,109 +19,135 @@ export const Section = styled.section`
     background-position-x: center;
     background-position-y: 260px;
   }
-  ${cssResponsive('Desktop13')}{
-    
-  }
 `
 
-export const Title = styled.section`
-  display: flex;
-  flex-flow: column nowrap;
+export const Title = styled.div`
   text-align: center;
-  
-  margin: auto;
-  p:nth-child(1){
-    font-size: 138px;
+  h1 {
+    font-size: 50px;
+    line-height: 85%;
     font-family: "cooper_hewittheavy";
-    color:#F10505;
+    color: #F10505;
+    margin-bottom: 0.5rem;
+    @media (min-width: 480px) {
+      font-size: 106px;
+    }
+    @media (min-width: 768px) {
+      font-size: 144px;
+    }
   }
-  p:nth-child(2){
-    font-size: 48px;
+  h2 {
+    font-size: 25px;
+    line-height: 95%;
     font-family: "cooper_hewittbook";
+    @media (min-width: 480px) {
+      font-size: 44px;
+    }
+    @media (min-width: 768px) {
+      font-size: 48px;
+    }
   }
-
 `
 export const Container = styled.div`
   width: 100%;
-  
-  background-image: url(${imageBg});
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 100px;
-  
-  
+  padding: 2.5rem 1rem;
+  @media (min-width: 480px) {
+    padding: 5rem 1.75rem;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width: 1024px) {
+    background-image: url(${imageBg});
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 10rem;
+  }
 `
 export const Grid = styled.section`
-  padding: 14px 100px;
   display: grid;
-  width:100%;
-  
- 
-  grid-template-areas:"a a b c d d"
-                      "a a e e d d" ;
-  
-  ${cssResponsive('Desktop15')}{
-    grid-template-areas:"a a b b c c d d"
-                      "a a e e e e d d" ;
-    padding:10px 10px;
+  width: 100%;
+  grid-template-rows: 3.5fr 1fr 5.1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 860px;
+  grid-template-areas: "a d"
+                       "b c"
+                       "e e";
+  @media (min-width: 480px) {
+    gap: 1rem;
   }
-
+  @media (min-width: 1024px) {
+    grid-template-rows: 1fr 2.3fr;
+    grid-template-columns: 1.5fr 1.3fr 1fr 1.1fr;
+    grid-template-areas: "a b c d"
+                         "a e e d";
+    max-width: 1700px;
+  }
+  & > div:nth-child(1) > span {
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    @media (min-width: 480px) {
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+    }
+    @media (min-width: 1024px) {
+      padding-bottom: 0;
+      margin-bottom: -2rem;
+      color: white;
+      // Does not hide the text with the bg-white
+      text-shadow: 0 0 10px black;
+    }
+  }
+  & > div:nth-child(4) > span {
+    display: none;
+    @media (min-width: 1024px) {
+      display: inline;
+      margin-bottom: -2rem;
+    }
+  }
+  & > div:nth-child(5) > span {
+    right: 0;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    @media (min-width: 480px) {
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+    }
+    @media (min-width: 1024px) {
+      right: initial;
+      padding-bottom: 0;
+      margin-bottom: -2rem;
+    }
+  }
 `
-export const Item = styled.section`
+export const Item = styled.div`
   display: flex;
-  padding: 14px 15px ;
   width: 100%;
   height: 100%;
-  img{
-    
+  position: relative;
+  img {
     object-fit: cover;
-    
-    transition: transform 1s;
-    &:hover{
-      transform: scale(1.2);
-      z-index: 10;
-      position: relative;
+    width: inherit;
+    height: inherit;
+    @media (min-width: 1024px) {
+      transition: transform 1s;
+      &:hover{
+        transform: scale(1.2);
+        z-index: 10;
+        position: relative;
+      }
     }
-    
-    ${cssResponsive('Desktop15')}{
-      width: 100%;
-      height: 100%;
   }
-  
-  }
-
- 
-
-    
-
-
-`
-
-export const GridScenes = styled.div`
-  display:flex;
-  flex-flow: row nowrap;
-  margin: 0px 118px;
-  font-family: "cooper_hewittheavy";
-  div:nth-child(1){
+  img + span {
+    position: absolute;
+    bottom: 0;
+    font-family: "cooper_hewittheavy";
+    font-size: 18px;
     color: white;
-  }
-  div:nth-child(2){
-    margin-left: 25.5%;
-  }
-  div:nth-child(3){
-    margin-left: 43%;
-  }
-  ${cssResponsive('Desktop15')}{
-    margin: 0px 20px;
-    div:nth-child(1){
-    color: white;
-    }
-    div:nth-child(2){
-      margin-left: 25.5%;
-    }
-    div:nth-child(3){
-      margin-left: 43%;
+    @media (min-width: 1024px) {
+      color: black;
     }
   }
-
 `

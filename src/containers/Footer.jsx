@@ -9,12 +9,8 @@ import { SocialMediaBar } from '@components/SocialMediaBar'
 const Footer = () => {
   return (
     <div className='footer'>
-      <div className='lettersContainer'>
-        <h1 className='Title1'>CONNECT WITH THE <span>TRAP</span></h1>
-      </div>
-      <div className='cardsContainer'>
-        <FooterCard />
-      </div>
+      <h2 className='title1'>CONNECT WITH THE <span>TRAP</span></h2>
+      <FooterCard />
       <SocialMediaBar />
     </div>
   )

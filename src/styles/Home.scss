@@ -10,14 +10,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .tfttSubcontainer {
   background-color: transparent;
   width: 100%;
   padding: 9rem 1rem 6rem 1rem;
-  
-  @media (min-width: 480px) {
+
+  @media (min-width: 420px) {
     padding: 9rem 3rem 6rem 3rem;
   }
   @media screen and (min-width: 768px) {
@@ -31,14 +32,17 @@
     padding-bottom: 14rem;
   }
 }
+.previousFilms {
+  padding-left: 101px;
+  margin-bottom: 40px;
+}
 
 .fade {
-  // position: absolute;
-  // bottom: 100px;
-  // left: 0;
-  // width: 100%;
-  // height: auto;
-  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 @import "animations";
@@ -48,6 +52,7 @@
   font-size: 50px;
   line-height: 54px;
   color: var(--white);
+  text-align: center;
   animation: 3s animationFade ease;
   span {
     color: var(--red);
@@ -59,6 +64,7 @@
   @media (min-width: 1024px) {
     font-size: 88px;
     line-height: 92px;
+    align-self: center;
   }
   @media (min-width: 1280px) {
     font-size: 110px;
@@ -71,24 +77,21 @@
   @media (min-width: 1700px) {
     font-size: 144px;
     line-height: 162.72px;
-    margin-right: 3rem;
   }
 }
 
 .tfttSubcontainer h2 {
   margin-left: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  text-align: center;
   font-family: var(--titles);
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 38px;
   text-decoration: underline;
   color: var(--white);
-  @media (min-width: 768px) {
-    font-size: 48px;
-    line-height: 60px;
-  }
   @media (min-width: 1024px) {
-    margin-top: 6rem;
+    margin-top: 7rem;
+    text-align: left;
   }
 }
 
@@ -98,6 +101,7 @@
   line-height: 27.6px;
   font-family: var(--subtitles);
   margin-top: 1.5rem;
+  text-align: justify;
   @media (min-width: 768px) {
     font-size: 24px;
     line-height: 33.6px;
@@ -108,9 +112,7 @@
 p.paragraph {
   margin-top: 2rem;
   margin-bottom: 4rem;
-  @media (min-width: 768px) {
-    // Font Bold goes here
-  }
+  font-weight: bolder;
 }
 
 @media (min-width: 1024px) {
@@ -122,8 +124,10 @@ p.paragraph {
 }
 
 .terryStoneContainer {
-  height: 1310px;
+  height: auto;
+  padding-top: 15px;
   width: 100%;
+  margin-bottom: 40px;
   background-color: black;
   color: var(--white);
   display: flex;
@@ -132,13 +136,21 @@ p.paragraph {
 
 .terryStone {
   width: 710px;
-  height: 1117px;
+  height: 624px;
 }
 
 .terryStoneTextContainer {
-  height: 1117px;
-  margin-right: 82px;
+  height: auto;
+  margin-right: 92px;
   margin-left: 92px;
+}
+
+.terryStoneTextContainer h2 {
+  color: var(--red);
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: var(--titles);
+  margin-bottom: 20px;
 }
 
 .terryTitle {
@@ -146,20 +158,25 @@ p.paragraph {
   font-size: 48px;
   line-height: 24px;
   margin-bottom: 43px;
+  text-decoration: underline;
+  margin-bottom: 28px;
 }
 
 .terryText {
   font-family: var(--subtitles);
-  font-size: 24px;
-  line-height: 33.6px;
+  font-size: 18px;
+  line-height: 25.2px;
   margin-bottom: 50px;
+  text-align: justify;
 }
 
 .terryText2 {
   font-family: var(--subtitles);
-  font-size: 24px;
-  line-height: 33.6px;
-  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  text-align: justify;
+  font-weight: bolder;
 }
 
 .terrySubtitle {
@@ -168,13 +185,14 @@ p.paragraph {
   line-height: 24px;
   margin-bottom: 84px;
   text-decoration: underline;
+  color: white;
 }
 
 .imageWrapper {
-  width: 295px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   position: relative;
-  margin-right: 40px;
+  margin-right: 100px;
   &:hover img {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -194,6 +212,10 @@ p.paragraph {
   color: var(--red);
 }
 
+.imageWrapper:hover #a4 {
+  color: var(--red);
+}
+
 .imageWrapper img {
   position: absolute;
   top: 0;
@@ -202,8 +224,8 @@ p.paragraph {
 }
 
 .movieCover {
-  width: 295px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
@@ -212,8 +234,8 @@ p.paragraph {
 }
 
 .movieCover1 {
-  width: 295px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(0 0, 0 32%, 28% 0);
@@ -223,8 +245,8 @@ p.paragraph {
 }
 
 .movieCover3 {
-  width: 295px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
@@ -233,8 +255,8 @@ p.paragraph {
 }
 
 .movieCover4 {
-  width: 295px;
-  height: 486px;
+  width: 348px;
+  height: 608px;
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
@@ -248,8 +270,8 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 110px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -259,8 +281,8 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 110px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -270,8 +292,19 @@ p.paragraph {
   font-family: var(--titles);
   color: transparent;
   font-size: 140px;
-  top: 170px;
-  left: 110px;
+  top: 230px;
+  left: 140px;
+  z-index: 5;
+  text-decoration: none;
+}
+
+#a4 {
+  position: absolute;
+  font-family: var(--titles);
+  color: transparent;
+  font-size: 140px;
+  top: 230px;
+  left: 140px;
   z-index: 5;
   text-decoration: none;
 }
@@ -281,68 +314,76 @@ p.paragraph {
 }
 
 .discoverContainer {
-  background-image: url("../assets/images/discoverourpeople.png");
+  background-image: url("../assets/images/discoverMobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 572px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   background-color: black;
-  @media (max-width: 480px) {
-    text-align: start;
-    background-image: url("../assets/images/discoverMobile.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 423px;
-    align-items: flex-start;
-    background-color: black;
+  padding: 13rem 0 1.5rem 2rem;
+  @media (min-width: 420px) {
+    padding-left: 3rem;
+  }
+  @media (min-width: 768px) {
+    padding: 9rem 0 5rem;
+    gap: 4rem;
+  }
+  @media (min-width: 1024px) {
+    background-image: url("../assets/images/discoverourpeople.png");
   }
 }
 
 .ijbTitle {
   color: var(--white);
   font-family: var(--titles);
-  font-size: 96px;
-  line-height: 81.6px;
-  margin-bottom: 27px;
-  @media (max-width: 480px) {
-    font-size: 38px;
-    text-decoration: underline;
-    width: 250px;
-    line-height: 50px;
-    margin-left: 40px;
+  font-size: 38px;
+  line-height: 44px;
+  text-decoration: underline;
+  max-width: 270px;
+  @media (min-width: 768px) {
+    line-height: 70px;
+    font-size: 60px;
+    text-align: center;
+    max-width: initial;
+  }
+  @media (min-width: 1024px) {
+    font-size: 96px;
+    line-height: 105%;
   }
 }
 
 .ijbSubtitle {
   color: var(--white);
   font-family: var(--subtitles);
-  font-size: 24px;
-  line-height: 27.96px;
-  margin-bottom: 27px;
-  @media (max-width: 480px) {
-    font-size: 38px;
-    margin-left: 40px;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.3rem;
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
   }
 }
 
 .ijbImg {
-  @media (max-width: 480px) {
-    width: 177px;
-    height: 62px;
-    margin-left: 40px;
+  width: 177px;
+  height: 62px;
+  @media (min-width: 768px) {
+    margin: 0 auto;
   }
 }
 
 .sliderContainer {
-  background-image: url("../assets//images/blockshome.png");
-  background-color: var(--main);
-  padding-top: 136px;
+  /*  background-color: var(--main); */
+  background-color: black;
+  padding-top: 10px;
+  height: auto;
 
   @media screen and (max-width: 768px) {
-    padding-top: 50px;
+    padding-top: 0px;
   }
 }
 
@@ -355,6 +396,7 @@ p.paragraph {
   align-items: center;
   background-image: url("../assets/images/graffiti.png");
   background-color: black;
+  background-size: cover;
 
   @media screen and (max-width: 768px) {
     height: 1900px;
@@ -362,6 +404,14 @@ p.paragraph {
     justify-content: start;
   }
 }
+
+.brickellContainer div {
+  width: 100%;
+  height: 190px;
+  background-image: url("../assets/images/BRICKS.png");
+  opacity: 0.5;
+}
+
 .relImagesContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -374,8 +424,6 @@ p.paragraph {
   background-repeat: no-repeat;
   background-position-x: -10px;
 
- 
-
   @media screen and (max-width: 768px) {
     display: flex;
     grid-template-columns: none;
@@ -385,8 +433,7 @@ p.paragraph {
     width: 1360px;
     margin: 0;
     height: 327px;
-    padding:  0;
-    
+    padding: 0;
   }
 }
 
@@ -419,10 +466,9 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:46px;
+    top: -2px;
+    left: 46px;
   }
-  
 }
 
 .reel2 {
@@ -442,8 +488,8 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:150px;
+    top: -2px;
+    left: 150px;
   }
 }
 
@@ -464,8 +510,8 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:257px;
+    top: -2px;
+    left: 257px;
   }
 }
 
@@ -486,8 +532,8 @@ p.paragraph {
     width: 233px;
     height: 327px;
     position: relative;
-    top:-2px;
-    left:366px;
+    top: -2px;
+    left: 366px;
   }
 }
 
@@ -497,7 +543,6 @@ p.paragraph {
   font-size: 36px;
   line-height: 50px;
   z-index: 1;
-  
 }
 .redBlock {
   height: 100%;
@@ -505,7 +550,8 @@ p.paragraph {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  &:hover{
+  text-decoration: none;
+  &:hover {
     opacity: 1;
   }
   h1 {
@@ -553,7 +599,7 @@ p.paragraph {
   display: flex;
   align-items: center;
   @media only screen and (max-width: 768px) {
-    margin-top: 200px;
+    margin-top: 25px;
     flex-flow: column nowrap;
   }
 }
@@ -565,10 +611,9 @@ p.paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-family: var(--titles);
+  font-size: 24px;
+  font-family: var(--subtitles);
   color: white;
-  text-decoration: underline;
   @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
@@ -583,10 +628,9 @@ p.paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-family: var(--titles);
+  font-size: 24px;
+  font-family: var(--subtitles);
   color: white;
-  text-decoration: underline;
   @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
@@ -601,10 +645,9 @@ p.paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  font-family: var(--titles);
+  font-size: 24px;
+  font-family: var(--subtitles);
   color: white;
-  text-decoration: underline;
   @media only screen and (max-width: 768px) {
     background-size: cover;
     width: 100%;
@@ -619,11 +662,6 @@ p.paragraph {
   font-family: var(--titles);
   color: white;
   font-style: italic;
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-    top: 2714px;
-    left: 0px;
-  }
 }
 
 .treepicsContainer h2 {
@@ -636,12 +674,9 @@ p.paragraph {
   color: white;
   text-decoration: underline;
   @media only screen and (max-width: 768px) {
-    display: block;
     width: 100%;
-    margin-top: 400px;
     text-align: center;
-
-    left: 0px;
+    margin-top: 20px;
   }
 }
 
@@ -649,15 +684,15 @@ p.paragraph {
   margin-top: 100px;
 }
 
-@media (min-width: 1239px) and (max-width: 1367px) {
+@media screen and (min-width: 1200px) and (max-width: 1390px) {
   .terryTitle {
     font-size: 44px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 
   .terryText {
-    font-size: 20px;
-    margin-bottom: 18px;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .terrySubtitle {
@@ -667,61 +702,68 @@ p.paragraph {
 
   .terryStone {
     width: 557px;
-    height: 948px;
+    height: 589px;
   }
 
   .terryStoneContainer {
-    height: 1100px;
+    height: auto;
     width: 100%;
   }
 
   .terryStoneTextContainer {
-    height: 948px;
+    height: auto;
     margin-left: 40px;
     padding-left: 20px;
+    margin-right: 55px;
     width: 660px;
   }
 
   .imageWrapper {
-    width: 180px;
-    height: 310px;
-    margin-right: 40px;
+    width: 201px;
+    height: 309px;
+    margin-right: 110px;
   }
 
   .movieCover {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover1 {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover3 {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover4 {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   #a1 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 70px;
   }
   #a2 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 70px;
   }
   #a3 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 70px;
+  }
+
+  #a4 {
+    font-size: 110px;
+    top: 100px;
+    left: 70px;
   }
 
   .treepicsContainer h1 {
@@ -737,12 +779,21 @@ p.paragraph {
 
   .pictureContainer1 {
     height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
   .pictureContainer2 {
     height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
   .pictureContainer3 {
     height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
 
   .treepicsContainer {
@@ -753,17 +804,42 @@ p.paragraph {
     height: 250px;
     margin-top: 70px;
   }
+  .terryText2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  .terryStoneTextContainer h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .terryStoneTextContainer h1 {
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
 }
 
-@media (min-width: 1367px) and (max-width: 1760px) {
+@media screen and (min-width: 1400px) and (max-width: 1760px) {
   .terryTitle {
     font-size: 44px;
     margin-bottom: 28px;
   }
 
+  .terryStoneTextContainer h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .terryStoneTextContainer h1 {
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
   .terryText {
-    font-size: 20px;
-    margin-bottom: 18px;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .terrySubtitle {
@@ -773,79 +849,112 @@ p.paragraph {
 
   .terryStone {
     width: 557px;
-    height: 948px;
+    height: 589px;
   }
 
   .terryStoneContainer {
-    height: 1100px;
+    height: auto;
     width: 100%;
   }
 
   .terryStoneTextContainer {
-    height: 948px;
+    height: auto;
     margin-left: 40px;
     padding-left: 20px;
-    width: 710px;
+    margin-right: 55px;
+    width: 770px;
   }
 
   .imageWrapper {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
     margin-right: 40px;
   }
 
   .movieCover {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover1 {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover3 {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .movieCover4 {
-    width: 180px;
-    height: 310px;
+    width: 201px;
+    height: 309px;
   }
 
   .moviesContainer {
     padding-left: 10px;
+    width: 100%;
   }
 
   #a1 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 40px;
   }
   #a2 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 40px;
   }
   #a3 {
     font-size: 110px;
     top: 100px;
-    left: 60px;
+    left: 40px;
+  }
+  #a4 {
+    font-size: 110px;
+    top: 100px;
+    left: 40px;
+  }
+
+  .terryText2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  .pictureContainer1 {
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+  .pictureContainer2 {
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+  .pictureContainer3 {
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
   }
 }
 
-@media (max-width: 480px) {
-  .titleGrafContainer{
+@media only screen and (max-width: 780px) {
+  .titleGrafContainer {
     margin-top: 50px;
     margin-bottom: 600px;
   }
   .terryStoneContainer {
-    height: 1200px;
+    height: auto;
     width: 100%;
     flex-direction: column;
     align-content: center;
-    margin-bottom: 905px;
+    background-image: url("../assets/images/terrymobilebackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
   }
 
   .terryStone {
@@ -858,98 +967,168 @@ p.paragraph {
   }
 
   .terryTitle {
-    font-size: 44px;
+    font-size: 24px;
     margin-bottom: 1px;
     position: relative;
+    line-height: 24px;
     top: -470px;
   }
 
   .terryText {
     font-size: 18px;
     margin-bottom: 18px;
-    margin-left: 52px;
-    margin-right: 44px;
   }
 
   .terryText2 {
     font-size: 18px;
     margin-bottom: 18px;
-    margin-left: 52px;
-    margin-right: 44px;
   }
 
   .terrySubtitle {
-    font-size: 35px;
+    font-size: 20px;
     line-height: 42px;
-    width: 20px;
-    position: relative;
-    top: 260px;
-    left: -180px;
-    margin-bottom: 0px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
   }
 
   .terryStoneTextContainer {
-    height: 620px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 0px;
     margin-right: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .terryStoneTextContainer h2 {
+    text-align: center;
   }
 
   .moviesContainer {
     width: 100%;
-    height: 640px;
+    height: auto;
     padding-left: 0px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .imageWrapper {
-    width: 100%;
-    height: 320px;
+  .moviesContainer div:nth-child(1) {
+    width: 388px;
+    height: 221px;
     margin-right: 0px;
     margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/anuvahoodmobile.png");
+  }
+
+  .moviesContainer div:nth-child(2) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/rollingmobile.png");
+  }
+
+  .moviesContainer div:nth-child(3) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/roftmobile.png");
+  }
+
+  .moviesContainer div:nth-child(4) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/londonmobile.png");
   }
 
   .movieCover {
-    width: 100%;
-    height: 320px;
+    /*     width: 388px;
+    height: 221px;
     margin: 0px;
+    margin-bottom: 10px;
     clip-path: none;
     transform: translate(0px, 0px);
     transition: transform 0ms;
-  }
-
-  .moviesContainer .imageWrapper:nth-child(1) {
-    grid-column-start: 2;
+    object-fit: cover; */
+    display: none;
   }
 
   .movieCover1 {
-    display:none;
+    display: none;
   }
 
   .movieCover3 {
-    display:none;
+    display: none;
   }
 
   .movieCover4 {
-    display:none;
+    display: none;
   }
 
   #a1 {
-    visibility: hidden;
+    font-size: 220px;
+    top: -10px;
+    left: 135px;
   }
   #a2 {
-    visibility: hidden;
+    font-size: 220px;
+    top: -10px;
+    left: 135px;
   }
   #a3 {
-    visibility: hidden;
+    font-size: 220px;
+    top: -10px;
+    left: 135px;
+  }
+  #a4 {
+    font-size: 220px;
+    top: -10px;
+    left: 135px;
   }
 
-  .treepicsContainer {
-    display: none;
+  .treepicsContainer h1 {
+    font-size: 28px;
+    margin-left: 19px;
+  }
+  .treepicsContainer h2 {
+    font-size: 28px;
+  }
+
+  .previousFilms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0px;
+    margin-bottom: 25px;
+    background-image: url("../assets/images/terrymobilebackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .pictureContainer1 {
+    font-size: 18px;
+  }
+  .pictureContainer2 {
+    font-size: 18px;
+  }
+  .pictureContainer3 {
+    font-size: 18px;
+  }
+
+  .brickellContainer div {
+    height: 90px;
   }
 }

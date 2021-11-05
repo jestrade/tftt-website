@@ -8,13 +8,15 @@ export const Grid = styled.section`
   position: absolute;
   top:0px;
   background-color: transparent;
+  z-index: 10;
   
   ${cssResponsive('Desktop15')}{
     position:  ${props => props.positionGrid};
     height: ${props => props.heightGrid};
   }
   ${cssResponsive('Mobile')}{
-    background-color: ${props => props.dropMenu ? 'black' : 'transparent'};
+    background: transparent;
+    
   }
 `
 
@@ -70,6 +72,7 @@ export const Menu = styled.ul`
   ${cssResponsive('Desktop15')}{
       li{
         font-size: 16px;
+       
       }
   }
   ${cssResponsive('Mobile')}{
@@ -78,8 +81,12 @@ export const Menu = styled.ul`
       position: absolute;
       top: 150px;
       left: 0px;
-      background-color: black;
+      background-color: ${props => props.navState ? 'white' : 'black'};
       margin: auto 0px;
+      height: 500px;
+      padding-top: 150px;
+      top: 0;
+      z-index: -1;
       ${fadeIn({ time: '.5s', type: 'ease' })}
       li{
         display: flex;
@@ -136,9 +143,13 @@ export const RegisterButton = styled.div`
 export const MenuLogo = styled.button`
   display: none;
   ${cssResponsive('Mobile')}{
-    width: 44px;
-    height: 24px;
+    width: 28px;
+    height: 16px;
     display: block;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   
   }
 `

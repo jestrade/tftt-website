@@ -10,6 +10,47 @@ const fadeInKeyframes = keyframes`
     opacity: 1;
   }
 `
+
+const leftKeyFrames = keyframes`
+  from{
+    
+    left:-200px;
+    opacity:0;
+  }
+  to{
+    
+    left:0;
+    opacity:1;
+  }
+`
+const rightKeyFrames = keyframes`
+  from{
+    right:-200px;
+    opacity:0;
+  }
+  to{
+    right:0;
+    opacity:1;
+  }
+`
+const loadingKeyFrames = keyframes`
+  from{
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(356deg)
+  }
+`
+
 export const fadeIn = ({ time = '3s', type = 'ease' } = {}) => css`
   animation: ${time} ${fadeInKeyframes} ${type};
+`
+
+export const slideAnimate = ({ time = '3s', type = 'ease', direction = 'left' } = {}) =>
+  direction === 'left'
+    ? css`animation: ${time} ${leftKeyFrames} ${type};`
+    : css`animation: ${time} ${rightKeyFrames} ${type};`
+
+export const loadingAnimate = ({ time = '3s', type = 'ease' } = {}) => css`
+  animation: ${time} ${loadingKeyFrames} ${type};
 `

@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  display: block;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-
   background-color: black;
-  padding-top: 256px;
-  margin-bottom: 200px;
+  height: auto;
 `
