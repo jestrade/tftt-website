@@ -60,7 +60,6 @@ export const ContactForm = () => {
   });
 
   const onSubmitHandler = (data) => {
-    console.log({ data });
     reset();
   };
 
