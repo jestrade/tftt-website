@@ -15,14 +15,16 @@
     margin-bottom: 5.25rem;
     display: flex;
     flex-direction: column;
-    & > img{
+    & > img {
       display: none;
     }
     .signupform {
       border: white 1px solid;
       display: flex;
       flex-direction: column;
+      height: 974px;
       padding: 0.8rem 1rem;
+      justify-content: center;
       & > h1 {
         text-transform: uppercase;
         font-size: 24px;
@@ -46,7 +48,7 @@
           color: #a9a9a9;
           font-size: 13px;
         }
-        &Input{
+        &Input {
           width: 100%;
           height: $height;
           border-radius: 6px;
@@ -89,7 +91,6 @@
             text-align: center;
             option {
               background-color: black;
-              
             }
           }
           .phoneInput {
@@ -114,14 +115,14 @@
         .radioContainer {
           display: flex;
           margin-top: 1.75rem;
-        
+
           input {
             height: 0.75rem;
             width: 0.75rem;
             margin: 0;
             margin-right: 0.5rem;
           }
-        
+
           p {
             color: #a9a9a9;
             font-size: 14px;
@@ -168,11 +169,15 @@
         padding-left: 10px;
         a {
           margin-right: 16px;
-          & > img{
+          & > img {
             height: 1.5rem;
             width: 1.5rem;
           }
         }
+      }
+
+      @media (max-width: 760px) {
+        height: auto;
       }
     }
   }
@@ -199,7 +204,7 @@
           font-size: 16px;
           line-height: 16px;
         }
-        &Input{
+        &Input {
           height: $height;
           font-size: 16px;
           line-height: 16px;
@@ -258,7 +263,7 @@
       }
       .logosButtons {
         margin-top: 1.25rem;
-        a > img{
+        a > img {
           height: 2.5rem;
           width: 2.5rem;
         }
@@ -306,11 +311,11 @@
     .signupFormSubcontainer {
       margin-top: 12rem;
       .signupform {
-        padding: 3.25rem 2.5rem;;
+        padding: 3.25rem 2.5rem;
       }
     }
-    .phoneDiv{
-      select{
+    .phoneDiv {
+      select {
         width: 8rem;
         max-width: 8rem;
       }
@@ -318,22 +323,24 @@
   }
 }
 
-.icon-select{
+.checkLogo {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 30px;
+}
+
+.icon-select {
   position: relative;
   pointer-events: none;
   height: 100%;
   width: 0px;
-  right:15px;
+  right: 15px;
   top: 32%;
-  img{
+  img {
     width: 10px;
     height: 6px;
   }
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     top: 24%;
   }
 }
-
-
-
-

@@ -14,6 +14,7 @@ import { Gallery } from '../pages/Gallery'
 import useNavbarState from '../hooks/useNavbarState'
 import Context from '../context/Context'
 import { About } from '../pages/About'
+import PopUpSignUp from '../components/PopUpContact'
 
 const App = () => {
   const navbarState = useNavbarState()
@@ -32,6 +33,7 @@ const App = () => {
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/gallery' component={Gallery} />
             <Route exact path='/about' component={About} />
+            <Route exact path='/pop' component={PopUpSignUp} />
           </Switch>
         </Layout>
       </BrowserRouter>

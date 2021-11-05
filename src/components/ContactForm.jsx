@@ -31,18 +31,18 @@ import iconFolder from '@icons/folder.png'
 import arrowDown from '@icons/arrowDownSelect.png'
 
 // Form Validation
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 // Form Schema
 const schema = yup.object().shape({
-  contactMail: yup.string().email("Must be a valid email").required("Required"),
-  subject: yup.string().required("Required"),
+  contactMail: yup.string().email('Must be a valid email').required('Required'),
+  subject: yup.string().required('Required'),
   indicative: yup.string(),
   phone: yup.string(),
-  letUs: yup.string().required("Required"),
-});
+  letUs: yup.string().required('Required')
+})
 
 export const ContactForm = () => {
   // State
@@ -56,12 +56,12 @@ export const ContactForm = () => {
   }
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
-    resolver: yupResolver(schema),
-  });
+    resolver: yupResolver(schema)
+  })
 
   const onSubmitHandler = (data) => {
-    reset();
-  };
+    reset()
+  }
 
   return (
     <Contact>
@@ -78,18 +78,18 @@ export const ContactForm = () => {
               <Form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
                 <Input>
                   <label htmlFor='contactMail'>Contact Mail*</label>
-                  <input {...register("contactMail")} type='email' placeholder='Enter email address' />
+                  <input {...register('contactMail')} type='email' placeholder='Enter email address' />
                   {errors.contactMail?.message && <p role='alert'>{errors.contactMail?.message}</p>}
                 </Input>
                 <Input>
                   <label htmlFor='subject'>Subject*</label>
-                  <input {...register("subject")} type='text' placeholder="What's up?" />
+                  <input {...register('subject')} type='text' placeholder="What's up?" />
                   {errors.subject?.message && <p role='alert'>{errors.subject?.message}</p>}
                 </Input>
                 <InputPhone>
                   <label htmlFor='phone'>Phone number</label>
                   <div>
-                    <select {...register("indicative")} name='code' id=''>
+                    <select {...register('indicative')} name='code' id=''>
                       <option data-countrycode='GB' value='44' defaultValue>(+44) UK</option>
                       <option data-countrycode='DZ' value='213'>(+213) Algeria</option>
                       <option data-countrycode='AD' value='376'>(+376) Andorra</option>
@@ -309,12 +309,12 @@ export const ContactForm = () => {
                     <IconSelect>
                       <img src={arrowDown} alt='icon select row down' />
                     </IconSelect>
-                    <input {...register("phone")} type='text' placeholder='000-000-0000' />
+                    <input {...register('phone')} type='text' placeholder='000-000-0000' />
                   </div>
                 </InputPhone>
                 <InputLetUs>
                   <label htmlFor='letUs'>Let us know*</label>
-                  <textarea {...register("letUs")} type='text' placeholder='Message' />
+                  <textarea {...register('letUs')} type='text' placeholder='Message' />
                   {errors.letUs?.message && <p role='alert'>{errors.letUs?.message}</p>}
                 </InputLetUs>
                 <ButtonTerms onClick={handleCheck}>
@@ -336,7 +336,7 @@ export const ContactForm = () => {
                   </AttachFileButton>
                 </ButtonsContainer>
               </Form>
-            </>
+              </>
         }
 
       </FormContainer>
