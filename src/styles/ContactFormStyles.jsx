@@ -105,13 +105,13 @@ export const Input = styled.div`
     }
   }
   p[role="alert"] {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 13px;
+    line-height: 13px;
     color: var(--red);
     margin-bottom: 1rem;
     @media (min-width: 640px) {
-      font-size: 15px;
-      line-height: 15px;
+      font-size: 14px;
+      line-height: 14px;
     }
   }
 `
