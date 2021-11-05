@@ -222,6 +222,17 @@ export const InputLetUs = styled.div`
     font-family: "steinbeckregular";
     font-size: 14px;
     line-height: 14px;
+    ::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #c4c4c4;
+    }
     &::placeholder{
       color:white;
     }
