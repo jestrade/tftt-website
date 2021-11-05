@@ -66,6 +66,16 @@
             color: white;
           }
         }
+        & p[role="alert"] {
+          font-size: 13px;
+          line-height: 13px;
+          color: var(--red);
+          margin-bottom: 1rem;
+          @media (min-width: 640px) {
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
         .phoneDiv {
           display: flex;
           width: 100%;
@@ -210,7 +220,6 @@
           line-height: 16px;
           padding: 1.5rem 2rem;
           margin-top: 1rem;
-          margin-bottom: 1.5rem;
         }
         .phoneDiv {
           height: $height;
@@ -219,7 +228,6 @@
             font-size: 18px;
             line-height: 18px;
             padding-left: 0.75rem;
-            // padding-right: 0.5rem;
           }
           .phoneInput {
             width: 100%;
