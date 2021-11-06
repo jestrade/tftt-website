@@ -43,7 +43,6 @@ export const Navbar = ({ fontColor = 'white' }) => {
     setMove({ moved: '' })
     !dropMenu ? document.body.style.position = 'fixed' : document.body.style.position = 'static'
     setDropMenu(!dropMenu)
-    /* !dropMenu ? window.addEventListener('scroll', disableScroll) : window.removeEventListener('scroll', disableScroll) */
   }
 
   return (
