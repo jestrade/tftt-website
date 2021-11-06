@@ -41,8 +41,9 @@ const schema = yup.object().shape({
   subject: yup.string().required('Required'),
   indicative: yup.string(),
   phone: yup.string(),
-  letUs: yup.string().required('Required')
-})
+  letUs: yup.string().required("Required"),
+  // TODO: Add checkbox validation
+});
 
 export const ContactForm = () => {
   // State
@@ -51,7 +52,6 @@ export const ContactForm = () => {
 
   // Functions
   const handleCheck = (e) => {
-    e.preventDefault()
     setCheckBox(!checkBox)
   }
 

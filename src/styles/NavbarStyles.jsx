@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { cssResponsive } from '@hooks/useResponsive'
-import { fadeIn } from '@styles/animations'
+import { hiddenNavAnimate, showNavAnimate } from '@styles/animations'
 
 export const Grid = styled.section`
   width:100%;
@@ -76,18 +76,18 @@ export const Menu = styled.ul`
       }
   }
   ${cssResponsive('Mobile')}{
-      display:${props => props.dropMenu};
-      flex-flow: column nowrap;
+      display:block;
       position: absolute;
-      top: 150px;
       left: 0px;
       background-color: ${props => props.navState ? 'white' : 'black'};
       margin: auto 0px;
       height: 500px;
       padding-top: 150px;
+      overflow-y: hidden;
       top: 0;
       z-index: -1;
-      ${fadeIn({ time: '.5s', type: 'ease' })}
+      ${props => props.dropMenu ? showNavAnimate({ time: '.5s', type: 'ease' }) : hiddenNavAnimate({ time: '.5s', type: 'ease' })};
+      
       li{
         display: flex;
         justify-content: center;
