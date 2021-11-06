@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // Context
@@ -23,14 +23,27 @@ import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
 import logoStore from '@logos/logoStore.png'
 import logoMenu from '@logos/menuNav.png'
 import logoMenuBlack from '@logos/menuNavBlack.png'
+import { useMobileEvents } from '../hooks/useMobileEvents'
 
 export const Navbar = ({ fontColor = 'white' }) => {
   const { navState } = useContext(Context)
   const [dropMenu, setDropMenu] = useState(false)
+
+  const [move, evenMag, setMove] = useMobileEvents()
+
+  useEffect(() => {
+    if (move.moved === 'up') {
+      setDropMenu(false)
+      document.body.style.position = 'static'
+    }
+  }, [move.moved])
+
   const onClick = (e) => {
     e.preventDefault()
+    setMove({ moved: '' })
+    !dropMenu ? document.body.style.position = 'fixed' : document.body.style.position = 'static'
     setDropMenu(!dropMenu)
-    console.log(dropMenu)
+    /* !dropMenu ? window.addEventListener('scroll', disableScroll) : window.removeEventListener('scroll', disableScroll) */
   }
 
   return (
@@ -39,7 +52,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
         <Logo to='/'>
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
-        <Menu fontColor={fontColor} dropMenu={dropMenu ? 'block' : 'none'} navState={navState}>
+        <Menu fontColor={fontColor} dropMenu={dropMenu} navState={navState} {...evenMag}>
           <li> <Link to='/about'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
