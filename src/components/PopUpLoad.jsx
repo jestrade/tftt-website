@@ -13,16 +13,17 @@ import {
   Loading,
   Center,
   CheckImage,
-  LoadingImage
+  LoadingImage,
+  NameFile
 
-} from '@styles/PopUpRegistrationStyles.jsx'
+} from '@styles/PopUpLoadStyles.jsx'
 
 // Icons
 
 import checkLogo from '@icons/checkLogo.png'
 
-export const PopUpRegistration = () => {
-  const [finishUpload, setFinishUpload] = useState(false)
+export const PopUpLoad = () => {
+  const [finishUpload, setFinishUpload] = useState(true)
 
   return (
     <Section>
@@ -57,28 +58,28 @@ export const PopUpRegistration = () => {
         <hr />
         <BoxMins>
           <MinContainer>
-            <img src='https://picsum.photos/200/300' alt='' />
-            {finishUpload
-              ? <CheckImage />
-              : <LoadingImage />}
+            <NameFile> My_song_drill.mp3</NameFile>
+            <div>
+              {finishUpload
+                ? <CheckImage />
+                : <LoadingImage />}
+            </div>
           </MinContainer>
           <MinContainer>
-            <img src='https://picsum.photos/200/300' alt='' />
-            {finishUpload
-              ? <CheckImage />
-              : <LoadingImage />}
+            <NameFile> This is my first music video.mp4</NameFile>
+            <div>
+              {finishUpload
+                ? <CheckImage />
+                : <LoadingImage />}
+            </div>
           </MinContainer>
           <MinContainer>
-            <img src='https://picsum.photos/200/300' alt='' />
-            {finishUpload
-              ? <CheckImage />
-              : <LoadingImage />}
-          </MinContainer>
-          <MinContainer>
-            <img src='https://picsum.photos/200/300' alt='' />
-            {finishUpload
-              ? <CheckImage />
-              : <LoadingImage />}
+            <NameFile> My freestyle music session.mp3</NameFile>
+            <div>
+              {finishUpload
+                ? <CheckImage />
+                : <LoadingImage />}
+            </div>
           </MinContainer>
         </BoxMins>
         <Description>

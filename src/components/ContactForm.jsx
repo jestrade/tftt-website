@@ -20,7 +20,7 @@ import {
 
 // Components
 
-import { PopUpRegistration } from '../components/PopUpRegistration'
+import { PopUpLoad } from './PopUpLoad'
 
 // Images
 import imgForm from '@images/contactFormImage.png'
@@ -41,14 +41,14 @@ const schema = yup.object().shape({
   subject: yup.string().required('Required'),
   indicative: yup.string(),
   phone: yup.string(),
-  letUs: yup.string().required("Required"),
+  letUs: yup.string().required('Required')
   // TODO: Add checkbox validation
-});
+})
 
 export const ContactForm = () => {
   // State
   const [checkBox, setCheckBox] = useState(false)
-  const [uplopading, setUploading] = useState(false)
+  const [uplopading, setUploading] = useState(true)
 
   // Functions
   const handleCheck = (e) => {
@@ -68,7 +68,7 @@ export const ContactForm = () => {
       <FormContainer>
         {
           uplopading
-            ? <PopUpRegistration />
+            ? <PopUpLoad />
             : <>
               <Text>
                 <h1> What’s up?</h1>

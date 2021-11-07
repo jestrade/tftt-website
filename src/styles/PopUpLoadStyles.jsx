@@ -33,30 +33,22 @@ export const TextBox = styled.div`
   h1{
     text-align:center;
     margin:20px 0;
+    font-size: 30px;
+  }
+  p{
+    font-size: 18px;
   }
 `
 export const BoxMins = styled.div`
   display:flex;
-  flex-flow:row wrap;
+  flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 20px;
 `
 export const MinContainer = styled.div`
   
-  max-width: 199px;
-  max-height: 133px;
-  background-color: black;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  ${cssResponsive('Mobile')}{
-    max-width: 134px;
-    max-height: 93px;
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 `
 export const Description = styled.div`
   text-align:center;
@@ -90,11 +82,15 @@ export const Center = styled.div`
   border-bottom: 2px solid white;
   ${loadingAnimate({ time: '1s', type: 'infinite' })}
 `
+export const NameFile = styled.div`
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+`
 export const LoadingImage = styled.div`
-  position: relative;
   margin: auto;
-  top:-30px;
-  left: 80px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -111,10 +107,8 @@ export const CheckImage = styled.div`
   background-repeat: no-repeat;
   width: 24px;
   height: 13px;
-  position: relative;
   margin: auto;
-  top:-30px;
-  left: 80px;
+  
   ${cssResponsive('Mobile')}{
   left: 50px;
   }
