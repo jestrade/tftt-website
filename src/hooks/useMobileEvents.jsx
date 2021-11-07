@@ -30,7 +30,7 @@ export const useMobileEvents = () => {
   }
   const setDir = () => {
     const dif = 100
-    // console.log(move)
+    console.log(move)
     if (move.startX + dif < move.movingX) {
       setMove({ ...move, moved: 'right' })
     } else if (move.startX - dif > move.movingX) {

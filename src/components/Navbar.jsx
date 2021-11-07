@@ -36,6 +36,9 @@ export const Navbar = ({ fontColor = 'white' }) => {
     if (move.moved === 'up') {
       setDropMenu(false)
       document.body.style.position = 'static'
+    } else if (move.moved === 'down') {
+      setDropMenu(true)
+      document.body.style.position = 'fixed'
     }
   }, [move.moved])
 
@@ -47,12 +50,12 @@ export const Navbar = ({ fontColor = 'white' }) => {
   }
 
   return (
-    <Grid heightGrid={dropMenu && '500px'} dropMenu={dropMenu} navState={navState}>
+    <Grid heightGrid={dropMenu && '500px'} dropMenu={dropMenu} navState={navState} {...events}>
       <NavbarSection>
         <Logo to='/'>
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
-        <Menu fontColor={fontColor} dropMenu={dropMenu} navState={navState} {...events}>
+        <Menu fontColor={fontColor} dropMenu={dropMenu} navState={navState}>
           <li> <Link to='/about'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
