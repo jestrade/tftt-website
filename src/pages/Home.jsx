@@ -145,8 +145,8 @@ const Home = () => {
       <section ref={element2}>
         {show2 &&
           <Link to='/signup' className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
-            <span className='ijbTitle'>DISCOVER OUR PEOPLE</span>
-            <span className='ijbSubtitle'>FIND YOUR PLACE</span>
+            <h2 className='ijbTitle'>DISCOVER OUR PEOPLE</h2>
+            <h3 className='ijbSubtitle'>FIND YOUR PLACE</h3>
             <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
           </Link>}
       </section>
