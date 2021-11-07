@@ -85,7 +85,7 @@ export const PopUpLoad = () => {
         <Description>
           {finishUpload ? 'Attached files' : 'Loading...'}
         </Description>
-        {finishUpload && <BackButton>  Back </BackButton>}
+        {finishUpload && <BackButton to='/'> Go back </BackButton>}
 
       </Container>
     </Section>

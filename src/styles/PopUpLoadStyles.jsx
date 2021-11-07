@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { loadingAnimate } from '@styles/animations'
 import { cssResponsive } from '@hooks/useResponsive'
 import checkLogo from '@icons/checkLogo.png'
+import { Link } from 'react-router-dom'
 
 export const Section = styled.section`
   display: flex;
@@ -53,7 +54,10 @@ export const MinContainer = styled.div`
 export const Description = styled.div`
   text-align:center;
 `
-export const BackButton = styled.button`
+export const BackButton = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   border-radius: 6px;
   font-size: 16px;
@@ -62,7 +66,7 @@ export const BackButton = styled.button`
   width: 272px;
   height: 64px;
   margin: 20px auto;
-  
+  text-decoration: none;
 `
 
 export const Loading = styled.div`
