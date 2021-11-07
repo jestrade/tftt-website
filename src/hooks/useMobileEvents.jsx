@@ -30,7 +30,7 @@ export const useMobileEvents = () => {
   }
   const setDir = () => {
     const dif = 100
-    console.log(move)
+    // console.log(move)
     if (move.startX + dif < move.movingX) {
       setMove({ ...move, moved: 'right' })
     } else if (move.startX - dif > move.movingX) {
@@ -44,7 +44,7 @@ export const useMobileEvents = () => {
     }
   }
 
-  const eventsTest = { onTouchStart: setStart, onTouchMove: setMoving, onTouchEnd: setDir }
+  const events = { onTouchStart: setStart, onTouchMove: setMoving, onTouchEnd: setDir }
 
-  return [move, eventsTest, setMove]
+  return [move, events, setMove]
 }

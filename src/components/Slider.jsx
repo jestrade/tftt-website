@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Styles
 import {
@@ -35,6 +35,7 @@ import ArrowForward from '@icons/arrowForward.png'
 
 // Components
 import { ComingSoon } from '@components/ComingSoon'
+import { useMobileEvents } from '../hooks/useMobileEvents'
 
 export const Slider = () => {
   const slides = [
@@ -58,17 +59,29 @@ export const Slider = () => {
   const length = slides.length
   const [animation, setAnimation] = useState(true)
 
+  const [move, events, setMove] = useMobileEvents() // hook for mobile swipe events
+
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
     setAnimation(true)
+    setMove({ moved: '' })
   }
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
     setAnimation(false)
+    setMove({ moved: '' })
   }
 
   // Handle swiped mobile
-  const [startX, setStartX] = useState(0)
+
+  useEffect(() => {
+    if (move.moved === 'left') {
+      nextSlide()
+    } else if (move.moved === 'right') {
+      prevSlide()
+    }
+  }, [move.moved])
+  /*  const [startX, setStartX] = useState(0)
   const [moveX, setMoveX] = useState(0)
 
   const setStart = (e) => {
@@ -83,7 +96,7 @@ export const Slider = () => {
     } else if (startX - 100 > moveX) {
       nextSlide()
     }
-  }
+  } */
 
   const name = 'LEARN MORE'
 
@@ -107,7 +120,7 @@ export const Slider = () => {
         ))}
       </Paginator>
 
-      <Container onTouchStart={setStart} onTouchMove={setMoving} onTouchEnd={setDir}>
+      <Container {...events}>
         <Button onClick={prevSlide} style={{ gridColum: 1 }}>
           <img src={ArrowBack} alt='' />
         </Button>

@@ -14,7 +14,8 @@ import {
   ButtonBox,
   RegisterButton,
   ButtonContainer,
-  ButtonContainerLi
+  ButtonContainerLi,
+  ClickArea
 } from '@styles/NavbarStyles'
 
 // Logos
@@ -29,7 +30,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
   const { navState } = useContext(Context)
   const [dropMenu, setDropMenu] = useState(false)
 
-  const [move, evenMag, setMove] = useMobileEvents()
+  const [move, events, setMove] = useMobileEvents()
 
   useEffect(() => {
     if (move.moved === 'up') {
@@ -51,7 +52,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
         <Logo to='/'>
           <LogoImg src={navState ? tfttBlackLogo : tfttWhiteLogo} alt='Logo' borderColor={fontColor} />
         </Logo>
-        <Menu fontColor={fontColor} dropMenu={dropMenu} navState={navState} {...evenMag}>
+        <Menu fontColor={fontColor} dropMenu={dropMenu} navState={navState} {...events}>
           <li> <Link to='/about'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
@@ -77,7 +78,10 @@ export const Navbar = ({ fontColor = 'white' }) => {
             <img src={navState ? logoMenuBlack : logoMenu} alt='' />
           </MenuLogo>
         </ButtonBox>
+
       </NavbarSection>
+      <ClickArea onClick={onClick} style={dropMenu ? { display: 'block' } : { display: 'none' }} />
     </Grid>
+
   )
 }

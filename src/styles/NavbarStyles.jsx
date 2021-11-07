@@ -153,3 +153,15 @@ export const MenuLogo = styled.button`
   
   }
 `
+
+export const ClickArea = styled.div`
+  display: none;
+  ${cssResponsive('Mobile')}{
+    display: block;
+    position: absolute;
+    top:502px;
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+  }
+`
