@@ -11,7 +11,7 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.mjs', '.js', '.json', '.jsx', '.css'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@containers': path.resolve(__dirname, 'src/containers/'),
@@ -53,6 +53,12 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         type: 'asset'
+      },
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false
+        }
       }
     ]
   },

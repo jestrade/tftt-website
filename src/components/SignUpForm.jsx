@@ -1,5 +1,9 @@
 import React from 'react'
 
+// Auth Amplify
+import Amplify, { Auth } from 'aws-amplify'
+import awsconfig from '../aws-exports'
+
 // Styles
 import '@styles/SignUpForm.scss'
 
@@ -12,31 +16,42 @@ import icloud from '@images/icloudlogo.png'
 import arrowDown from '@icons/arrowDownSelect.png'
 
 // Form Validation
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 // Form Schema
 const schema = yup.object().shape({
-  email: yup.string().email("Must be a valid email").required("Required"),
-  password: yup.string().required('No password provided.') 
+  email: yup.string().email('Must be a valid email').required('Required'),
+  password: yup.string().required('No password provided.')
     .min(8, 'Password is too short - should be 8 chars minimum.')
     .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
   passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
   indicative: yup.string(),
-  phone: yup.string(),
+  phone: yup.string()
   // TODO: Add checkbox validation
-});
+})
+
+Amplify.configure(awsconfig)
+Auth.configure(awsconfig)
 
 const SignUpForm = () => {
   // Functions
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema)
+  })
 
-  const onSubmitHandler = (data) => {
-    reset();
-  };
+  const onSubmitHandler = async (data) => {
+    try {
+      const { user } = await Auth.signUp({
+        username: data.email,
+        password: data.password
+      })
+      console.log(user)
+    } catch (error) {
+      console.log('error signing up:', error)
+    }
+  }
 
   return (
     <div className='signupFormContainer'>
@@ -51,17 +66,17 @@ const SignUpForm = () => {
           <hr />
           <form className='formMain' onSubmit={handleSubmit(onSubmitHandler)} noValidate>
             <label>Email Address*</label>
-            <input {...register("email")} className='formMainInput' type='email' placeholder='Enter email address' />
+            <input {...register('email')} className='formMainInput' type='email' placeholder='Enter email address' />
             {errors.email?.message && <p role='alert'>{errors.email?.message}</p>}
             <label>Create Password*</label>
-            <input {...register("password")} className='formMainInput' type='password' placeholder='Password' />
+            <input {...register('password')} className='formMainInput' type='password' placeholder='Password' />
             {errors.password?.message && <p role='alert'>{errors.password?.message}</p>}
             <label>Repeat Password*</label>
-            <input {...register("passwordConfirmation")} className='formMainInput' type='password' placeholder='Repeat password' />
+            <input {...register('passwordConfirmation')} className='formMainInput' type='password' placeholder='Repeat password' />
             {errors.passwordConfirmation?.message && <p role='alert'>{errors.passwordConfirmation?.message}</p>}
             <label>Phone Number</label>
             <div className='phoneDiv'>
-              <select {...register("indicative")}>
+              <select {...register('indicative')}>
                 <option data-countrycode='GB' value='44' defaultValue>(+44) UK</option>
                 <option data-countrycode='DZ' value='213'>(+213) Algeria</option>
                 <option data-countrycode='AD' value='376'>(+376) Andorra</option>
@@ -281,7 +296,7 @@ const SignUpForm = () => {
               <div className='icon-select'>
                 <img src={arrowDown} alt='' />
               </div>
-              <input {...register("phone")} className='phoneInput' type='tel' />
+              <input {...register('phone')} className='phoneInput' type='tel' />
             </div>
             <div className='radioContainer'>
               <input type='radio' />
