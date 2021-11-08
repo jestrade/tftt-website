@@ -126,19 +126,34 @@
           display: flex;
           margin-top: 1.75rem;
 
-          input {
+          input[type="checkbox"] {
+            appearance: none;
+            cursor: pointer;
             height: 0.75rem;
             width: 0.75rem;
+            border-radius: 100%;
+            background-color: white;
             margin: 0;
             margin-right: 0.5rem;
+            vertical-align: baseline;
+            outline: none;
           }
-
+          & > input[type="checkbox"]:checked {
+            background-color: var(--red);
+            border: 2px solid var(--white);
+            @media (min-width: 640px) {
+              border-width: 4px;
+            }
+          }
           p {
             color: #a9a9a9;
             font-size: 14px;
             line-height: 14px;
             margin: 0;
           }
+        }
+        .radioContainer + p[role="alert"] {
+          margin-top: 0.25rem;
         }
         button {
           height: $height;
@@ -240,10 +255,11 @@
         .radioContainer {
           align-items: center;
           margin-top: 3.25rem;
-          input {
+          input[type="checkbox"] {
             height: 1.25rem;
             width: 1.25rem;
             margin-right: 0.75rem;
+            vertical-align: bottom;
           }
           p {
             font-size: 16px;

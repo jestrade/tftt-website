@@ -41,26 +41,22 @@ const schema = yup.object().shape({
   subject: yup.string().required('Required'),
   indicative: yup.string(),
   phone: yup.string(),
-  letUs: yup.string().required('Required')
-  // TODO: Add checkbox validation
+  letUs: yup.string().required('Required'),
+  terms: yup.boolean().oneOf([true, null], 'You must agree to the terms and conditions.')
 })
 
 export const ContactForm = () => {
   // State
-  const [checkBox, setCheckBox] = useState(false)
   const [uplopading, setUploading] = useState(false)
 
   // Functions
-  const handleCheck = (e) => {
-    setCheckBox(!checkBox)
-  }
-
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   })
 
   const onSubmitHandler = (data) => {
     reset()
+    setUploading(true)
   }
 
   const renderForm = () => (
@@ -312,18 +308,15 @@ export const ContactForm = () => {
           <textarea {...register('letUs')} type='text' placeholder='Message' />
           {errors.letUs?.message && <p role='alert'>{errors.letUs?.message}</p>}
         </InputLetUs>
-        <ButtonTerms onClick={handleCheck}>
-          <div>
-            {checkBox
-              ? <div style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: '#F13D3C' }} />
-              : <div />}
-          </div>
-          <p>
+        <ButtonTerms>
+          <label htmlFor='terms'>
+            <input {...register('terms')} type='checkbox' />
             I agree to terms &amp; conditions
-          </p>
+          </label>
+          {errors.terms?.message && <p role='alert'>{errors.terms?.message}</p>}
         </ButtonTerms>
         <ButtonsContainer>
-          <SendButton type='submit' onClick={() => setUploading(true)}>
+          <SendButton type='submit'>
             <img src={iconMessageCheck} alt='message check icon' /> <span>Send</span>
           </SendButton>
           <AttachFileButton href='#'>

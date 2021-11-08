@@ -19,13 +19,13 @@ import * as yup from "yup";
 // Form Schema
 const schema = yup.object().shape({
   email: yup.string().email("Must be a valid email").required("Required"),
-  password: yup.string().required('No password provided.') 
+  password: yup.string().required('No password provided.')
     .min(8, 'Password is too short - should be 8 chars minimum.')
     .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
   passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
   indicative: yup.string(),
   phone: yup.string(),
-  // TODO: Add checkbox validation
+  terms: yup.boolean().oneOf([true, null], 'You must agree to the terms and conditions.')
 });
 
 const SignUpForm = () => {
@@ -284,9 +284,10 @@ const SignUpForm = () => {
               <input {...register("phone")} className='phoneInput' type='tel' />
             </div>
             <div className='radioContainer'>
-              <input type='radio' />
-              <p>I agree to terms &amp; conditions</p>
+              <input {...register("terms")} type='checkbox' />
+              <label htmlFor='terms'>I agree to terms &amp; conditions</label>
             </div>
+            {errors.terms?.message && <p role='alert'>{errors.terms?.message}</p>}
             <button type='submit'>Register Account</button>
           </form>
           <div className='otherOptions'>

@@ -67,6 +67,16 @@ export const Hr = styled.hr`
 export const Form = styled.form`
   width: 100%;
   font-family: "steinbeckregular";
+  p[role="alert"] {
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--red);
+    margin-bottom: 1rem;
+    @media (min-width: 640px) {
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
 `
 
 export const Input = styled.div`
@@ -262,36 +272,50 @@ export const InputLetUs = styled.div`
 `
 
 export const ButtonTerms = styled.div`
-  display:flex;
-  cursor: pointer;
   font-family: "steinbeckregular";
-  align-items: center;
   margin-top: 1rem;
   @media (min-width: 640px) {
     margin-top: 1.5rem;
   }
-  & > div {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    padding: 3px;
-    background-color: white;
-    margin-right: 0.5rem;
-    @media (min-width: 640px) {
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-right: 0.75rem;
-    }
-  }
-  & > p {
+  & > label {
     color: white;
     font-size: 13px;
     line-height: 13px;
+    margin-bottom: 1rem;
     @media (min-width: 640px) {
       font-size: 16px;
       line-height: 16px;
     }
+    & > input[type="checkbox"] {
+      appearance: none;
+      cursor: pointer;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 100%;
+      background-color: white;
+      margin: 0;
+      margin-right: 0.5rem;
+      vertical-align: baseline;
+      outline: none;
+      @media (min-width: 640px) {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.75rem;
+        vertical-align: bottom;
+      }
+    }
+    & > input[type="checkbox"]:checked {
+      background-color: var(--red);
+      border: 2px solid var(--white);
+      @media (min-width: 640px) {
+        border-width: 4px;
+      }
+    }
   }
+  p {
+    margin-top: 0.25rem;
+  }
+}
 `
 
 export const ButtonsContainer = styled.div`
