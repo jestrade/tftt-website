@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tftt-dev-91731-authRole",
+      "UnauthRoleArn": "arn:aws:iam::365079957891:role/amplify-tftt-dev-91731-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::365079957891:role/amplify-tftt-dev-91731-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-tftt-dev-91731-deployment",
+      "UnauthRoleName": "amplify-tftt-dev-91731-unauthRole",
+      "StackName": "amplify-tftt-dev-91731",
+      "StackId": "arn:aws:cloudformation:eu-central-1:365079957891:stack/amplify-tftt-dev-91731/9fc21570-409e-11ec-a5e3-0a72f6f2c428",
+      "AmplifyAppId": "d2avk9wys6go18"
+    },
+    "categories": {
+      "auth": {
+        "reactAmplifyCognito": {}
+      }
+    }
+  }
+}
