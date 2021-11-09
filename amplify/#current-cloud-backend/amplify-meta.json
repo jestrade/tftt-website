@@ -1,0 +1,60 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tftt-dev-91731-authRole",
+      "UnauthRoleArn": "arn:aws:iam::365079957891:role/amplify-tftt-dev-91731-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::365079957891:role/amplify-tftt-dev-91731-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-tftt-dev-91731-deployment",
+      "UnauthRoleName": "amplify-tftt-dev-91731-unauthRole",
+      "StackName": "amplify-tftt-dev-91731",
+      "StackId": "arn:aws:cloudformation:eu-central-1:365079957891:stack/amplify-tftt-dev-91731/9fc21570-409e-11ec-a5e3-0a72f6f2c428",
+      "AmplifyAppId": "d2avk9wys6go18"
+    }
+  },
+  "auth": {
+    "reactAmplifyCognito": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "loginMechanisms": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": "8",
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-tftt-dev-91731-deployment/amplify-cfn-templates/auth/reactAmplifyCognito-cloudformation-template.yml",
+        "logicalId": "authreactAmplifyCognito"
+      },
+      "lastPushTimeStamp": "2021-11-08T15:51:09.901Z",
+      "output": {
+        "UserPoolId": "eu-central-1_22IPRjXu8",
+        "AppClientIDWeb": "3dot41qk4morbg4qe6s9iiar83",
+        "AppClientID": "em4p282pe8n95r9biskmldpo",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:365079957891:userpool/eu-central-1_22IPRjXu8",
+        "UserPoolName": "tftt-amplify"
+      },
+      "lastPushDirHash": "vvBAFkzHE0uhnRgS5T6ffbItf8E="
+    }
+  }
+}
