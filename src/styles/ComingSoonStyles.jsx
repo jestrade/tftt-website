@@ -44,11 +44,12 @@ export const CountdownTitle = styled.h1`
     color: white;
     font-family: 'cooper_hewittbold';
     position: relative;
-    left: 180px;
+    left: 320px;
     @media (max-width: 480px) {
         font-size: 59px;
         line-height: 50.15px;
-        left: 70px;
+        left: 130px;
+        margin-top: 60px;
     }
 `
 
@@ -57,7 +58,7 @@ export const CustomButtonTitle = styled.a`
     text-align: center;
     color: white;
     font-family: 'cooper_hewittbold';
-    width: 336px;
+    width: 636px;
     height: 90px;
     background-color: #030303;
     opacity: 0.95;
@@ -76,6 +77,7 @@ export const CustomButtonTitle = styled.a`
         left: -110px;
         border-radius: 8px;
         height: 29.49px;
-        width: 141px;
+        width: 241px;
+        top: 30px;
     }
 `
