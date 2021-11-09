@@ -23,6 +23,7 @@
       display: flex;
       flex-direction: column;
       height: 974px;
+      width: 100%;
       padding: 0.8rem 1rem;
       justify-content: center;
       & > h1 {
@@ -30,6 +31,14 @@
         font-size: 24px;
         line-height: 24px;
         margin-bottom: 0.5rem;
+      }
+      & > h1.verifyH1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        & + p {
+          margin-bottom: 1.5rem;
+          text-align: justify;
+        }
       }
       & > p {
         font-size: 13px;
@@ -40,6 +49,22 @@
         color: #f5f5f5;
         margin-top: 1.25rem;
         margin-bottom: 1rem;
+      }
+      & > a.verifyBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        height: $height;
+        width: 60%;
+        background-color: var(--white);
+        border: none;
+        border-radius: 6px;
+        color: black;
+        font-size: 14px;
+        line-height: 14px;
+        font-family: var(--subtitles);
+        margin: 1rem auto 0;
       }
       .formMain {
         display: flex;
@@ -155,7 +180,7 @@
         .radioContainer + p[role="alert"] {
           margin-top: 0.25rem;
         }
-        button {
+        button[type=submit] {
           height: $height;
           width: 100%;
           background-color: var(--white);
@@ -167,6 +192,11 @@
           font-family: var(--subtitles);
           margin-top: 1rem;
           cursor: pointer;
+        }
+        button[type=submit].verifyBtn {
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
       .otherOptions {
@@ -350,6 +380,7 @@
 .checkLogo {
   width: 86px;
   height: 86px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 

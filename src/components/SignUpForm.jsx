@@ -31,7 +31,6 @@ const schema = yup.object().shape({
   indicative: yup.string(),
   phone: yup.string(),
   terms: yup.boolean().oneOf([true, null], 'You must agree to the terms and conditions.')
-  // TODO: Add checkbox validation
 })
 
 Amplify.configure(awsconfig)
@@ -52,9 +51,14 @@ const SignUpForm = () => {
       })
       console.log(user)
       if (user) {
-        history.push('/pop')
+        history.push({
+          pathname: '/pop',
+          state: {
+            email: data.email
+          }
+        })
       }
-      return user
+      // return user
     } catch (error) {
       console.log('error signing up:', error)
     }
