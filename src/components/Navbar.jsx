@@ -36,14 +36,15 @@ export const Navbar = ({ fontColor = 'white' }) => {
     if (move.moved === 'up') {
       setDropMenu(false)
       document.body.style.position = 'static'
+      setMove({ moved: '' })
     } else if (move.moved === 'down') {
       setDropMenu(true)
       document.body.style.position = 'fixed'
+      setMove({ moved: '' })
     }
   }, [move.moved])
 
   const onClick = (e) => {
-    e.preventDefault()
     setMove({ moved: '' })
     !dropMenu ? document.body.style.position = 'fixed' : document.body.style.position = 'static'
     setDropMenu(!dropMenu)
