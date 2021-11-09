@@ -46,7 +46,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-tftt-dev-91731-deployment/amplify-cfn-templates/auth/reactAmplifyCognito-cloudformation-template.yml",
         "logicalId": "authreactAmplifyCognito"
       },
-      "lastPushTimeStamp": "2021-11-08T15:51:09.901Z",
+      "lastPushTimeStamp": "2021-11-09T03:31:00.501Z",
       "output": {
         "UserPoolId": "eu-central-1_22IPRjXu8",
         "AppClientIDWeb": "3dot41qk4morbg4qe6s9iiar83",

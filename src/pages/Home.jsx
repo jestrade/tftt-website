@@ -13,6 +13,10 @@ import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
 import auhood from '@images/anuvahood.png'
+import unation from '@images/unation.png'
+import doghouse from '@images/doghouse.png'
+import rof from '@images/rof.png'
+import outil2 from '@images/outil2.png'
 
 // import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
@@ -94,18 +98,11 @@ const Home = () => {
         <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
         <div className='moviesContainer'>
           <div className='imageWrapper'>
-            <img className='movieCover1' src={rotf} alt='Movie cover' />
-            <img className='movieCover' src={rotf} alt='Movie cover' />
-            <img className='movieCover3' src={rotf} alt='Movie cover' />
-            <img className='movieCover4' src={rotf} alt='Movie cover' />
-            <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
-          </div>
-          <div className='imageWrapper'>
-            <img className='movieCover1' src={ouatil} alt='Movie cover' />
-            <img className='movieCover' src={ouatil} alt='Movie cover' />
-            <img className='movieCover3' src={ouatil} alt='Movie cover' />
-            <img className='movieCover4' src={ouatil} alt='Movie cover' />
-            <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
+            <img className='movieCover1' src={auhood} alt='Movie cover' />
+            <img className='movieCover' src={auhood} alt='Movie cover' />
+            <img className='movieCover3' src={auhood} alt='Movie cover' />
+            <img className='movieCover4' src={auhood} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=rolling' id='a4'>+</a>
           </div>
           <div className='imageWrapper'>
             <img className='movieCover1' src={rolling} alt='Movie cover' />
@@ -115,11 +112,50 @@ const Home = () => {
             <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
           </div>
           <div className='imageWrapper'>
-            <img className='movieCover1' src={auhood} alt='Movie cover' />
-            <img className='movieCover' src={auhood} alt='Movie cover' />
-            <img className='movieCover3' src={auhood} alt='Movie cover' />
-            <img className='movieCover4' src={auhood} alt='Movie cover' />
+            <img className='movieCover1' src={ouatil} alt='Movie cover' />
+            <img className='movieCover' src={ouatil} alt='Movie cover' />
+            <img className='movieCover3' src={ouatil} alt='Movie cover' />
+            <img className='movieCover4' src={ouatil} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={rotf} alt='Movie cover' />
+            <img className='movieCover' src={rotf} alt='Movie cover' />
+            <img className='movieCover3' src={rotf} alt='Movie cover' />
+            <img className='movieCover4' src={rotf} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
+          </div>
+        </div>
+      </section>
+      <section className='previousFilms'>
+        <div className='moviesContainer'>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={unation} alt='Movie cover' />
+            <img className='movieCover' src={unation} alt='Movie cover' />
+            <img className='movieCover3' src={unation} alt='Movie cover' />
+            <img className='movieCover4' src={unation} alt='Movie cover' />
             <a href='https://www.gateway-films.com/films.php?film=rolling' id='a4'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={doghouse} alt='Movie cover' />
+            <img className='movieCover' src={doghouse} alt='Movie cover' />
+            <img className='movieCover3' src={doghouse} alt='Movie cover' />
+            <img className='movieCover4' src={doghouse} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=rolling' id='a2'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={rof} alt='Movie cover' />
+            <img className='movieCover' src={rof} alt='Movie cover' />
+            <img className='movieCover3' src={rof} alt='Movie cover' />
+            <img className='movieCover4' src={rof} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=once-upon-a-time' id='a1'>+</a>
+          </div>
+          <div className='imageWrapper'>
+            <img className='movieCover1' src={outil2} alt='Movie cover' />
+            <img className='movieCover' src={outil2} alt='Movie cover' />
+            <img className='movieCover3' src={outil2} alt='Movie cover' />
+            <img className='movieCover4' src={outil2} alt='Movie cover' />
+            <a href='https://www.gateway-films.com/films.php?film=anuvahood' id='a3'>+</a>
           </div>
         </div>
       </section>
