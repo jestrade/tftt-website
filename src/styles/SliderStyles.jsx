@@ -176,5 +176,6 @@ export const ItemPaginator = styled.div`
     border-radius: 50%;
     width: 70%;
     height: 70%;
+    transition: all .5s;
   }
 `
