@@ -9,6 +9,7 @@ import { SocialMediaBar } from '@components/SocialMediaBar'
 import { Slider } from '@components/Slider'
 
 // Images
+import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
 import terrystone from '@images/terry.png'
 import ouatil from '@images/outil.png'
 import rolling from '@images/rollingwiththenines.png'
@@ -17,8 +18,6 @@ import unation from '@images/unation.png'
 import doghouse from '@images/doghouse.png'
 import rof from '@images/rof.png'
 import outil2 from '@images/outil2.png'
-
-// import anuvahood from '@images/anuvahood.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
 import rotf from '@images/rotf.png'
@@ -49,10 +48,27 @@ const Home = () => {
           <div className='tfttSubcontainer'>
             <h1>TALES FROM THE<span> TRAP</span></h1>
             <h2>FILM SYNOPSIS</h2>
-            <p>TALES FROM THE TRAP is a gritty no holds barred look at the world faced by many UK's streets and council estates youths of today. A tale of gang culture, knife crime and cross county drug deals, however more than that TALES FROM THE TRAP is a story of brotherhood, loyalty and a friendship that runs deeper than any family.</p>
-            <p>Slick is a rising star in the UK Rap &amp; Drill Music scenes as part of the SE8 crew who are tearing up the music scene, however with a rise in success also comes a rise in status and all the dangers that come with it. Soon the SE8’s friendship is tested to the limit as rival gangs, bent coppers, older drillers and dealers, fate and circumstances force these youths hand with deadly consequences.</p>
-            <p className='paragraph'>TALES FROM THE TRAP is as powerful and hard hitting as it is heartwarming and tells the story, which is all too familiar on today’s UK streets and council estates.</p>
-            <SocialMediaBar />
+            <p>
+              "TALES FROM THE TRAP" is a gritty no holds barred look inside the World
+              faced today by many youths growing up on UK Streets and Council Estates.
+              Tales of Gang Culture, Fashion, Music, Knife &amp; Gun Crime,
+              County Lines Drug Deals, however more than that "TALES FROM THE TRAP"
+              is a story of Friendship and Loyalty that runs deeper than any Family.
+            </p>
+            <p>Slick is a rising star in the UK Rap &amp; Drill Music scenes
+              as part of the SE8 crew who are tearing up the music scene,
+              however with a rise in success also comes a rise in status
+              and all the dangers that come with it. Soon the SE8’s friendship
+              is tested to the limit as rival gangs, bent coppers,
+              older drillers and dealers, fate and circumstances force
+              these youths hand with deadly consequences.
+            </p>
+            <p className='paragraph'>
+              TALES FROM THE TRAP is as powerful and hard hitting as it is heartwarming
+              and tells the story, which is all too familiar on today’s UK streets
+              and council estates.
+            </p>
+            <img className='logo' src={tfttWhiteLogo} alt='Tales from the Trap Logo' />
             <img className='fade' src={fade} alt='Fade' />
           </div>
         </div>
@@ -61,7 +77,7 @@ const Home = () => {
       <SectionActors ref={element4}>
         {show4 &&
           <div className='actors-container animation'>
-            <TitleMb>CAST & CREW</TitleMb>
+            {/* <TitleMb>CAST & CREW</TitleMb> */}
             <div className='row-actors'>
               <div className='col-img'>
                 <div className='img1' alt='' />
