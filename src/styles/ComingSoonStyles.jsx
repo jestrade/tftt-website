@@ -5,6 +5,9 @@ export const CountdownContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    @media (max-width: 780px) {
+        width: 100%;
+    }
 `
 
 export const CountdownTimer = styled.div`
@@ -15,7 +18,7 @@ export const CountdownTimer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media (max-width: 480px) {
+    @media (max-width: 780px) {
         width: 100%;
         height: 147px;
         border-radius: 36px;
@@ -27,7 +30,7 @@ export const CountdownTitleContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 480px) {
+    @media (max-width: 780px) {
         width: 100%;
         height: 29px;
         margin-bottom:30px;
@@ -45,10 +48,10 @@ export const CountdownTitle = styled.h1`
     font-family: 'cooper_hewittbold';
     position: relative;
     left: 320px;
-    @media (max-width: 480px) {
+    @media (max-width: 780px) {
         font-size: 59px;
         line-height: 50.15px;
-        left: 130px;
+        left: 95px;
         margin-top: 60px;
     }
 `
@@ -71,13 +74,13 @@ export const CustomButtonTitle = styled.a`
     cursor: pointer;
     position: relative;
     left: -260px;
-    @media (max-width: 480px) {
+    @media (max-width: 780px) {
         font-size: 17px;
         line-height: 22.1px;
         left: -110px;
         border-radius: 8px;
         height: 29.49px;
-        width: 241px;
+        width: 341px;
         top: 30px;
     }
 `

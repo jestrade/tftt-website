@@ -1023,7 +1023,7 @@ p.paragraph {
     align-items: center;
   }
 
-  .moviesContainer div:nth-child(1) {
+  .home section:nth-child(4) div div:nth-child(1) {
     width: 388px;
     height: 221px;
     margin-right: 0px;
@@ -1032,7 +1032,7 @@ p.paragraph {
     background-image: url("../assets/images/anuvahoodmobile.png");
   }
 
-  .moviesContainer div:nth-child(2) {
+  .home section:nth-child(4) div div:nth-child(2) {
     width: 388px;
     height: 221px;
     margin-right: 0px;
@@ -1041,7 +1041,7 @@ p.paragraph {
     background-image: url("../assets/images/rollingmobile.png");
   }
 
-  .moviesContainer div:nth-child(3) {
+  .home section:nth-child(4) div div:nth-child(3) {
     width: 388px;
     height: 221px;
     margin-right: 0px;
@@ -1050,13 +1050,49 @@ p.paragraph {
     background-image: url("../assets/images/roftmobile.png");
   }
 
-  .moviesContainer div:nth-child(4) {
+  .home section:nth-child(4) div div:nth-child(4) {
     width: 388px;
     height: 221px;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 10px;
     background-image: url("../assets/images/londonmobile.png");
+  }
+
+  .home section:nth-child(5) div div:nth-child(1) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/unationmobile.png");
+  }
+
+  .home section:nth-child(5) div div:nth-child(2) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/doghousemobile.png");
+  }
+
+  .home section:nth-child(5) div div:nth-child(3) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/roftmobile.png");
+  }
+
+  .home section:nth-child(5) div div:nth-child(4) {
+    width: 388px;
+    height: 221px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    background-image: url("../assets/images/outlmobile.png");
   }
 
   .movieCover {

@@ -42,7 +42,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div>
+    <div className='home'>
       <section>
         <div className='tfttContainer animationHeader'>
           <div className='tfttSubcontainer'>
