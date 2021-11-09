@@ -29,7 +29,8 @@ const schema = yup.object().shape({
     .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
   passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
   indicative: yup.string(),
-  phone: yup.string()
+  phone: yup.string(),
+  terms: yup.boolean().oneOf([true, null], 'You must agree to the terms and conditions.')
   // TODO: Add checkbox validation
 })
 
@@ -305,9 +306,10 @@ const SignUpForm = () => {
               <input {...register('phone')} className='phoneInput' type='tel' />
             </div>
             <div className='radioContainer'>
-              <input type='radio' />
-              <p>I agree to terms &amp; conditions</p>
+              <input {...register('terms')} type='checkbox' />
+              <label htmlFor='terms'>I agree to terms &amp; conditions</label>
             </div>
+            {errors.terms?.message && <p role='alert'>{errors.terms?.message}</p>}
             <button type='submit'>Register Account</button>
           </form>
           <div className='otherOptions'>
