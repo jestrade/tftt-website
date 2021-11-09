@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 // Auth Amplify
 import Amplify, { Auth } from 'aws-amplify'
@@ -36,6 +37,7 @@ Amplify.configure(awsconfig)
 Auth.configure(awsconfig)
 
 const SignUpForm = () => {
+  const history = useHistory()
   // Functions
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
@@ -48,6 +50,10 @@ const SignUpForm = () => {
         password: data.password
       })
       console.log(user)
+      if (user) {
+        history.push('/pop')
+      }
+      return user
     } catch (error) {
       console.log('error signing up:', error)
     }

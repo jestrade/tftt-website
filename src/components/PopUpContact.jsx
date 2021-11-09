@@ -22,7 +22,7 @@ const PopUpSignUp = () => {
           <hr />
           <form className='formMain'>
             <label>Verification code*</label>
-            <input className='formMainInput' type='email' placeholder='Paste your code here' />
+            <input className='formMainInput' placeholder='Paste your code here' />
             <button type='submit'>Verify</button>
           </form>
         </div>
