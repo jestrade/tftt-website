@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { SMTPClient } from 'emailjs'
 
 // Styles
 import {
@@ -50,13 +51,32 @@ export const ContactForm = () => {
   const [uplopading, setUploading] = useState(false)
 
   // Functions
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   })
 
   const onSubmitHandler = (data) => {
-    reset()
     setUploading(true)
+
+    const client = new SMTPClient({
+      user: 'petti.soporte',
+      password: 'petticolombia',
+      host: 'gmail.com',
+      ssl: true
+    })
+
+    client.send(
+      {
+        text: `${data.letUs} - Phone Number: +${data.indicative} ${data.phone} - Contact Mail: ${data.contactMail}`,
+        from: 'petti.soporte@gmail.com',
+        to: 'sergio.maury@bpo2b.com',
+        cc: 'yennifer.herrera@bpo2b.com',
+        subject: data.subject
+      },
+      (err, message) => {
+        console.log(err || message)
+      }
+    )
   }
 
   const renderForm = () => (
