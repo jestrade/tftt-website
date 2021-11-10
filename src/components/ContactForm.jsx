@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from 'emailjs-com'
 
 // Styles
 import {
@@ -18,12 +19,30 @@ import {
   Hr
 } from '@styles/ContactFormStyles'
 
+import {
+  Section,
+  Container,
+  Icon,
+  TextBox,
+  BoxMins,
+  MinContainer,
+  Description,
+  BackButton,
+  Loading,
+  Center,
+  CheckImage,
+  LoadingImage,
+  NameFile
+
+} from '@styles/PopUpLoadStyles.jsx'
+
 // Components
 
-import { PopUpLoad } from './PopUpLoad'
+// import { PopUpLoad } from './PopUpLoad'
 
 // Images
 import imgForm from '@images/contactFormImage.png'
+import checkLogo from '@icons/checkLogo.png'
 
 // Icons
 import iconMessageCheck from '@icons/messageCheck.png'
@@ -48,14 +67,23 @@ const schema = yup.object().shape({
 export const ContactForm = () => {
   // State
   const [uplopading, setUploading] = useState(false)
-
+  const [finishUpload, setFinishUpload] = useState(false)
   // Functions
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   })
 
-  const onSubmitHandler = (data) => {
-    reset()
+  const contactform = useRef(null)
+
+  const onSubmitHandler = () => {
+    emailjs.sendForm('gmailScarlosService', 'template_4y7ibss', contactform.current, 'user_C38MEC0PmK99cRE1dgji5')
+      .then((result) => {
+        setFinishUpload(true)
+        reset()
+      }, (error) => {
+        window.alert(error.message)
+        console.log(error)
+      })
     setUploading(true)
   }
 
@@ -66,7 +94,7 @@ export const ContactForm = () => {
         <p>Wanna talk with us? Let us know the deal and we will message you shortly.</p>
       </Text>
       <Hr />
-      <Form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
+      <Form onSubmit={handleSubmit(onSubmitHandler)} noValidate ref={contactform}>
         <Input>
           <label htmlFor='contactMail'>Contact Mail*</label>
           <input {...register('contactMail')} type='email' placeholder='Enter email address' />
@@ -80,7 +108,7 @@ export const ContactForm = () => {
         <InputPhone>
           <label htmlFor='phone'>Phone number</label>
           <div>
-            <select {...register('indicative')} name='code' id=''>
+            <select {...register('indicative')} id=''>
               <option data-countrycode='GB' value='44' defaultValue>(+44) UK</option>
               <option data-countrycode='DZ' value='213'>(+213) Algeria</option>
               <option data-countrycode='AD' value='376'>(+376) Andorra</option>
@@ -327,12 +355,86 @@ export const ContactForm = () => {
     </>
   )
 
+  const handleGoBack = (e) => {
+    e.preventDefault()
+    setUploading(false)
+    setFinishUpload(false)
+  }
+
+  const renderPopUpUpload = () => {
+    return (
+      <Section>
+        <Container>
+          <Icon>
+            <Loading>
+              {finishUpload
+                ? <img src={checkLogo} alt='check logo' />
+                : <Center />}
+            </Loading>
+          </Icon>
+          <TextBox>
+            {finishUpload
+              ? <>
+                <h1>MESSAGE SENT</h1>
+                <p>
+                  We will get back to you as soon as possible,
+                  you attached files are up and ready too review.
+                </p>
+                {/* eslint-disable-next-line react/jsx-closing-tag-location */}
+              </>
+              : <>
+                <h1>UPLOADING FILES</h1>
+                <p>
+                  Your files are being uploaded hold up a second,
+                  you can check them below.
+                </p>
+                {/* eslint-disable-next-line react/jsx-closing-tag-location */}
+              </>}
+
+          </TextBox>
+          <hr />
+          <BoxMins>
+            <MinContainer>
+              <NameFile> My_song_drill.mp3</NameFile>
+              <div>
+                {finishUpload
+                  ? <CheckImage />
+                  : <LoadingImage />}
+              </div>
+            </MinContainer>
+            <MinContainer>
+              <NameFile> This is my first music video.mp4</NameFile>
+              <div>
+                {finishUpload
+                  ? <CheckImage />
+                  : <LoadingImage />}
+              </div>
+            </MinContainer>
+            <MinContainer>
+              <NameFile> My freestyle music session.mp3</NameFile>
+              <div>
+                {finishUpload
+                  ? <CheckImage />
+                  : <LoadingImage />}
+              </div>
+            </MinContainer>
+          </BoxMins>
+          <Description>
+            {finishUpload ? 'Attached files' : 'Loading...'}
+          </Description>
+          {finishUpload && <BackButton onClick={handleGoBack}> Go back </BackButton>}
+
+        </Container>
+      </Section>
+    )
+  }
+
   return (
     <Contact>
       <FormContainer>
         {
           uplopading
-            ? <PopUpLoad />
+            ? renderPopUpUpload()
             : renderForm()
         }
       </FormContainer>

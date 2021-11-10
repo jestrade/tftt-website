@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Styles
 import {
@@ -22,9 +22,10 @@ import {
 
 import checkLogo from '@icons/checkLogo.png'
 
-export const PopUpLoad = () => {
-  const [finishUpload, setFinishUpload] = useState(true)
+export const PopUpLoad = ({ finish }) => {
+  const [finishUpload, setFinishUpload] = useState(false)
 
+  useEffect(() => setFinishUpload(finish), [])
   return (
     <Section>
       <Container>

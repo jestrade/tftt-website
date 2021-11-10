@@ -24,7 +24,9 @@ module.exports = {
       '@routes': path.resolve(__dirname, 'src/routes/'),
       '@hooks': path.resolve(__dirname, 'src/hooks/')
     }
+
   },
+
   module: {
     rules: [
       {
@@ -72,6 +74,8 @@ module.exports = {
     })
   ],
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: {
+      disableDotRule: true
+    }
   }
 }
