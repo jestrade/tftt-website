@@ -4,24 +4,11 @@ export const CountdownContainer = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 70px;
     @media (max-width: 780px) {
         width: 100%;
-    }
-`
-
-export const CountdownTimer = styled.div`
-    height: 367px;
-    width: 640px;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    @media (max-width: 780px) {
-        width: 100%;
-        height: 147px;
-        border-radius: 36px;
+        height: 200px;
+        margin-top: 35px;
     }
 `
 
@@ -32,8 +19,8 @@ export const CountdownTitleContainer = styled.div`
     align-items: center;
     @media (max-width: 780px) {
         width: 100%;
-        height: 29px;
-        margin-bottom:30px;
+        height: auto;
+        margin-bottom:0px;
     }
 `
 
@@ -52,7 +39,6 @@ export const CountdownTitle = styled.h1`
         font-size: 59px;
         line-height: 50.15px;
         left: 95px;
-        margin-top: 60px;
     }
 `
 
@@ -79,8 +65,8 @@ export const CustomButtonTitle = styled.a`
         line-height: 22.1px;
         left: -110px;
         border-radius: 8px;
-        height: 29.49px;
-        width: 341px;
-        top: 30px;
+        width: 200px;
+        height: 45.49px;
+        top: -2px;
     }
 `
