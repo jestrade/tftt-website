@@ -16,7 +16,8 @@ import {
   ButtonTerms,
   InputPhone,
   IconSelect,
-  Hr
+  Hr,
+  MessagePopup
 } from '@styles/ContactFormStyles'
 
 import {
@@ -69,6 +70,7 @@ export const ContactForm = () => {
   const [uplopading, setUploading] = useState(false)
   const [finishUpload, setFinishUpload] = useState(false)
   const [filesAttach, setFilesAttach] = useState([])
+  const [messagePopup, setMessagePopup] = useState({ show: false, message: 'This is a default message, please you must be ignored this' })
 
   // Functions
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
@@ -82,10 +84,8 @@ export const ContactForm = () => {
       .then((result) => {
         setFinishUpload(true)
         reset()
-      }, (error) => {
-        window.alert(error.message)
-        console.log(error)
-      })
+      }, (error) => setMessagePopup({ show: true, message: `the files cannot be uploaded at this moment. Error: ${error.message}` })
+      )
     setUploading(true)
   }
 
@@ -471,6 +471,20 @@ export const ContactForm = () => {
 
   return (
     <Contact>
+      <MessagePopup style={messagePopup.show ? { display: 'flex' } : { display: 'none' }}>
+        <div className='button-container'>
+          <button onClick={() => {
+            setMessagePopup({ show: false, message: '' })
+            setUploading(false)
+          }}
+          >X
+          </button>
+        </div>
+        <div className='text-container'>
+          <p>{messagePopup.message}</p>
+        </div>
+
+      </MessagePopup>
       <FormContainer>
         {
           uplopading

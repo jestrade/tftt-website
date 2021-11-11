@@ -405,3 +405,56 @@ background-repeat: no-repeat;
   flex-grow: 1;
 }
 `
+
+export const MessagePopup = styled.div`
+  position:absolute;
+  flex-direction: column;
+  width: 400px;
+  height: 120px;
+  font-family: "steinbeckregular";
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px red;
+  top: 50%;
+  left: 45%;
+  .button-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 16px;
+    button{
+      padding: 10px;
+      cursor: pointer;
+      color:red;
+      font-weight: bolder;
+    }
+  }
+  .text-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:100%;
+    padding: 0 20px;
+    font-size: 18px;
+      p{
+        text-align: center;
+      }
+    }
+
+  ${cssResponsive('Desktop15')}{
+    left: 40%;
+  }
+
+  ${cssResponsive('Mobile')}{
+    left: 15%;
+    width: 300px;
+    height: 100px;
+    .button-container{
+      font-size: 12px;
+    }
+    .text-container{
+      font-size: 14px;
+    }
+  }
+
+`
