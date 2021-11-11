@@ -7,7 +7,7 @@ export const ComingSoon = (props) => {
   return (
     <CountdownContainer>
       <CountdownTitleContainer>
-        <CountdownTitle>COMING<br />SOON</CountdownTitle>
+        <CountdownTitle>COMING SOON</CountdownTitle>
         <CustomButtonTitle>{props.name}</CustomButtonTitle>
       </CountdownTitleContainer>
     </CountdownContainer>
