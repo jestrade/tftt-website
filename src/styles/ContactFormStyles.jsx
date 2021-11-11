@@ -315,7 +315,7 @@ export const ButtonTerms = styled.div`
   p {
     margin-top: 0.25rem;
   }
-}
+
 `
 
 export const ButtonsContainer = styled.div`
@@ -353,28 +353,35 @@ export const SendButton = styled.button`
   }
 `
 
-export const AttachFileButton = styled.a`
-  text-decoration: none;
+export const AttachFileButton = styled.div`
   display: flex;
+  width: 11.5rem;
+  margin-left: 10px;
+  border-radius: 6px;
   justify-content: center;
   align-items: center;
-  width: 11.5rem;
-  border-radius: 6px;
-  margin-left: 10px;
-  span{
-    margin-left: 0.5rem;
-    font-size: 14px;
-    line-height: 14px;
-    color:#A9A9A9;
-    @media (min-width: 640px) {
-      margin-left: 0.75rem;
-      font-size: 16px;
-      line-height: 16px;
+
+  label{
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    
+    span{
+      margin-left: 0.5rem;
+      font-size: 14px;
+      line-height: 14px;
+      color:#A9A9A9;
+      @media (min-width: 640px) {
+        margin-left: 0.75rem;
+        font-size: 16px;
+        line-height: 16px;
+      }
     }
-  }
-  img{
-    width: 24px;
-    height: 22px;
+    img{
+      width: 24px;
+      height: 22px;
+    }
   }
 `
 

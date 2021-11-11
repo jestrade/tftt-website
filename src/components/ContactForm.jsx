@@ -68,6 +68,8 @@ export const ContactForm = () => {
   // State
   const [uplopading, setUploading] = useState(false)
   const [finishUpload, setFinishUpload] = useState(false)
+  const [filesAttach, setFilesAttach] = useState([])
+
   // Functions
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
@@ -85,6 +87,44 @@ export const ContactForm = () => {
         console.log(error)
       })
     setUploading(true)
+  }
+
+  const handleChange = (event) => {
+    const files = event.target.files
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+
+      if (!file.type.match('image')) continue
+
+      // eslint-disable-next-line no-undef
+      const reader = new FileReader()
+      setFilesAttach((currPics) => [
+        ...currPics,
+        {
+          name: file.name,
+          file: file,
+          loading: true,
+          imagePreviewUrl: ''
+        }
+      ])
+
+      reader.onloadend = () => {
+        setFilesAttach((currPics) =>
+          currPics.map((pic) =>
+            pic.file === file
+              ? {
+                  name: file.name,
+                  file: file,
+                  loading: false,
+                  imagePreviewUrl: reader.result
+                }
+              : pic
+          )
+        )
+      }
+      reader.readAsDataURL(file)
+    }
   }
 
   const renderForm = () => (
@@ -347,8 +387,18 @@ export const ContactForm = () => {
           <SendButton type='submit'>
             <img src={iconMessageCheck} alt='message check icon' /> <span>Send</span>
           </SendButton>
-          <AttachFileButton href='#'>
-            <img src={iconFolder} alt='folder icon' /><span>Attach file</span>
+          <AttachFileButton>
+            <label for='filesAttach' class='btn'><img src={iconFolder} alt='folder icon' /><span>Attach file</span></label>
+            <input
+              id='filesAttach'
+              type='file'
+              name='picSelector'
+              onChange={handleChange}
+              multiple
+              style={{ visibility: 'hidden' }}
+
+            />
+
           </AttachFileButton>
         </ButtonsContainer>
       </Form>
@@ -394,30 +444,20 @@ export const ContactForm = () => {
           </TextBox>
           <hr />
           <BoxMins>
-            <MinContainer>
-              <NameFile> My_song_drill.mp3</NameFile>
-              <div>
-                {finishUpload
-                  ? <CheckImage />
-                  : <LoadingImage />}
-              </div>
-            </MinContainer>
-            <MinContainer>
-              <NameFile> This is my first music video.mp4</NameFile>
-              <div>
-                {finishUpload
-                  ? <CheckImage />
-                  : <LoadingImage />}
-              </div>
-            </MinContainer>
-            <MinContainer>
-              <NameFile> My freestyle music session.mp3</NameFile>
-              <div>
-                {finishUpload
-                  ? <CheckImage />
-                  : <LoadingImage />}
-              </div>
-            </MinContainer>
+            {
+                filesAttach.map((file, index) => {
+                  return (
+                    <MinContainer key={index}>
+                      <NameFile> {file.name} </NameFile>
+                      <div>
+                        {finishUpload
+                          ? <CheckImage />
+                          : <LoadingImage />}
+                      </div>
+                    </MinContainer>
+                  )
+                })
+              }
           </BoxMins>
           <Description>
             {finishUpload ? 'Attached files' : 'Loading...'}
