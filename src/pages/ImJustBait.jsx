@@ -30,7 +30,7 @@ const ImJustBaitPage = () => {
           to success within the past six years.
         </p>
         <p>
-          Now with the aforementioned 4.6 million followers on Instagram,
+          Now with the aforementioned 4.7 million followers on Instagram,
           it is one of the most popular and culturally relevant Instagram accounts
           for young people in the UK
         </p>

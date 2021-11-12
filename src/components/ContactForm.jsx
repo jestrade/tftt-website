@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import emailjs from 'emailjs-com'
+// import emailjs from 'emailjs-com'
 
 // Styles
 import {
@@ -73,13 +73,13 @@ export const ContactForm = () => {
   const [messagePopup, setMessagePopup] = useState({ show: false, message: 'This is a default message, please you must be ignored this' })
 
   // Functions
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   })
 
   const contactform = useRef(null)
 
-  const onSubmitHandler = () => {
+  /*   const onSubmitHandler = () => {
     emailjs.sendForm('gmailScarlosService', 'template_4y7ibss', contactform.current, 'user_C38MEC0PmK99cRE1dgji5')
       .then((result) => {
         setFinishUpload(true)
@@ -87,7 +87,7 @@ export const ContactForm = () => {
       }, (error) => setMessagePopup({ show: true, message: `the files cannot be uploaded at this moment. Error: ${error.message}` })
       )
     setUploading(true)
-  }
+  } */
 
   const handleChange = (event) => {
     const files = event.target.files
