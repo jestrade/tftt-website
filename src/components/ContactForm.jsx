@@ -134,7 +134,7 @@ export const ContactForm = () => {
         <p>Wanna talk with us? Let us know the deal and we will message you shortly.</p>
       </Text>
       <Hr />
-      <Form onSubmit={handleSubmit(onSubmitHandler)} noValidate ref={contactform}>
+      <Form onSubmit={handleSubmit(/* onSubmitHandler */)} noValidate ref={contactform}>
         <Input>
           <label htmlFor='contactMail'>Contact Mail*</label>
           <input {...register('contactMail')} type='email' placeholder='Enter email address' />
