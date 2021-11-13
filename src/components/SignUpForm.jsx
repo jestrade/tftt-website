@@ -311,7 +311,7 @@ const SignUpForm = () => {
               <input {...register('phone')} className='phoneInput' type='tel' />
             </div>
             <div className='radioContainer'>
-              <input {...register('terms')} type='checkbox' />
+              <input id='btnCheck-signup' {...register('terms')} type='checkbox' />
               <label htmlFor='terms' style={{ cursor: 'pointer' }} onClick={() => setPopUpTerms(true)}>I agree to terms &amp; conditions</label>
             </div>
             {errors.terms?.message && <p role='alert'>{errors.terms?.message}</p>}
@@ -421,7 +421,12 @@ const SignUpForm = () => {
 
           </div>
           <div className='button-terms'>
-            <button onClick={() => setPopUpTerms(false)}> I agree </button>
+            <button onClick={() => {
+              setPopUpTerms(false)
+              document.getElementById('btnCheck-signup').checked = true
+            }}
+            > I agree
+            </button>
           </div>
 
         </div>
