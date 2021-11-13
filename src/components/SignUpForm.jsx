@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 // Auth Amplify
@@ -37,6 +37,7 @@ Amplify.configure(awsconfig)
 Auth.configure(awsconfig)
 
 const SignUpForm = () => {
+  const [popUpTerms, setPopUpTerms] = useState(false)
   const history = useHistory()
   // Functions
   const { register, handleSubmit, formState: { errors } } = useForm({
@@ -311,7 +312,7 @@ const SignUpForm = () => {
             </div>
             <div className='radioContainer'>
               <input {...register('terms')} type='checkbox' />
-              <label htmlFor='terms'>I agree to terms &amp; conditions</label>
+              <label htmlFor='terms' style={{ cursor: 'pointer' }} onClick={() => setPopUpTerms(true)}>I agree to terms &amp; conditions</label>
             </div>
             {errors.terms?.message && <p role='alert'>{errors.terms?.message}</p>}
             <button type='submit'>Register Account</button>
@@ -321,11 +322,108 @@ const SignUpForm = () => {
             <a href='#'>Or register with</a>
             <hr />
           </div>
-          <div className='logosButtons'>
+          <div className='logosButtons' style={{ display: 'none' }}>
             <a href='#'><img src={google} alt='Google Logo' /></a>
             <a href='#'><img src={facebook} alt='Facebook Logo' /></a>
             <a href='#'><img src={icloud} alt='icloud logo' /></a>
           </div>
+        </div>
+      </div>
+      <div className='pop-up-terms' style={popUpTerms ? { display: 'block' } : { display: 'none' }}>
+        <div className='box-pop-up'>
+          <div className='button-closed'> <p onClick={() => setPopUpTerms(false)}> X</p></div>
+          <h1>TERMS AND CONDITIONS</h1>
+          <div className='text-box'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dolores voluptates similique quaerat autem quis ab, et accusamus
+            nam totam molestiae deleniti iure fugit cumque reprehenderit
+            praesentium. Ratione labore quia reprehenderit!
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dolores voluptates similique quaerat autem quis ab, et accusamus
+            nam totam molestiae deleniti iure fugit cumque reprehenderit
+            praesentium. Ratione labore quia reprehenderit!
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dolores voluptates similique quaerat autem quis ab, et accusamus
+            nam totam molestiae deleniti iure fugit cumque reprehenderit
+            praesentium. Ratione labore quia reprehenderit!
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Dolores voluptates similique quaerat autem quis ab, et accusamus
+            nam totam molestiae deleniti iure fugit cumque reprehenderit
+            praesentium. Ratione labore quia reprehenderit!
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+            Cupiditate reprehenderit fugiat minus atque explicabo quidem
+            voluptate vero tenetur quaerat soluta magni itaque aperiam
+            voluptatem deserunt officiis placeat id, repellat ea omnis architecto,
+            voluptatum veniam molestiae aliquid? Laudantium, cupiditate?
+
+          </div>
+          <div className='button-terms'>
+            <button onClick={() => setPopUpTerms(false)}> I agree </button>
+          </div>
+
         </div>
       </div>
     </div>
