@@ -24,9 +24,12 @@ import * as yup from 'yup'
 // Form Schema
 const schema = yup.object().shape({
   email: yup.string().email('Must be a valid email').required('Required'),
-  password: yup.string().required('No password provided.')
-    .min(8, 'Password is too short - should be 8 chars minimum.')
-    .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
+  password: yup.string()
+    .required('Please Enter your password')
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~])[A-Za-z\d!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]{8,}$/,
+      "Must contain at least 8 characters, 1 uppercase, 1 lowercase, 1 Number and 1 special case character"
+    ),
   passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
   indicative: yup.string(),
   phone: yup.string(),
