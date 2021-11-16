@@ -159,7 +159,8 @@ export const InputPhone = styled.div`
         padding: 0 0.75rem;
       }
       option{
-        color: #1d1d1b;
+        background-color: #1d1d1b;
+        color: white;
       }
     }
 
