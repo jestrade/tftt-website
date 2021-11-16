@@ -21,7 +21,6 @@ import {
 // Logos
 import tfttBlackLogo from '@logos/tfttBlackLogo.png'
 import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
-import logoStore from '@logos/logoStore.png'
 import logoMenu from '@logos/menuNav.png'
 import logoMenuBlack from '@logos/menuNavBlack.png'
 import { useMobileEvents } from '../hooks/useMobileEvents'
@@ -60,7 +59,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
           <li> <Link to='/about'> ABOUT TTF<span>T</span>  </Link> </li>
           <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
-          <li> <Link to='/store'> <img src={logoStore} alt='Store' /> <p style={{ marginLeft: 43 }}>STORE</p>  </Link> </li>
+          <li> <Link to='/store'> STORE </Link> </li>
           <li> <Link to='/news'> NEWS </Link> </li>
           <li> <Link to='/contact'> CONTACT </Link> </li>
           <li> <Link to='/gallery'> GALLERY </Link> </li>
