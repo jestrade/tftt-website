@@ -55,7 +55,7 @@ export const CustomButtonTitle = styled.span`
     max-height: 120px;
     height: auto;
     background-color: #030303;
-    opacity: 0.95;
+    opacity: 0.85;
     border-radius: 17px;
     border: 1px solid white;
     text-transform: uppercase;
