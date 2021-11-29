@@ -167,27 +167,6 @@ p.paragraph {
   }
 }
 
-.terryStoneContainer h2 {
-  padding: 0 1rem;
-  color: var(--red);
-  font-family: var(--titles);
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bolder;
-  letter-spacing: -0.011rem;
-  text-align: center;
-  @media (min-width: 420px) {
-    padding: 0 3rem;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 24px;
-  }
-  @media (min-width: 1024px) {
-    text-align: left;
-    grid-column-start: 2;
-  }
-}
-
 .terryStone {
   width: 100%;
   height: auto;

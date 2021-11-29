@@ -106,7 +106,6 @@ const Home = () => {
         {show1 && (
           <>
             <h1 className='terryTitle'>PRODUCTION</h1>
-            <h2>BAFTA Nominated and Raindance Best Feature Winner Terry Stone</h2>
             <img className='terryStone' src={terrystone} alt='Terry Stone' />
             <div className='terryStoneTextContainer'>
               <p className='terryText'>

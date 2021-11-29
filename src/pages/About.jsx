@@ -30,10 +30,10 @@ export const About = () => {
         <h2>THE PRODUCER</h2>
         <h3>Mr. TERRY STONE</h3>
         <p>
-          Terry Stone is a world recognised, highly acclaimed,
-          Television/Film, BAFTA Nominee actor and producer, as well as
-          staring in one of the UK’s biggest and most successful crime
-          film franchises of all time.
+          Terry Stone is a world recognised, highly acclaimed
+          Actor and Producer, as well as staring in one of 
+          the UK’s biggest and most successful crime film 
+          franchises of all time.
         </p>
         <p>
           Released in 2007, Terry created and starred in the inaugural
