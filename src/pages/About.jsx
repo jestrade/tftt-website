@@ -28,7 +28,7 @@ export const About = () => {
       </section>
       <section className='producer'>
         <h2>THE PRODUCER</h2>
-        <h3>Mr. TERRY STONE</h3>
+        <h3>TERRY STONE</h3>
         <p>
           Terry Stone is a world recognised, highly acclaimed
           Actor and Producer, as well as staring in one of 
@@ -59,7 +59,7 @@ export const About = () => {
           around the world, and together with ongoing revenues for all
           stakeholders we have potentially developed an industry game
           changer, we are full steam ahead and aim to launch the new
-          platform within the last Qtr. 2021”
+          platform within the first Qtr. of 2022”
         </p>
       </section>
       <div className='bgBricks'>
@@ -91,7 +91,7 @@ export const About = () => {
         <hr />
         <section>
           <h2>
-            YOU CAN BECOME A SHAREHOLDER IN THE FILM &amp; TV FRANCHISE
+            You can support this Film &amp; TV franchise by purchasing FilmCoin
           </h2>
           <p>
             “TALES FROM THE TRAP’s (“TFTT”) Film &amp; Television Franchise will
@@ -108,8 +108,8 @@ export const About = () => {
             loyal fanbase.”
           </p>
           <p>
-            Anyone and everyone will have the opportunity to become a Part
-            Shareholder in the TFT Film &amp; Television franchise.
+            Anyone and everyone will have the opportunity to support
+            the TFTT Film &amp; Television franchise.
           </p>
         </section>
       </div>

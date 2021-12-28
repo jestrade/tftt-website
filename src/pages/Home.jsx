@@ -134,9 +134,8 @@ const Home = () => {
                 the TFT<span>T</span> loyal fanbase.”
               </p>
               <p className='terryText'>
-                Anyone and everyone will have the opportunity to become
-                a Part Shareholder in the TFT<span>T</span> Film &amp;
-                Television franchise.
+                Anyone and everyone will have the opportunity to support
+                the TFTT Film &amp; Television franchise.
               </p>
             </div>
           </>
@@ -258,7 +257,6 @@ const Home = () => {
             <h1 className='gcTitle'>EXPERIENCE THE <span>TRAP</span></h1>
             <h3>FROM THE INSIDE OUT</h3>
           </div>
-          {/*  <img className='reel' src={reel} alt='Movie reel' /> */}
 
           <div className='relImagesContainer'>
             <div className='reel1'>
