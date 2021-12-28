@@ -33,7 +33,7 @@
   }
 }
 .previousFilms {
-  padding-left: 6.25rem;
+  // padding-left: 6.25rem;
   margin-bottom: 40px;
 }
 .logo {
@@ -265,45 +265,73 @@ p.paragraph {
 }
 
 /* Styles: previous films section */
-
-.terrySubtitle {
-  font-family: var(--titles);
-  font-size: 48px;
-  line-height: 56px;
-  margin-bottom: 84px;
-  text-decoration: underline;
-  color: white;
-}
-
-.imageWrapper {
-  width: 348px;
-  height: 608px;
-  position: relative;
-  margin-right: 100px;
-  &:hover img {
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-    transform: translate(0, 0);
+.previousFilms {
+  & > h2{
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-family: var(--titles);
+    font-size: 24px;
+    line-height: 38px;
+    text-decoration: underline;
+    color: var(--white);
+    @media (min-width: 768px) {
+      font-size: 48px;
+      line-height: 56px;
+      margin-left: 6.25rem;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 7rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+  & > .moviesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      max-width: 800px;
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: initial;
+    }
+    @media (min-width: 1280px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+      max-width: 1300px;
+    }
+    & > .imageWrapper:nth-child(1),
+    & > .imageWrapper:nth-child(2),
+    & > .imageWrapper:nth-child(3),
+    & > .imageWrapper:nth-child(4){
+      display: none;
+      @media (min-width: 1024px) {
+        display: block;
+      }
+    }
+    & > .imageWrapper {
+      width: 348px;
+      height: 608px;
+      position: relative;
+      &:hover img {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        transform: translate(0, 0);
+      }
+    }
   }
 }
 
-.imageWrapper:hover #a1 {
-  color: var(--red);
-}
-
-.imageWrapper:hover #a2 {
-  color: var(--red);
-}
-
-.imageWrapper:hover #a3 {
-  color: var(--red);
-}
-
-.imageWrapper:hover #a4 {
-  color: var(--red);
-}
-
 .imageWrapper img {
+  width: 348px;
+  height: 608px;
+  cursor: pointer;
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -311,20 +339,12 @@ p.paragraph {
 }
 
 .movieCover {
-  width: 348px;
-  height: 608px;
-  cursor: pointer;
-  z-index: 1;
   clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
   transform: translate(-30px, 5px);
   transition: transform 300ms ease;
 }
 
 .movieCover1 {
-  width: 348px;
-  height: 608px;
-  cursor: pointer;
-  z-index: 1;
   clip-path: polygon(0 0, 0 32%, 28% 0);
   transform: translate(-10px, -10px);
   transition: transform 300ms ease;
@@ -332,74 +352,20 @@ p.paragraph {
 }
 
 .movieCover3 {
-  width: 348px;
-  height: 608px;
-  cursor: pointer;
-  z-index: 1;
   clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
   transform: translate(-15px, -10px);
   transition: transform 300ms ease;
 }
 
 .movieCover4 {
-  width: 348px;
-  height: 608px;
-  cursor: pointer;
-  z-index: 1;
   clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
   transform: translate(-32px, 5px);
   transition: transform 300ms ease;
   transform-origin: top;
 }
 
-#a1 {
-  position: absolute;
-  font-family: var(--titles);
-  color: transparent;
-  font-size: 140px;
-  top: 230px;
-  left: 140px;
-  z-index: 5;
-  text-decoration: none;
-}
 
-#a2 {
-  position: absolute;
-  font-family: var(--titles);
-  color: transparent;
-  font-size: 140px;
-  top: 230px;
-  left: 140px;
-  z-index: 5;
-  text-decoration: none;
-}
-
-#a3 {
-  position: absolute;
-  font-family: var(--titles);
-  color: transparent;
-  font-size: 140px;
-  top: 230px;
-  left: 140px;
-  z-index: 5;
-  text-decoration: none;
-}
-
-#a4 {
-  position: absolute;
-  font-family: var(--titles);
-  color: transparent;
-  font-size: 140px;
-  top: 230px;
-  left: 140px;
-  z-index: 5;
-  text-decoration: none;
-}
-
-.moviesContainer {
-  display: flex;
-}
-
+/* Discover section */
 .discoverContainer {
   background-image: url("../assets/images/discoverMobile.png");
   background-repeat: no-repeat;
@@ -465,7 +431,6 @@ p.paragraph {
 }
 
 .sliderContainer {
-  /*  background-color: var(--main); */
   background-color: black;
   padding-top: 10px;
   height: auto;
@@ -528,18 +493,6 @@ p.paragraph {
     padding: 0;
   }
 }
-
-/* .reel {
-  
-  height: 470px;
-  margin-top: 69px;
-  position: absolute;
-  z-index: 0;
-  @media screen and (max-width:768px){
-    transform: rotate(90deg);
-    width: 1360px;
-  }
-} */
 
 .reel1 {
   height: 338px;
@@ -747,7 +700,7 @@ p.paragraph {
   }
 }
 
-.treepicsContainer h1 {
+.threePicsContainer h1 {
   position: block;
   margin-left: 180px;
   font-size: 48px;
@@ -756,7 +709,7 @@ p.paragraph {
   font-style: italic;
 }
 
-.treepicsContainer h2 {
+.threePicsContainer h2 {
   text-align: right;
   margin-right: 181px;
   margin-bottom: 80px;
@@ -766,75 +719,17 @@ p.paragraph {
   text-decoration: underline;
   @media only screen and (max-width: 768px) {
     width: 100%;
-    // text-align: center;
     margin-top: 20px;
   }
 }
 
-.mt-60 {
-  margin-top: 100px;
-}
-
 @media screen and (min-width: 1200px) and (max-width: 1390px) {
-  .terrySubtitle {
-    font-size: 34px;
-    margin-bottom: 58px;
-  }
-
-  .imageWrapper {
-    width: 221px;
-    height: 329px;
-    margin-right: 110px;
-  }
-
-  .movieCover {
-    width: 221px;
-    height: 329px;
-  }
-
-  .movieCover1 {
-    width: 221px;
-    height: 329px;
-  }
-
-  .movieCover3 {
-    width: 221px;
-    height: 329px;
-  }
-
-  .movieCover4 {
-    width: 221px;
-    height: 329px;
-  }
-
-  #a1 {
-    font-size: 110px;
-    top: 100px;
-    left: 70px;
-  }
-  #a2 {
-    font-size: 110px;
-    top: 100px;
-    left: 70px;
-  }
-  #a3 {
-    font-size: 110px;
-    top: 100px;
-    left: 70px;
-  }
-
-  #a4 {
-    font-size: 110px;
-    top: 100px;
-    left: 70px;
-  }
-
-  .treepicsContainer h1 {
+  .threePicsContainer h1 {
     font-size: 28px;
     margin-left: 120px;
   }
 
-  .treepicsContainer h2 {
+  .threePicsContainer h2 {
     margin-top: 45px;
     font-size: 28px;
     margin-right: 120px;
@@ -859,7 +754,7 @@ p.paragraph {
     background-repeat: no-repeat;
   }
 
-  .treepicsContainer {
+  .threePicsContainer {
     height: 520px;
   }
 
@@ -870,63 +765,6 @@ p.paragraph {
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1760px) {
-  .terrySubtitle {
-    font-size: 37px;
-    margin-bottom: 58px;
-  }
-
-  .imageWrapper {
-    width: 221px;
-    height: 329px;
-    margin-right: 40px;
-  }
-
-  .movieCover {
-    width: 221px;
-    height: 329px;
-  }
-
-  .movieCover1 {
-    width: 221px;
-    height: 329px;
-  }
-
-  .movieCover3 {
-    width: 221px;
-    height: 329px;
-  }
-
-  .movieCover4 {
-    width: 221px;
-    height: 329px;
-  }
-
-  .moviesContainer {
-    padding-left: 10px;
-    width: 100%;
-  }
-
-  #a1 {
-    font-size: 110px;
-    top: 100px;
-    left: 40px;
-  }
-  #a2 {
-    font-size: 110px;
-    top: 100px;
-    left: 40px;
-  }
-  #a3 {
-    font-size: 110px;
-    top: 100px;
-    left: 40px;
-  }
-  #a4 {
-    font-size: 110px;
-    top: 100px;
-    left: 40px;
-  }
-
   .pictureContainer1 {
     height: 250px;
     background-size: cover;
@@ -953,163 +791,15 @@ p.paragraph {
     margin-bottom: 600px;
   }
 
-  .terrySubtitle {
-    font-size: 20px;
-    line-height: 42px;
-    text-align: center;
-    margin-bottom: 30px;
-    color: white;
-  }
-
-  .moviesContainer {
-    width: 100%;
-    height: auto;
-    padding-left: 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .home section:nth-child(4) div div:nth-child(1) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/anuvahoodmobile.png");
-  }
-
-  .home section:nth-child(4) div div:nth-child(2) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/rollingmobile.png");
-  }
-
-  .home section:nth-child(4) div div:nth-child(3) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/roftmobile.png");
-  }
-
-  .home section:nth-child(4) div div:nth-child(4) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/londonmobile.png");
-  }
-
-  .home section:nth-child(5) div div:nth-child(1) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/unationmobile.png");
-  }
-
-  .home section:nth-child(5) div div:nth-child(2) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/doghousemobile.png");
-  }
-
-  .home section:nth-child(5) div div:nth-child(3) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/roftmobile.png");
-  }
-
-  .home section:nth-child(5) div div:nth-child(4) {
-    width: 388px;
-    height: 221px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 10px;
-    background-image: url("../assets/images/outlmobile.png");
-  }
-
-  .movieCover {
-    /*     width: 388px;
-    height: 221px;
-    margin: 0px;
-    margin-bottom: 10px;
-    clip-path: none;
-    transform: translate(0px, 0px);
-    transition: transform 0ms;
-    object-fit: cover; */
-    display: none;
-  }
-
-  .movieCover1 {
-    display: none;
-  }
-
-  .movieCover3 {
-    display: none;
-  }
-
-  .movieCover4 {
-    display: none;
-  }
-
-  #a1 {
-    font-size: 220px;
-    top: -10px;
-    left: 135px;
-  }
-  #a2 {
-    font-size: 220px;
-    top: -10px;
-    left: 135px;
-  }
-  #a3 {
-    font-size: 220px;
-    top: -10px;
-    left: 135px;
-  }
-  #a4 {
-    font-size: 220px;
-    top: -10px;
-    left: 135px;
-  }
-
-  .treepicsContainer h1 {
+  .threePicsContainer h1 {
     font-size: 28px;
     margin-left: 19px;
   }
-  .treepicsContainer h2 {
+
+  .threePicsContainer h2 {
     font-size: 28px;
   }
 
-  .previousFilms {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 0px;
-    margin-bottom: 25px;
-    // background-image: url("../assets/images/terrymobilebackground.png");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    & > h1 {
-      text-align: left;
-      margin-left: 1.2rem;
-    }
-  }
   .pictureContainer1 {
     font-size: 18px;
   }

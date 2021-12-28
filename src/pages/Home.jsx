@@ -158,7 +158,9 @@ const Home = () => {
       </section>
 
       <section className='previousFilms'>
-        <h1 className='terrySubtitle'>PREVIOUS FILMS FROM TERRY STONE</h1>
+        <h2 className='terrySubtitle'>
+          PREVIOUS FILMS FROM TERRY STONE
+        </h2>
         <div className='moviesContainer'>
           <div className='imageWrapper'>
             <img className='movieCover1' src={auhood} alt='Movie cover' />
@@ -177,19 +179,13 @@ const Home = () => {
             <img className='movieCover' src={ouatil} alt='Movie cover' />
             <img className='movieCover3' src={ouatil} alt='Movie cover' />
             <img className='movieCover4' src={ouatil} alt='Movie cover' />
-
           </div>
           <div className='imageWrapper'>
             <img className='movieCover1' src={rotf} alt='Movie cover' />
             <img className='movieCover' src={rotf} alt='Movie cover' />
             <img className='movieCover3' src={rotf} alt='Movie cover' />
             <img className='movieCover4' src={rotf} alt='Movie cover' />
-
           </div>
-        </div>
-      </section>
-      <section className='previousFilms'>
-        <div className='moviesContainer'>
           <div className='imageWrapper'>
             <img className='movieCover1' src={unation} alt='Movie cover' />
             <img className='movieCover' src={unation} alt='Movie cover' />
@@ -221,7 +217,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='treepicsContainer'>
+      <section className='threePicsContainer'>
         <h1>IF YOU WATCHED...</h1>
         <div className='pictureContainer'>
           <div className='pictureContainer1'>"BLUE STORY"</div>
@@ -279,27 +275,7 @@ const Home = () => {
                 <h1 className='msjRed'>WORK ON THE RED CARPET</h1>
               </Link>
             </div>
-
           </div>
-
-          {/* <div className='reel2'>
-            <img src={reel2} alt='Movie reel' />
-            <div className='redBlock'>
-              <h1 className='msjRed'>WALK ON THE RED CARPET</h1>
-            </div>
-          </div>
-          <div className='reel3'>
-            <img src={reel3} alt='Movie reel' />
-            <div className='redBlock'>
-              <h1 className='msjRed'>BE IN THE MOVIE</h1>
-            </div>
-          </div>
-          <div className='reel4'>
-            <img src={reel4} alt='Movie reel' />
-            <div className='redBlock'>
-              <h1 className='msjRed'>MEET THE STARS</h1>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
