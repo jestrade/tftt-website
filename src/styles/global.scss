@@ -1,5 +1,11 @@
 @import "vars";
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+/*font-family: 'Space Mono', monospace;*/
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono&display=swap");
+/* font-family: 'Space Grotesk', sans-serif;*/
+
 html {
   box-sizing: border-box;
 }
@@ -37,7 +43,6 @@ body {
   max-width: 100%;
   margin: 0 auto;
   overscroll-behavior: none; //evita que nuestra app haga rebotes cuando usamos scroll
-  
 }
 
 #app {

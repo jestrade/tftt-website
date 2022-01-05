@@ -1,12 +1,21 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
 import { SectionActors, TitleMb } from '@styles/HomeStyles'
+import { Slider } from '@components/Slider'
+import {
+  Button,
+  CloseBtn,
+  Container,
+  Description,
+  PopupWrapper,
+  SmallText,
+  Title
+} from '@styles/PopupStyles'
 
 // Components
 import { SocialMediaBar } from '@components/SocialMediaBar'
-import { Slider } from '@components/Slider'
 
 // Images
 import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
@@ -21,12 +30,14 @@ import outil2 from '@images/outil2.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
 import rotf from '@images/rotf.png'
+import CloseIcon from '@icons/closeIcon.svg'
 
 // Hooks
 import { useNearScreen } from '../hooks/userNearScreen'
 import Context from '../context/Context'
 
 const Home = () => {
+  const [showPopup, setShowPopup] = useState(true)
   // This code is for identify if the page is Gallery
   const location = useLocation()
   const { changeNav } = useContext(Context)
@@ -43,6 +54,24 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <PopupWrapper showPopup={showPopup}>
+        <Container>
+          <CloseBtn onClick={() => setShowPopup(false)}>
+            <img src={CloseIcon} alt='close' />
+          </CloseBtn>
+          <Title>Welcome to the FILM<strong>COIN</strong></Title>
+          <Description>
+            The Motion Picture Digital Currency Of Choice
+          </Description>
+
+          <Button href='https://thefilmcoin.io/#/payment1'>Buy Now</Button>
+          <SmallText>
+            20% discount public pre-sale
+            <br />
+            Minting on 28th February 2022
+          </SmallText>
+        </Container>
+      </PopupWrapper>
       <section>
         <div className='tfttContainer animationHeader'>
           <div className='tfttSubcontainer'>
@@ -97,9 +126,9 @@ const Home = () => {
 
       <section
         className={
-          show1 ? 
-          'terryStoneContainer animation'
-          : 'terryStoneContainer'
+          show1
+            ? 'terryStoneContainer animation'
+            : 'terryStoneContainer'
         }
         ref={element1}
       >
@@ -120,7 +149,7 @@ const Home = () => {
                 period crime film "Once Upon a Time in London".
               </p>
               <p className='terryText'>
-                “TALES FROM THE TRAP (“TFT<span>T</span>”) Film &amp; 
+                “TALES FROM THE TRAP (“TFT<span>T</span>”) Film &amp;
                 Television Franchise will leverage from the anticipated exponential
                 growing demand of digital assets in the Film, Television,
                 social media, music and the graphic/art content industries.
@@ -144,14 +173,14 @@ const Home = () => {
 
       <section className='movieCatalog'>
         <h2>MOVIE CATALOG</h2>
-        <div className="video-container">
-          <div className="video">
+        <div className='video-container'>
+          <div className='video'>
             <iframe
-              src="https://player.vimeo.com/video/579966680?autoplay=1&amp;loop=1&amp;muted=1"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              src='https://player.vimeo.com/video/579966680?autoplay=1&amp;loop=1&amp;muted=1'
+              frameBorder='0'
+              allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
-              scrolling="auto"
+              scrolling='auto'
             />
           </div>
         </div>
