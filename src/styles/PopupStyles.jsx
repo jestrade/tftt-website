@@ -96,13 +96,13 @@ export const Button = styled.a`
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 20px;
-  
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "cooper_hewittheavy", sans-serif;
   text-decoration: none;
-
-  &:hover {
-    background-color: rgba(241, 5, 5, 1);
-    color: #fff;
+  @media (hover: hover){
+    &:hover {
+      background-color: rgba(241, 5, 5, 1);
+      color: #fff;
+    }
   }
   @media only screen and (min-width:1024px){
     font-size: 1.125rem;

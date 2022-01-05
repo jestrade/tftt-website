@@ -59,7 +59,11 @@ const Home = () => {
           <CloseBtn onClick={() => setShowPopup(false)}>
             <img src={CloseIcon} alt='close' />
           </CloseBtn>
-          <Title>Welcome to the FILM<strong>COIN</strong></Title>
+          <Title>
+            Purchase
+            <br />
+            FILM<strong>COIN</strong>
+          </Title>
           <Description>
             The Motion Picture Digital Currency Of Choice
           </Description>
