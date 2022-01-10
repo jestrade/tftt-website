@@ -4,6 +4,8 @@ import { useLocation } from 'react-router'
 import Context from '../context/Context'
 // components
 import { ContactForm } from '@components/ContactForm'
+import Seo from '@components/Seo'
+
 // styles
 
 import { Section } from '@styles/ContactStyles'
@@ -18,9 +20,12 @@ export const Contact = () => {
   }, [])
 
   return (
-    <Section>
-      <ContactForm />
-    </Section>
+    <>
+      <Seo title='Contact' description='Contact us. We will message you shortly' />
+      <Section>
+        <ContactForm />
+      </Section>
+    </>
 
   )
 }

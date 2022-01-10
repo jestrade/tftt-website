@@ -11,6 +11,7 @@ import BgImg from '@images/bgPartnershipsImg.png'
 
 //  Components
 import { ComingSoon } from '@components/ComingSoon'
+import Seo from '../components/Seo'
 
 export const Partnerships = () => {
   // This code is for identify if the page is Gallery
@@ -22,11 +23,13 @@ export const Partnerships = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <Section bgImg={BgImg}>
-      <Container>
-        <ComingSoon name={name} />
-      </Container>
-    </Section>
-
+    <>
+      <Seo title='Partnerships' description='Coming Soon' />
+      <Section bgImg={BgImg}>
+        <Container>
+          <ComingSoon name={name} />
+        </Container>
+      </Section>
+    </>
   )
 }
