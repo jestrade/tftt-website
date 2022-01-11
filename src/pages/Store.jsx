@@ -11,6 +11,7 @@ import BgImg from '@images/bgStoreImg.png'
 
 //  Components
 import { ComingSoon } from '@components/ComingSoon'
+import Seo from '../components/Seo'
 
 export const Store = () => {
   // This code is for identify if the page is Gallery
@@ -22,11 +23,13 @@ export const Store = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <Section bgImg={BgImg}>
-      <Container>
-        <ComingSoon name={name} />
-      </Container>
-    </Section>
-
+    <>
+      <Seo title='NFT STORE' description='Coming Soon' />
+      <Section bgImg={BgImg}>
+        <Container>
+          <ComingSoon name={name} />
+        </Container>
+      </Section>
+    </>
   )
 }

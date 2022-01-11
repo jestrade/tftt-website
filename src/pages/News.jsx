@@ -10,6 +10,7 @@ import BgImg from '@images/bgNewsImg.png'
 
 //  Components
 import { ComingSoon } from '@components/ComingSoon'
+import Seo from '../components/Seo'
 
 export const News = () => {
   // This code is for identify if the page is Gallery
@@ -21,11 +22,13 @@ export const News = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <Section bgImg={BgImg}>
-      <Container>
-        <ComingSoon name={name} />
-      </Container>
-    </Section>
-
+    <>
+      <Seo title='News' description='Coming Soon' />
+      <Section bgImg={BgImg}>
+        <Container>
+          <ComingSoon name={name} />
+        </Container>
+      </Section>
+    </>
   )
 }

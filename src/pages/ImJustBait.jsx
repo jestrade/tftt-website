@@ -8,6 +8,8 @@ import '@styles/ImJustBait.scss'
 import Logo from '../assets/logos/IJB.png'
 // images
 import logoBC from '@images/logoBaitCoin.svg'
+import Seo from '../components/Seo'
+
 const ImJustBaitPage = () => {
   // This code is for identify if the page is Gallery
   const location = useLocation()
@@ -18,6 +20,7 @@ const ImJustBaitPage = () => {
   }, [])
   return (
     <>
+      <Seo title='IMJUSTBAIT' description='IMJUSTBAIT is one of the most popular and culturally relevant Instagram accounts for young people in the UK' />
       <div className='IJB-container'>
         <div className='IJB-image__first' />
         <div className='IJB-headings'>
@@ -55,6 +58,7 @@ const ImJustBaitPage = () => {
           buy <span>baitcoin</span> coin
         </Link>
       </section>
+
     </>
   )
 }
