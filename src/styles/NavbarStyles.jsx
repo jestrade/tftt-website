@@ -14,7 +14,7 @@ export const Grid = styled.section`
     position:  ${props => props.positionGrid};
     height: ${props => props.heightGrid};
   }
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
     background: transparent;
     
   }
@@ -28,7 +28,7 @@ export const NavbarSection = styled.nav`
   ${cssResponsive('Desktop15')}{
     margin: 42px 80px;
   }
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
     justify-content: space-between;
     align-items: center;
     margin: 42px 40px;
@@ -75,13 +75,13 @@ export const Menu = styled.ul`
        
       }
   }
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
       display:block;
       position: absolute;
       left: 0px;
       background-color: ${props => props.navState ? 'white' : 'black'};
       margin: auto 0px;
-      height: 500px;
+      height: 524px;
       padding-top: 150px;
       overflow-y: hidden;
       top: 0;
@@ -111,7 +111,7 @@ export const ButtonContainer = styled(Link)`
   display: flex;
   text-decoration: none;
   cursor: pointer;
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
     display: none;
   }
 `
@@ -119,7 +119,7 @@ export const ButtonContainerLi = styled(Link)`
   display: none;
   text-decoration: none;
   cursor: pointer;
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -142,7 +142,7 @@ export const RegisterButton = styled.div`
 
 export const MenuLogo = styled.button`
   display: none;
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
     width: 28px;
     height: 16px;
     display: block;
@@ -156,7 +156,7 @@ export const MenuLogo = styled.button`
 
 export const ClickArea = styled.div`
   display: none;
-  ${cssResponsive('Mobile')}{
+  ${cssResponsive('MobileNav')}{
     display: block;
     position: absolute;
     top:502px;

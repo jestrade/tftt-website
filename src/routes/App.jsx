@@ -15,6 +15,7 @@ import useNavbarState from '../hooks/useNavbarState'
 import Context from '../context/Context'
 import { About } from '../pages/About'
 import PopUpSignUp from '../components/PopUpContact'
+import FilmCoin from '@pages/FilmCoin'
 
 const App = () => {
   const navbarState = useNavbarState()
@@ -34,6 +35,7 @@ const App = () => {
             <Route exact path='/gallery' component={Gallery} />
             <Route exact path='/about' component={About} />
             <Route exact path='/pop' component={PopUpSignUp} />
+            <Route exact path='/filmcoin' component={FilmCoin} />
           </Switch>
         </Layout>
       </BrowserRouter>

@@ -8,11 +8,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 2rem;
+  height: 700px;
+  justify-content: center;
   @media (min-width: 480px) {
     background-image: url("../assets/images/footerBackground.png");
     background-position: left top;
-    padding-bottom: 5rem;
   }
 }
 

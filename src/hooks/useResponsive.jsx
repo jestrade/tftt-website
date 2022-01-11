@@ -4,6 +4,7 @@ import { css } from 'styled-components'
 export const cssResponsive = (type = 'Desktop15', isMin = false) => {
   const screens = {
     Mobile: '768px',
+    MobileNav: '1240px',
     Desktop13: '1400px',
     Desktop15: '1830px'
   }
