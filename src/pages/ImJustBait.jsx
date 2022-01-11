@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router'
-import { Link } from 'react-router-dom'
 // Context
 import Context from '../context/Context'
 // Styles
@@ -49,14 +48,14 @@ const ImJustBaitPage = () => {
         <div className='text-box'>
           <img src={logoBC} alt='Logo Baitcoin' />
           <div className='text'>
-            About Bitcoin.com: Since Roger Ver founded bitcoin.com in 2014 the company
-            has generated over 22 million wallet downloads. Bitcoin.com has positioned
+            About Baitcoin.com: Since Roger Ver founded baitcoin.com in 2014 the company
+            has generated over 22 million wallet downloads. Baitcoin.com has positioned
             itself as one of the worlds most recognised cryptocurrency brands.
           </div>
         </div>
-        <Link to='#' className='buy-button'>
+        <a href='https://baitcoin.com/' className='buy-button' target='_blank' rel="noopener noreferrer">
           buy <span>baitcoin</span> coin
-        </Link>
+        </a>
       </section>
 
     </>

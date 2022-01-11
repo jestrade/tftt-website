@@ -112,10 +112,20 @@ export const TextColumns = styled.div`
   height: 610px;
   background-image: url(${bgImgSect});
   padding: 0 60px;
+  & > div {
+    max-width: 450px;
+  }
   @media (min-width: 696px) {
     grid-template-columns: 1fr 1fr;
-    gap: 200px;
-    padding: 0 220px;
+    grid-template-rows: initial;
+    gap: 4rem;
+    padding: 0 4rem 5rem;
+  }
+  @media (min-width: 1400px) {
+    padding: 0 10% 5rem;
+  }
+  @media (min-width: 1700px) {
+    padding: 0 20% 5rem;
   }
 `
 
