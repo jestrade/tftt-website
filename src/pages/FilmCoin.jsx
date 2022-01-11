@@ -41,10 +41,10 @@ export default () => {
                   <img src={icon2} alt='Icon Deck' />
                   <p>Deck</p>
                 </DocIcon>
-                <DocIcon href='#'>
+                {/* <DocIcon href='#'>
                   <img src={icon1} alt='Icon Document' />
                   <p>Document</p>
-                </DocIcon>
+                </DocIcon> */}
               </IconsContainer>
             </div>
           </section>
