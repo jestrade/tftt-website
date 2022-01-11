@@ -53,7 +53,7 @@ const ImJustBaitPage = () => {
             itself as one of the worlds most recognised cryptocurrency brands.
           </div>
         </div>
-        <a href='https://baitcoin.com/' className='buy-button' target='_blank' rel="noopener noreferrer">
+        <a href='https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x10f6F43d8321A3C86c2986BA4753ceBEba477BAa' className='buy-button' target='_blank' rel="noopener noreferrer">
           buy <span>baitcoin</span> coin
         </a>
       </section>
