@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const PopupWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background-color: rgb(0, 0, 0,0.7);
   display: ${props => props.showPopup ? 'flex' : 'none'};
   font-family: 'Space Grotesk', sans-serif;
@@ -44,11 +45,8 @@ export const CloseBtn = styled.div`
   position: absolute;
   top: 5%;
   right: 10%;
-  color:  #009242;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
- 
-  @media only screen and (min-width:1680px){
+  color: #009242;
+  @media only screen and (min-width: 1680px){
     width: 1.25rem;
     right: 5%;
   }
