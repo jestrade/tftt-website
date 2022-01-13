@@ -163,3 +163,17 @@
   font-weight: bolder;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Monument Grotesk Semi-Mono";
+  src: url("../fonts/MonumentGrotesk-Semi-Mono.eot");
+  src: local("../fonts/Monument Grotesk Semi-Mono"),
+    local("../fonts/MonumentGrotesk-Semi-Mono"),
+    url("../fonts/MonumentGrotesk-Semi-Mono.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/MonumentGrotesk-Semi-Mono.woff2") format("woff2"),
+    url("../fonts/MonumentGrotesk-Semi-Mono.woff") format("woff"),
+    url("../fonts/MonumentGrotesk-Semi-Mono.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}

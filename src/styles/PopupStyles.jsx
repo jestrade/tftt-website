@@ -44,7 +44,7 @@ export const CloseBtn = styled.div`
   position: absolute;
   top: 5%;
   right: 10%;
-  color:  rgba(241, 5, 5, 1);
+  color:  #009242;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
  
@@ -91,8 +91,8 @@ export const Button = styled.a`
   align-self: center;
   transition: all 0.5s ease-in-out;
   border: 1px solid #000;
-  color: rgba(241, 5, 5, 1);
-  border-color: rgba(241, 5, 5, 1);
+  color: #009242;
+  border-color: #009242;
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 20px;
@@ -100,7 +100,7 @@ export const Button = styled.a`
   text-decoration: none;
   @media (hover: hover){
     &:hover {
-      background-color: rgba(241, 5, 5, 1);
+      background-color: #009242;
       color: #fff;
     }
   }
