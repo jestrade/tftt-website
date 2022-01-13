@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const PopupWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background-color: rgb(0, 0, 0,0.7);
   display: ${props => props.showPopup ? 'flex' : 'none'};
   font-family: 'Space Grotesk', sans-serif;
@@ -44,11 +45,8 @@ export const CloseBtn = styled.div`
   position: absolute;
   top: 5%;
   right: 10%;
-  color:  rgba(241, 5, 5, 1);
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
- 
-  @media only screen and (min-width:1680px){
+  color: #009242;
+  @media only screen and (min-width: 1680px){
     width: 1.25rem;
     right: 5%;
   }
@@ -91,8 +89,8 @@ export const Button = styled.a`
   align-self: center;
   transition: all 0.5s ease-in-out;
   border: 1px solid #000;
-  color: rgba(241, 5, 5, 1);
-  border-color: rgba(241, 5, 5, 1);
+  color: #009242;
+  border-color: #009242;
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 20px;
@@ -100,7 +98,7 @@ export const Button = styled.a`
   text-decoration: none;
   @media (hover: hover){
     &:hover {
-      background-color: rgba(241, 5, 5, 1);
+      background-color: #009242;
       color: #fff;
     }
   }
