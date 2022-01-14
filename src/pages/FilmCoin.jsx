@@ -31,7 +31,7 @@ export default () => {
           </section>
           <section>
             <div>
-              <Title className='FC-learnMore'> Learn More</Title>
+              <Title className='FC-learnMore'> DOWNLOAD</Title>
               <IconsContainer>
                 <DocIcon href='https://drive.google.com/file/d/1mU5OsYmFkbLFzzmRoJdFamhrLkXJ-qkK/view?usp=sharing'>
                   <img src={icon1} alt='Icon White Papper' />

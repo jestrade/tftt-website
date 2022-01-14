@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 // Styles
 import '@styles/Home.scss'
-import { SectionActors, TitleMb } from '@styles/HomeStyles'
+import { SectionActors } from '@styles/HomeStyles'
 import { Slider } from '@components/Slider'
 import {
   Button,
@@ -15,7 +15,7 @@ import {
 } from '@styles/PopupStyles'
 
 // Components
-import { SocialMediaBar } from '@components/SocialMediaBar'
+// import { SocialMediaBar } from '@components/SocialMediaBar'
 import Seo from '@components/Seo'
 
 // Images
@@ -32,7 +32,7 @@ import outil2 from '@images/outil2.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
 import sket from '@images/sket.png'
-import CloseIcon from '@icons/closeIcon.svg'
+import CloseIcon from '@icons/closeIconGreen.svg'
 
 // Hooks
 import { useNearScreen } from '../hooks/userNearScreen'
