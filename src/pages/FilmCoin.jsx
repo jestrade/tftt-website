@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import Hero from '@components/Hero'
+import Goals from '@components/Goals'
+import GeneralCard from '@components/GeneralCard'
 // styles
 import {
   Banner,
@@ -16,10 +20,24 @@ import {
 import Logo from '@images/filmCoinLogo.svg'
 import icon1 from '@images/icon1.svg'
 import icon2 from '@images/icon2.svg'
+import { useLocation } from 'react-router-dom'
+import Context from '../context/Context'
+import bgImg1 from '@images/tapeImg.png'
 
 export default () => {
+  // This code is for identify if the page is Gallery
+  const location = useLocation()
+  const { changeNav } = useContext(Context)
+  changeNav(location.pathname)
   return (
     <>
+      <Hero />
+      <Goals />
+      <GeneralCard
+        bgImg={bgImg1}
+        question='Do you want to join in the exciting  and commercial world of motion  picture and television ...?'
+        text='Well, no need to wait any longer, FILMCOIN is poised to launch  in February 2022 ...'
+      />,
       <Container>
         <Banner>
           <section>
