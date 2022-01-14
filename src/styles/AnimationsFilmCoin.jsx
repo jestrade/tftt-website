@@ -1,4 +1,3 @@
-
 import { keyframes, css } from 'styled-components'
 
 const vibrateKeyframe = () => {

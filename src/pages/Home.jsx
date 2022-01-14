@@ -31,7 +31,7 @@ import outil2 from '@images/outil2.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
 import rotf from '@images/rotf.png'
-import closeIcon from '@icons/closeIconGreen.svg?url'
+import CloseIcon from '@icons/closeIconGreen.svg'
 
 // Hooks
 import { useNearScreen } from '../hooks/userNearScreen'
@@ -60,7 +60,7 @@ const Home = () => {
         <PopupWrapper showPopup={showPopup}>
           <Container>
             <CloseBtn onClick={() => setShowPopup(false)}>
-              <img src={closeIcon} alt='close' />
+              <img src={CloseIcon} alt='close' />
             </CloseBtn>
             <Title>
               Purchase
