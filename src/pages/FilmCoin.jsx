@@ -23,6 +23,9 @@ import icon2 from '@images/icon2.svg'
 import { useLocation } from 'react-router-dom'
 import Context from '../context/Context'
 import bgImg1 from '@images/tapeImg.png'
+import TimeLine from '../components/TimeLine'
+import MiniCard from '../components/MiniCard'
+import GreenRow from '@icons/GreenRowRigth.svg'
 
 export default () => {
   // This code is for identify if the page is Gallery
@@ -38,6 +41,64 @@ export default () => {
         question='Do you want to join in the exciting  and commercial world of motion  picture and television ...?'
         text='Well, no need to wait any longer, FILMCOIN is poised to launch  in February 2022 ...'
       />,
+      <TimeLine>
+        <MiniCard
+          text='Angel Investment Round'
+          date='DEC 2021'
+        />
+        <img src={GreenRow} className='GreenRow' />
+        <MiniCard
+          text='Initiate the Flag-Ship Movie Development'
+          date='JAN 2022'
+        />
+        <img src={GreenRow} className='GreenRow' />
+        <MiniCard
+          text='Token & Smart Contract
+        Development'
+          date='JAN 2022'
+        />
+        <img src={GreenRow} className='GreenRow' />
+        <MiniCard
+          text='Token Generation'
+          date='FEB 2022'
+        />
+        <img src={GreenRow} className='GreenRow' />
+        <MiniCard
+          text='Wallet Module & API Development'
+          date='FEB 2022'
+        />
+      </TimeLine>,
+      <TimeLine>
+        <div style={{ position: 'relative' }}>
+          <img src={GreenRow} alt='Green down' row style={{ transform: 'rotate(90deg)', position: 'absolute', top: '-50px', left: `${(146 - 39) / 2}px` }} />
+          <MiniCard
+            text='Payment and Token Allocation Development'
+            date='FEB 2022'
+          />
+        </div>
+
+        <img src={GreenRow} alt='Green right row' className='GreenRow' />
+        <MiniCard
+          text='Project Beta Launching'
+          date=' FEB 2022'
+        />
+        <img src={GreenRow} alt='Green right row' className='GreenRow' />
+        <MiniCard
+          text='Token Project Official Launching'
+          date='FEB 2022'
+        />
+        <img src={GreenRow} alt='Green right row' className='GreenRow' />
+        <MiniCard
+          text='Mobile App Development'
+          date='MARCH 2022'
+        />
+        <img src={GreenRow} alt='Green right row' className='GreenRow' />
+        <MiniCard
+          text='Movie production'
+          date=''
+        />
+      </TimeLine>,
+
       <Container>
         <Banner>
           <section>
