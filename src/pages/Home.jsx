@@ -21,16 +21,17 @@ import Seo from '@components/Seo'
 // Images
 import tfttWhiteLogo from '@logos/tfttWhiteLogo.png'
 import terrystone from '@images/terry.png'
-import ouatil from '@images/outil.png'
+import shank from '@images/shank.png'
 import rolling from '@images/rollingwiththenines.png'
 import auhood from '@images/anuvahood.png'
 import unation from '@images/unation.png'
 import doghouse from '@images/doghouse.png'
 import rof from '@images/rof.png'
+import plastic from '@images/plastic.png'
 import outil2 from '@images/outil2.png'
 import fade from '@images/FADE.png'
 import ijbimg from '@images/IJBIMAG.png'
-import rotf from '@images/rotf.png'
+import sket from '@images/sket.png'
 import CloseIcon from '@icons/closeIcon.svg'
 
 // Hooks
@@ -199,56 +200,58 @@ const Home = () => {
           </h2>
           <div className='moviesContainer'>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={auhood} alt='Movie cover' />
-              <img className='movieCover' src={auhood} alt='Movie cover' />
-              <img className='movieCover3' src={auhood} alt='Movie cover' />
-              <img className='movieCover4' src={auhood} alt='Movie cover' />
+              <img className='movieCover1' src={rof} alt='Rise of the FootSoldier Movie cover' />
+              <img className='movieCover' src={rof} alt='Rise of the FootSoldier Movie cover' />
+              <img className='movieCover3' src={rof} alt='Rise of the FootSoldier Movie cover' />
+              <img className='movieCover4' src={rof} alt='Rise of the FootSoldier Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={rolling} alt='Movie cover' />
-              <img className='movieCover' src={rolling} alt='Movie cover' />
-              <img className='movieCover3' src={rolling} alt='Movie cover' />
-              <img className='movieCover4' src={rolling} alt='Movie cover' />
+              <img className='movieCover1' src={auhood} alt='Anuvahood Movie cover' />
+              <img className='movieCover' src={auhood} alt='Anuvahood Movie cover' />
+              <img className='movieCover3' src={auhood} alt='Anuvahood Movie cover' />
+              <img className='movieCover4' src={auhood} alt='Anuvahood Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={ouatil} alt='Movie cover' />
-              <img className='movieCover' src={ouatil} alt='Movie cover' />
-              <img className='movieCover3' src={ouatil} alt='Movie cover' />
-              <img className='movieCover4' src={ouatil} alt='Movie cover' />
+              <img className='movieCover1' src={rolling} alt='Rollin With The Nines Movie cover' />
+              <img className='movieCover' src={rolling} alt='Rollin With The Nines Movie cover' />
+              <img className='movieCover3' src={rolling} alt='Rollin With The Nines Movie cover' />
+              <img className='movieCover4' src={rolling} alt='Rollin With The Nines Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={rotf} alt='Movie cover' />
-              <img className='movieCover' src={rotf} alt='Movie cover' />
-              <img className='movieCover3' src={rotf} alt='Movie cover' />
-              <img className='movieCover4' src={rotf} alt='Movie cover' />
+              <img className='movieCover1' src={outil2} alt='Once upon a time in London Movie cover' />
+              <img className='movieCover' src={outil2} alt='Once upon a time in London Movie cover' />
+              <img className='movieCover3' src={outil2} alt='Once upon a time in London Movie cover' />
+              <img className='movieCover4' src={outil2} alt='Once upon a time in London Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={unation} alt='Movie cover' />
-              <img className='movieCover' src={unation} alt='Movie cover' />
-              <img className='movieCover3' src={unation} alt='Movie cover' />
-              <img className='movieCover4' src={unation} alt='Movie cover' />
-
+              <img className='movieCover1' src={shank} alt='Shank Movie cover' />
+              <img className='movieCover' src={shank} alt='Shank Movie cover' />
+              <img className='movieCover3' src={shank} alt='Shank Movie cover' />
+              <img className='movieCover4' src={shank} alt='Shank Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={doghouse} alt='Movie cover' />
-              <img className='movieCover' src={doghouse} alt='Movie cover' />
-              <img className='movieCover3' src={doghouse} alt='Movie cover' />
-              <img className='movieCover4' src={doghouse} alt='Movie cover' />
-
+              <img className='movieCover1' src={sket} alt='Sket Movie cover' />
+              <img className='movieCover' src={sket} alt='Sket Movie cover' />
+              <img className='movieCover3' src={sket} alt='Sket Movie cover' />
+              <img className='movieCover4' src={sket} alt='Sket Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={rof} alt='Movie cover' />
-              <img className='movieCover' src={rof} alt='Movie cover' />
-              <img className='movieCover3' src={rof} alt='Movie cover' />
-              <img className='movieCover4' src={rof} alt='Movie cover' />
-
+              <img className='movieCover1' src={unation} alt='United Nation Three Decades of Drum &amp; Bass Movie cover' />
+              <img className='movieCover' src={unation} alt='United Nation Three Decades of Drum &amp; Bass Movie cover' />
+              <img className='movieCover3' src={unation} alt='United Nation Three Decades of Drum &amp; Bass Movie cover' />
+              <img className='movieCover4' src={unation} alt='United Nation Three Decades of Drum &amp; Bass Movie cover' />
             </div>
             <div className='imageWrapper'>
-              <img className='movieCover1' src={outil2} alt='Movie cover' />
-              <img className='movieCover' src={outil2} alt='Movie cover' />
-              <img className='movieCover3' src={outil2} alt='Movie cover' />
-              <img className='movieCover4' src={outil2} alt='Movie cover' />
-
+              <img className='movieCover1' src={plastic} alt='Plastic Movie cover' />
+              <img className='movieCover' src={plastic} alt='Plastic Movie cover' />
+              <img className='movieCover3' src={plastic} alt='Plastic Movie cover' />
+              <img className='movieCover4' src={plastic} alt='Plastic Movie cover' />
+            </div>
+            <div className='imageWrapper'>
+              <img className='movieCover1' src={doghouse} alt='Doghouse Movie cover' />
+              <img className='movieCover' src={doghouse} alt='Doghouse Movie cover' />
+              <img className='movieCover3' src={doghouse} alt='Doghouse Movie cover' />
+              <img className='movieCover4' src={doghouse} alt='Doghouse Movie cover' />
             </div>
           </div>
         </section>
