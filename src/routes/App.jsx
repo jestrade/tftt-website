@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 // Components
 import Layout from '@containers/Layout'
 import Home from '@pages/Home'
-import ImJustBaitPage from '@pages/ImJustBait'
+// import ImJustBaitPage from '@pages/ImJustBait'
 import SignUpPage from '@pages/SignUp'
 import { Partnerships } from '@pages/Partnerships'
 import { Store } from '@pages/Store'
@@ -26,7 +26,7 @@ const App = () => {
         <Layout>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/im-just-bait' component={ImJustBaitPage} />
+            {/* <Route exact path='/im-just-bait' component={ImJustBaitPage} /> */}
             <Route exact path='/signup' component={SignUpPage} />
             <Route exact path='/partnerships' component={Partnerships} />
             <Route exact path='/store' component={Store} />
