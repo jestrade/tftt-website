@@ -58,7 +58,7 @@ export const Navbar = ({ fontColor = 'white' }) => {
         <Menu fontColor={fontColor} dropMenu={dropMenu} navState={navState}>
           <li> <Link to='/about'> ABOUT TFT<span>T</span>  </Link> </li>
           <li> <Link to='/filmcoin'> FILMCOIN </Link> </li>
-          <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li>
+          {/* <li> <Link to='/im-just-bait'> I'M JUST BAIT </Link> </li> */}
           <li> <Link to='/partnerships'> PARTNERSHIPS </Link> </li>
           <li> <Link to='/store'> STORE </Link> </li>
           <li> <Link to='/news'> NEWS </Link> </li>
