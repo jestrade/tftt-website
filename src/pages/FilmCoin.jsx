@@ -26,6 +26,10 @@ import bgImg1 from '@images/tapeImg.png'
 import TimeLine from '../components/TimeLine'
 import MiniCard from '../components/MiniCard'
 import GreenRow from '@icons/GreenRowRigth.svg'
+import Launchpad from '@components/Launchpad'
+import BuyFC from '@components/BuyFC'
+import GlobalSolution from '../components/GlobalSolution'
+import Seo from '@components/Seo'
 
 export default () => {
   // This code is for identify if the page is Gallery
@@ -34,7 +38,14 @@ export default () => {
   changeNav(location.pathname)
   return (
     <>
-      <Hero />
+      <Seo 
+        title='FILMCOIN'
+        description='The FilmCoin Utility Token will be created on the 28th February 2022 using the ERC-20 standard and deployed to the Ethereum blockchain acting as a native currency for the Darkhorse Film Studios decentralized application program (DAPP)'
+      />
+      <Launchpad />
+      <BuyFC />
+      <GlobalSolution />
+      {/* <Hero />
       <Goals />
       <GeneralCard
         bgImg={bgImg1}
@@ -120,10 +131,6 @@ export default () => {
                   <img src={icon2} alt='Icon Deck' />
                   <p>Deck</p>
                 </DocIcon>
-                {/* <DocIcon href='#'>
-                  <img src={icon1} alt='Icon Document' />
-                  <p>Document</p>
-                </DocIcon> */}
               </IconsContainer>
             </div>
           </section>
@@ -147,7 +154,7 @@ export default () => {
           </div>
 
         </TextColumns>
-      </Container>
+      </Container> */}
     </>
   )
 }
