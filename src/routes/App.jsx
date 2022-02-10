@@ -35,7 +35,7 @@ const App = () => {
             <Route exact path='/gallery' component={Gallery} />
             <Route exact path='/about' component={About} />
             <Route exact path='/pop' component={PopUpSignUp} />
-            <Route exact path='/filmcoin' component={FilmCoin} />
+            {/* <Route exact path='/filmcoin' component={FilmCoin} /> */}
             <Redirect to='/' />
           </Switch>
         </Layout>
