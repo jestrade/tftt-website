@@ -39,7 +39,7 @@ import { useNearScreen } from '../hooks/userNearScreen'
 import Context from '../context/Context'
 
 const Home = () => {
-  const [showPopup, setShowPopup] = useState(true)
+  const [showPopup, setShowPopup] = useState(false)
   // This code is for identify if the page is Gallery
   const location = useLocation()
   const { changeNav } = useContext(Context)

@@ -48,9 +48,8 @@ const ImJustBaitPage = () => {
         <div className='text-box'>
           <img src={logoBC} alt='Logo Baitcoin' />
           <div className='text'>
-            About Baitcoin.com: Since Roger Ver founded baitcoin.com in 2014 the company
-            has generated over 22 million wallet downloads. Baitcoin.com has positioned
-            itself as one of the worlds most recognised cryptocurrency brands.
+            A Full-On-Chain Liquidity Protocol that can be implemented on any Smart Contract-Enabled Blockchain.
+            Utility coming soon.
           </div>
         </div>
         <a href='https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x10f6F43d8321A3C86c2986BA4753ceBEba477BAa' className='buy-button' target='_blank' rel="noopener noreferrer">
