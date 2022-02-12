@@ -18,11 +18,11 @@ export const About = () => {
 
   return (
     <>
-      <Seo 
+      <Seo
         title='About'
         description='Terry Stone is a world recognised, highly acclaimed
-          Actor and Producer, as well as staring in one of 
-          the UK’s biggest and most successful crime film 
+          Actor and Producer, as well as staring in one of
+          the UK’s biggest and most successful crime film
           franchises of all time.'
       />
       <section className='bannerAbout'>
@@ -35,12 +35,12 @@ export const About = () => {
         </div>
       </section>
       <section className='producer'>
-        <h2>THE PRODUCER</h2>
+        <h2>THE PRODUCERS</h2>
         <h3>TERRY STONE</h3>
         <p>
           Terry Stone is a world recognised, highly acclaimed
-          Actor and Producer, as well as staring in one of 
-          the UK’s biggest and most successful crime film 
+          Actor and Producer, as well as staring in one of
+          the UK’s biggest and most successful crime film
           franchises of all time.
         </p>
         <p>
@@ -69,7 +69,18 @@ export const About = () => {
           changer, we are full steam ahead and aim to launch the new
           platform within the first Qtr. of 2022”
         </p>
+        <h3 style={{ marginTop: 80 }}>RICHARD TURNER</h3>
+        <p>
+          Richard has worked in the Film Industry since 1982 and has produced,
+          executive produced and controlled the finances for more than 60
+          productions often from initial development to final delivery.
+          He is a completion guarantor-recognised producer and financial controller."
+          "Richard and Terry have been working together as Producing Partners for the past decade
+          and have created, developed,directed and produced a slate of films, documentaries & Television Series,
+          some of which have had wide cinema releases and Worldwide releases on Netflix and Amazon.
+        </p>
       </section>
+
       <div className='bgBricks'>
         <section>
           <h2>FILM SYNOPSIS</h2>

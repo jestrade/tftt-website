@@ -34,6 +34,7 @@ export default () => {
   changeNav(location.pathname)
   return (
     <>
+      {/* Start Filmcoin section */}
       <Hero />
       <Goals />
       <GeneralCard
@@ -98,6 +99,7 @@ export default () => {
           date=''
         />
       </TimeLine>,
+      {/* End Filmcoin section */}
 
       <Container>
         <Banner>
