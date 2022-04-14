@@ -30,7 +30,6 @@ import rof from '@images/rof.png'
 import plastic from '@images/plastic.png'
 import outil2 from '@images/outil2.png'
 import fade from '@images/FADE.png'
-import ijbimg from '@images/IJBIMAG.png'
 import sket from '@images/sket.png'
 import CloseIcon from '@icons/closeIconGreen.svg'
 
@@ -278,7 +277,6 @@ const Home = () => {
             <Link to='/signup' className={show2 ? 'discoverContainer animation' : 'discoverContainer'}>
               <h2 className='ijbTitle'>DISCOVER OUR PEOPLE</h2>
               <h3 className='ijbSubtitle'>FIND YOUR PLACE</h3>
-              <img className='ijbImg' src={ijbimg} alt='Im just bait logo' />
             </Link>}
         </section>
 
