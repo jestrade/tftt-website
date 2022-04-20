@@ -1,0 +1,7 @@
+{
+    "name": "email",
+    "dependencies": {
+      "nodemailer": "6.7.0",
+      "nodemailer-smtp-transport": "2.7.4"
+    }
+  }

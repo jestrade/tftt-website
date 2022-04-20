@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className='Layout' style={{ backgroundColor: '#020202' }}>
+
       {navState ? <Navbar fontColor='black' /> : <Navbar fontColor='white' />}
       {children}
       <Footer />
