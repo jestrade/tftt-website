@@ -40,7 +40,7 @@ export const useMobileEvents = () => {
     } else if (move.startY - dif > move.movingY) {
       setMove({ ...move, moved: 'up' })
     } else {
-      setMove({ ...move, moved: ' ' })
+      setMove({ ...move, moved: 'not moved' })
     }
   }
 
